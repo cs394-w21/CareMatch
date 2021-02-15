@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
-import theme from "../utils/theme";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { theme, textFont } from "../utils/theme";
 import Swiper from "react-native-web-swiper";
 
 const Screen = () => {
@@ -9,7 +9,9 @@ const Screen = () => {
     <View style={styles.container}>
       <Swiper>
         <View style={[styles.slideContainer, styles.slide1]}>
-          <Text>
+          <Text style={styles.title}>CareMatch(logo placeholder)</Text>
+          <Text style={styles.hiText}>Hi!</Text>
+          <Text style={styles.text}>
             Hello UserName, AppName gives you specific recommendations to help
             you make informed decisions for your aging loved one.
           </Text>
@@ -38,10 +40,23 @@ export default function Everything() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Text style={styles.title}>CareMatch</Text>
+
 
       {Screen()}
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.loginButtons}>
+          <Text style={styles.text}>
+            Login
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.loginButtons}>
+          <Text style={styles.text}>
+            Sign Up
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
+
   );
 }
 
@@ -52,25 +67,14 @@ const styles = StyleSheet.create({
   slideContainer: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-  },
-  slide1: {
-    backgroundColor: "rgba(20,20,200,0.3)",
-  },
-  slide2: {
-    backgroundColor: "rgba(20,200,20,0.3)",
-  },
-  slide3: {
-    backgroundColor: "rgba(200,20,20,0.3)",
+    justifyContent: "space-evenly",
   },
   title: {
-    fontSize: 40,
+    fontSize: 60,
     textAlign: "center",
   },
-  wrapper: {},
   slide1: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#9DD6EB",
   },
@@ -88,7 +92,33 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: "bold",
+    fontFamily: textFont,
+    textAlign: "center",
+  },
+  hiText: {
+    color: "#FFFFFF",
+    fontSize: 50,
+    fontWeight: "bold",
+    fontFamily: textFont
+  },
+
+  loginButtons: {
+    flex: 1,
+    margin: 40,
+    padding: 10,
+    elevation: 2,
+    width: 80,
+    height: 80,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "green",
+    borderRadius: 20,
+    opacity: 0.8,
+  },
+  buttonContainer: {
+    justifyContent: "space-evenly",
+    flexDirection: "row"
   },
 });

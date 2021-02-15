@@ -1,4 +1,6 @@
 const theme = {
   green: "#90EE90",
 };
-export default theme;
+
+const textFont = "Avenir";
+export { theme, textFont };
