@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: null,
-    height: null,
+    width: "100%",
+    height: "100%",
   },
   firstSlideContainer: {
     flex: 1,
