@@ -65,7 +65,7 @@ const Carousel = ({ setShowButtons }) => {
         </View>
         <View style={[styles.slideContainer]}>
           <View style={styles.textContainer}>
-            <Text style={[(styles.text, styles.primaryText)]}>
+            <Text style={[styles.text, styles.primaryText]}>
               To get started let’s take 10 minutes to learn about the person, or
               people, you’d like to help. We’ll let you know the information we
               need before you begin and if you can’t get it all done in one
