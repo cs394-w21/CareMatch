@@ -26,7 +26,7 @@ const Carousel = ({ setShowButtons }) => {
           >
             <View style={[styles.firstSlideContainer]}>
               <View style={{ maxWidth: "75%" }}>
-                <Text style={styles.title}>CareMatch</Text>
+                <Text style={styles.title}>juno</Text>
                 <Text style={[styles.text, styles.secondaryText]}>
                   Everyone gets older, but when a family member of your own
                   needs more support as they age, it can be difficult to engage.
