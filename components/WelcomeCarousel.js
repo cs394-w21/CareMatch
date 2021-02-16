@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
 import { theme } from "../utils/theme";
 import Swiper from "react-native-web-swiper";
 
@@ -12,16 +12,17 @@ const Carousel = ({ setShowButtons }) => {
     <View style={styles.container}>
       <Swiper
         onIndexChanged={onIndexChanged}
+        minDistanceForAction={0.03} // only 3% of distance needed to qualify as a swipe
         controlsProps={{
-          nextPos: false,
-          prevPos: false,
+          nextPos: false, // hide next button
+          prevPos: false, // hide back button
           dotsTouchable: true,
         }}
       >
         <View style={[styles.slideContainer]}>
           <ImageBackground
             source={require("../assets/elderly_couple.png")}
-            style={styles.image}
+            style={styles.imageBackground}
             resizeMode="cover"
           >
             <View style={[styles.firstSlideContainer]}>
@@ -38,6 +39,10 @@ const Carousel = ({ setShowButtons }) => {
         </View>
         <View style={[styles.slideContainer]}>
           <View style={styles.textContainer}>
+            <Image
+              style={styles.image}
+              source={require("../assets/graphic_placeholder.png")}
+            ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               Assess how much support your loved one may need by utilizing the
               ADL (Activities of Daily Living) checklist, a healthcare industry
@@ -48,6 +53,10 @@ const Carousel = ({ setShowButtons }) => {
         </View>
         <View style={[styles.slideContainer]}>
           <View style={styles.textContainer}>
+            <Image
+              style={styles.image}
+              source={require("../assets/graphic_placeholder.png")}
+            ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               Understand recommended products and services based on your loved
               one’s support rating and specific care type needs.
@@ -56,6 +65,10 @@ const Carousel = ({ setShowButtons }) => {
         </View>
         <View style={[styles.slideContainer]}>
           <View style={styles.textContainer}>
+            <Image
+              style={styles.image}
+              source={require("../assets/graphic_placeholder.png")}
+            ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               Review articles and information that will help you know what aging
               looks like for all of us, how it relates to you and your family,
@@ -65,6 +78,10 @@ const Carousel = ({ setShowButtons }) => {
         </View>
         <View style={[styles.slideContainer]}>
           <View style={styles.textContainer}>
+            <Image
+              style={styles.image}
+              source={require("../assets/graphic_placeholder.png")}
+            ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               To get started let’s take 10 minutes to learn about the person, or
               people, you’d like to help. We’ll let you know the information we
@@ -85,6 +102,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
+    width: 150,
+    height: 150,
+    borderRadius: 150 / 2,
+    overflow: "hidden",
+  },
+  imageBackground: {
     flex: 1,
     width: "100%",
     height: "100%",
@@ -110,6 +133,9 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   textContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-evenly",
     padding: 75,
   },
   text: {

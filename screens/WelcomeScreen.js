@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
   },
   secondaryButton: {
     borderColor: "black",
+    borderWidth: 2,
   },
   primaryButton: {
     backgroundColor: theme.pink,
