@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
 import { theme } from "../utils/theme";
 import Swiper from "react-native-web-swiper";
 
 const Carousel = ({ setShowButtons }) => {
+  const [currIndex, setCurrIndex] = useState(0);
   const onIndexChanged = (index) => {
     console.log(index);
+    setCurrIndex(index);
     index === 4 ? setShowButtons(false) : setShowButtons(true);
   };
   return (
@@ -17,6 +19,44 @@ const Carousel = ({ setShowButtons }) => {
           nextPos: false, // hide next button
           prevPos: false, // hide back button
           dotsTouchable: true,
+          dotsWrapperStyle: {
+            marginBottom: "100%",
+          },
+          DotComponent: ({ index, isActive, onPress }) => {
+            let color = "black";
+            if (currIndex === 0) {
+              color = "white";
+            }
+            if (isActive) {
+              return (
+                <View
+                  onPress={onPress}
+                  style={{
+                    backgroundColor: color,
+                    width: 16,
+                    height: 16,
+                    margin: 4,
+                    borderRadius: 16 / 2,
+                    overflow: "hidden",
+                  }}
+                />
+              );
+            }
+            return (
+              <View
+                onPress={onPress}
+                style={{
+                  borderWidth: 1,
+                  borderColor: color,
+                  width: 16,
+                  height: 16,
+                  margin: 4,
+                  borderRadius: 16 / 2,
+                  overflow: "hidden",
+                }}
+              />
+            );
+          },
         }}
       >
         <View style={[styles.slideContainer]}>
