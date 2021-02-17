@@ -3,17 +3,23 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
 import Carousel from "../components/WelcomeCarousel";
 
-const Buttons = ({ showButtons, onGetStarted }) => {
+const Buttons = ({ showButtons, onGetStarted, onLogin, onSignUp }) => {
   console.log(showButtons);
   if (showButtons) {
     return (
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.button, styles.secondaryButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.secondaryButton]}
+          onPress={onLogin}
+        >
           <Text style={[styles.buttonText, styles.secondaryButtonText]}>
             Log In
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.primaryButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.primaryButton]}
+          onPress={onSignUp}
+        >
           <Text style={[styles.buttonText, styles.primaryButtonText]}>
             Register
           </Text>
@@ -23,7 +29,10 @@ const Buttons = ({ showButtons, onGetStarted }) => {
   } else {
     return (
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={onGetStarted}>
+        <TouchableOpacity
+          style={[styles.button, styles.primaryButton]}
+          onPress={onGetStarted}
+        >
           <Text style={[styles.buttonText, styles.primaryButtonText]}>
             Get Started
           </Text>
@@ -36,12 +45,23 @@ const Buttons = ({ showButtons, onGetStarted }) => {
 export default function WelcomeScreen({ navigation }) {
   const [showButtons, setShowButtons] = useState(true);
   const onGetStarted = () => {
-    navigation.navigate("RecommendationScreen")
-  }
+    navigation.navigate("RecommendationScreen");
+  };
+  const onLogin = () => {
+    navigation.navigate("LoginScreen");
+  };
+  const onSignUp = () => {
+    navigation.navigate("SignUpScreen");
+  };
   return (
     <View style={styles.container}>
       <Carousel setShowButtons={setShowButtons} />
-      <Buttons showButtons={showButtons} onGetStarted={onGetStarted} />
+      <Buttons
+        showButtons={showButtons}
+        onGetStarted={onGetStarted}
+        onLogin={onLogin}
+        onSignUp={onSignUp}
+      />
     </View>
   );
 }
