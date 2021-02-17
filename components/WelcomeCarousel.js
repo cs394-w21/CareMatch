@@ -19,9 +19,6 @@ const Carousel = ({ setShowButtons }) => {
           nextPos: false, // hide next button
           prevPos: false, // hide back button
           dotsTouchable: true,
-          dotsWrapperStyle: {
-            marginBottom: "100%",
-          },
           DotComponent: ({ index, isActive, onPress }) => {
             let color = "black";
             if (currIndex === 0) {
