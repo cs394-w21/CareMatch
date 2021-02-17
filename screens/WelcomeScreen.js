@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
 import Carousel from "../components/WelcomeCarousel";
 
-const Buttons = ({ showButtons }) => {
+const Buttons = ({ showButtons, onGetStarted }) => {
   console.log(showButtons);
   if (showButtons) {
     return (
@@ -23,7 +23,7 @@ const Buttons = ({ showButtons }) => {
   } else {
     return (
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.button, styles.primaryButton]}>
+        <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={onGetStarted}>
           <Text style={[styles.buttonText, styles.primaryButtonText]}>
             Get Started
           </Text>
@@ -33,13 +33,15 @@ const Buttons = ({ showButtons }) => {
   }
 };
 
-export default function WelcomeScreen() {
+export default function WelcomeScreen({ navigation }) {
   const [showButtons, setShowButtons] = useState(true);
-
+  const onGetStarted = () => {
+    navigation.navigate("RecommendationScreen")
+  }
   return (
     <View style={styles.container}>
       <Carousel setShowButtons={setShowButtons} />
-      <Buttons showButtons={showButtons} />
+      <Buttons showButtons={showButtons} onGetStarted={onGetStarted} />
     </View>
   );
 }
