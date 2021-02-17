@@ -64,7 +64,10 @@ const Carousel = ({ setShowButtons }) => {
           >
             <View style={[styles.firstSlideContainer]}>
               <View style={{ maxWidth: "75%" }}>
-                <Text style={styles.title}>juno</Text>
+                <Image 
+                  style={styles.title}
+                  source={require("../assets/juno.png")}>
+                </Image>
                 <Text style={[styles.text, styles.secondaryText]}>
                   Everyone gets older, but when a family member of your own
                   needs more support as they age, it can be difficult to engage.
@@ -164,10 +167,11 @@ const styles = StyleSheet.create({
     height: "90%",
   },
   title: {
-    fontSize: 60,
-    textAlign: "center",
-    color: "white",
     marginBottom: 40,
+    overflow: "visible",
+    width: 112,
+    height: 49,
+    alignSelf: "center",
   },
   textContainer: {
     flex: 1,
@@ -178,7 +182,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: theme.textFontSize,
     //fontWeight: "bold",
-    fontFamily: theme.textFont,
+    fontFamily: "Helvetica Neue",
     textAlign: "center",
   },
   primaryText: {

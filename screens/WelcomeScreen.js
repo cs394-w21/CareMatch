@@ -64,11 +64,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   buttonText: {
-    fontFamily: theme.textFont2,
-    fontSize: 13,
-  },
-  buttonText: {
-    fontFamily: theme.textFont2,
+    fontFamily: "Georgia",
     fontSize: 13,
   },
   primaryButtonText: {
