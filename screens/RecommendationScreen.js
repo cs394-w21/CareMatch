@@ -1,17 +1,26 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Header } from "react-native";
+import { theme } from "../utils/theme";
+import ReactDOM from 'react-dom';
 
 const RecommendationScreen = ({ navigation }) => {
   return (
     <View>
-      <Text>
-        Visit this site to learn how to care for your aging loved one.
-      </Text>
+      <h1 style = {title}>
+      Recommendations  
+      </h1>
       <Text>
         https://www.google.com/search?q=how+to+care+for+your+aging+parents&oq=how+to+care+for+your+aging+parents&aqs=chrome..69i57j46j0j0i22i30l4j0i390.4373j0j7&sourceid=chrome&ie=UTF-8
       </Text>
     </View>
   );
+};
+
+const title = {
+  color: "#FF266F",
+  padding: "40px",
+  fontFamily: "Arial", 
+  textAlign: "center", 
 };
 
 export default RecommendationScreen;

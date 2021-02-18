@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
 import { theme } from "../utils/theme";
 import Swiper from "react-native-web-swiper";
+//import juno from '../assets/juno.svg';
+//import {Svg} from 'react-native-svg';
+
 
 const Carousel = ({ setShowButtons }) => {
   const [currIndex, setCurrIndex] = useState(0);
@@ -184,6 +187,7 @@ const styles = StyleSheet.create({
     //fontWeight: "bold",
     fontFamily: "Helvetica Neue",
     textAlign: "center",
+    textAlignVertical: "top"
   },
   primaryText: {
     color: "black",
