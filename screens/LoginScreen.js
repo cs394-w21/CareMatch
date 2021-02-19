@@ -39,6 +39,10 @@ const LoginScreen = ({ navigation }) => {
   }
   return (
     <View style={styles.container}>
+      {/* <Image 
+        style={styles.logo}
+        source={require("../assets/juno.png")}>
+      </Image> */} 
       <Text style={{ fontSize: 40, marginBottom: 15 }}>Juno</Text>
       <TextInput
         value={email}
@@ -87,6 +91,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "white",
   },
+  logo: {
+    marginBottom: 40,
+    overflow: "visible",
+    width: 112,
+    height: 49,
+    alignSelf: "center",
+  },
   input: {
     width: 200,
     height: 44,
@@ -111,6 +122,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginBottom: 10,
     borderRadius: 10,
+    marginTop: 10,
   },
 });
 

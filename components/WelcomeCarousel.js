@@ -68,7 +68,7 @@ const Carousel = ({ setShowButtons }) => {
             <View style={[styles.firstSlideContainer]}>
               <View style={{ maxWidth: "75%" }}>
                 <Image 
-                  style={styles.title}
+                  style={styles.logo}
                   source={require("../assets/juno.png")}>
                 </Image>
                 <Text style={[styles.text, styles.secondaryText]}>
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     height: "90%",
   },
-  title: {
+  logo: {
     marginBottom: 40,
     overflow: "visible",
     width: 112,
