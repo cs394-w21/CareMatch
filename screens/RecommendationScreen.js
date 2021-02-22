@@ -53,17 +53,30 @@ const buttons = () => {
 const RecommendationScreen = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {<SupportScoreChart percent={supportScore} />}
-      <Text>
-        Support Score of {supportScore} {"\n" + supportScoreDescription}{" "}
-      </Text>
-      <Text>Areas of Concern</Text>
-      <AreasOfConcern areas={areas} name={name} />
+      <SupportScoreChart percent={supportScore} />
+      <View style={styles.sectionContainer}>
+        <Text style={styles.sectionHeader}>
+          Support Score of {supportScore}
+        </Text>
+        <Text style={styles.sectionBody}>
+          {supportScoreDescription}
+        </Text>
+        <Text style={[styles.expandSection, styles.sectionBody]}>
+          Read More
+        </Text>
+      </View>
+      <View style={styles.sectionContainer}>
+
+        <Text style={styles.sectionHeader}>Areas of Concern</Text>
+        <View style={styles.line} />
+        <AreasOfConcern areas={areas} name={name} />
+      </View>
       <Text>Read about other support categories</Text>
       <Text>
         {name} scored well in our other support categories, but if you would
         like to read more about [category], [category], and others, click here.
       </Text>
+      <View style={styles.line} />
       <Text>Want to talk with someone?</Text>
       <Text>{nurse.name}</Text>
       <Text>
@@ -97,6 +110,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    margin: 20
   },
   title: {
     color: "#FF266F",
@@ -148,6 +162,38 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     flexDirection: "row",
   },
+  sectionHeader: {
+    fontFamily: theme.textFont,
+    fontWeight: "bold",
+    fontSize: 17,
+    lineHeight: 22,
+    textAlign: "left"
+  },
+  sectionContainer: {
+    flex: 1,
+    alignItems: "flex-start",
+    width: "95%",
+    marginTop: 26,
+    marginBottom: 0
+  },
+  sectionBody: {
+    fontFamily: theme.textFont2,
+    fontSize: 13,
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: 22,
+    textAlign: "left"
+  },
+  expandSection: {
+    color: theme.pink,
+  },
+  line: {
+    height: 0,
+    color: theme.gray,
+    borderColor: theme.gray,
+    borderWidth: 0.25,
+    width: "100%",
+  }
 });
 const textLink = {
   color: "#0000FF",

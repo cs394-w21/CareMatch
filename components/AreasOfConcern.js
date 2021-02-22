@@ -20,7 +20,7 @@ const AreasOfConcern = ({ areas, name }) => {
     }
   });
 
-  return <View>{display}</View>;
+  return <React.Fragment>{display}</React.Fragment>;
 };
 
 const hygeine = (score, name) => {
