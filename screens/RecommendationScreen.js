@@ -1,31 +1,154 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Header, Linking } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Header,
+  Linking,
+  ScrollView,
+  Image,
+} from "react-native";
 import { theme } from "../utils/theme";
-import ReactDOM from 'react-dom';
-import Unorderedlist from 'react-native-unordered-list';
+import ReactDOM from "react-dom";
+import Unorderedlist from "react-native-unordered-list";
+import SupportScoreChart from "../components/SupportScoreChart";
+import AreasOfConcern from "../components/AreasOfConcern";
 
+const supportScore = 65;
+const supportScoreDescription =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim";
+const name = "Marv";
+const areas = { Hygeine: 45, "Managing Medication": 55 };
+const nurse = {
+  name: "Jane",
+  title: "Registered Nurse",
+  location: "Chicago, IL",
+};
+
+const buttons = () => {
+  return (
+    <>
+      <TouchableOpacity
+        style={[styles.button, styles.primaryButton]}
+        onPress={() => {
+          return;
+        }}
+      >
+        <Text style={[styles.buttonText, styles.primaryButtonText]}>Call</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[styles.button, styles.secondaryButton]}
+        onPress={() => {
+          return;
+        }}
+      >
+        <Text style={[styles.buttonText, styles.secondaryButtonText]}>
+          Chat
+        </Text>
+      </TouchableOpacity>
+    </>
+  );
+};
 const RecommendationScreen = ({ navigation }) => {
   return (
-    <View>
-      <h1 style={title}>
-      Recommendations  
-      </h1>
+    <ScrollView contentContainerStyle={styles.container}>
+      {<SupportScoreChart percent={supportScore} />}
+      <Text>
+        Support Score of {supportScore} {"\n" + supportScoreDescription}{" "}
+      </Text>
+      <Text>Areas of Concern</Text>
+      <AreasOfConcern areas={areas} name={name} />
+      <Text>Read about other support categories</Text>
+      <Text>
+        {name} scored well in our other support categories, but if you would
+        like to read more about [category], [category], and others, click here.
+      </Text>
+      <Text>Want to talk with someone?</Text>
+      <Text>{nurse.name}</Text>
+      <Text>
+        {nurse.title}
+        {"\n"}
+        {nurse.location}
+      </Text>
+      {buttons()}
+      <Image
+        style={styles.logo}
+        source={require("../assets/juno_black.png")}
+      ></Image>
+
       <Unorderedlist style={listBullet}>
-        <Text style={textLink} onPress={() => Linking.openURL('https://www.google.com/search?q=how+to+care+for+your+aging+parents&oq=how+to+care+for+your+aging+parents&aqs=chrome..69i57j46j0j0i22i30l4j0i390.4373j0j7&sourceid=chrome&ie=UTF-8')}>
+        <Text
+          style={textLink}
+          onPress={() =>
+            Linking.openURL(
+              "https://www.google.com/search?q=how+to+care+for+your+aging+parents&oq=how+to+care+for+your+aging+parents&aqs=chrome..69i57j46j0j0i22i30l4j0i390.4373j0j7&sourceid=chrome&ie=UTF-8"
+            )
+          }
+        >
           How to Care for Your Aging Parents
         </Text>
       </Unorderedlist>
-    </View>
+    </ScrollView>
   );
 };
 
-const title = {
-  color: "#FF266F",
-  padding: "40px",
-  fontFamily: "Arial", 
-  textAlign: "center", 
-};
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+  title: {
+    color: "#FF266F",
+    padding: "40px",
+    fontFamily: "Arial",
+    textAlign: "center",
+  },
+  text: {
+    fontSize: theme.textFontSize,
+    //fontWeight: "bold",
+    fontFamily: theme.textFont,
+    textAlign: "center",
+  },
+  primaryText: {
+    color: "black",
+  },
+  secondaryText: {
+    color: "white",
+  },
+  buttonText: {
+    fontFamily: "Georgia",
+    fontSize: 13,
+  },
+  primaryButtonText: {
+    color: "white",
+  },
+  secondaryButtonText: {
+    color: "black",
+  },
+  button: {
+    flex: 1,
+    margin: 16,
+    padding: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 6,
+    textTransform: "uppercase",
+    minHeight: 80,
+    minWidth: 80,
+  },
+  secondaryButton: {
+    borderColor: "black",
+    borderWidth: 2,
+  },
+  primaryButton: {
+    backgroundColor: theme.pink,
+  },
+  buttonContainer: {
+    justifyContent: "space-evenly",
+    flexDirection: "row",
+  },
+});
 const textLink = {
   color: "#0000FF",
   fontFamily: "Arial",
@@ -34,5 +157,5 @@ const textLink = {
 
 const listBullet = {
   marginHorizontal: 20,
-}
+};
 export default RecommendationScreen;
