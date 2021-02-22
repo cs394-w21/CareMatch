@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     fontFamily: theme.textFont2,
     fontSize: 13,
     fontStyle: "normal",
-    fontWeight: 400,
+    fontWeight: "400",
     lineHeight: 22,
     textAlign: "left"
   },
