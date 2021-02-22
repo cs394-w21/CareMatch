@@ -14,7 +14,6 @@ import ReactDOM from "react-dom";
 import Unorderedlist from "react-native-unordered-list";
 import SupportScoreChart from "../components/SupportScoreChart";
 import AreasOfConcern from "../components/AreasOfConcern";
-
 const supportScore = 65;
 const supportScoreDescription =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim";
@@ -50,6 +49,7 @@ const buttons = () => {
     </>
   );
 };
+
 const RecommendationScreen = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>

@@ -14,16 +14,8 @@ import { theme } from "../utils/theme";
 const db = firebase.database().ref("users");
 
 const newUser = {
-  activityLevel: "",
-  age: 0,
   firstName: "",
   lastName: "",
-  gender: "",
-  log: {
-    foods: {},
-  },
-  weight: 0,
-  weightUnit: "",
 };
 
 const SignUpScreen = ({ navigation }) => {

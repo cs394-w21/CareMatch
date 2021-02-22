@@ -11,30 +11,39 @@ import {
 import { theme } from "../utils/theme";
 
 const AreasOfConcern = ({ areas, name }) => {
-  let display = [];
-  Object.keys(areas).forEach((area) => {
+  const cardSection = Object.keys(areas).map(area => {
+    let sectionContent;
     if (area == "Hygeine") {
-      display.push(hygeine(areas[area], name));
+      sectionContent = hygeine(areas[area], name);
     } else if (area == "Managing Medication") {
-      display.push(managingMedication(areas[area], name));
+      sectionContent = managingMedication(areas[area], name);
     }
-  });
-
-  return <React.Fragment>{display}</React.Fragment>;
+    return (
+    <React.Fragment>
+        <View style = {styles.cardContainer}>
+          {circle(areas[area])} 
+          <View style = {styles.textContainer}>
+            <Text style = {styles.sectionHeader}>{area}</Text>
+            {sectionContent}
+          </View>
+        </View>
+      <View style={styles.line}/>
+    </React.Fragment>
+    )
+  })
+  return <React.Fragment>{cardSection}</React.Fragment>;
 };
 
 const hygeine = (score, name) => {
   return (
-    <React.Fragment>
-      {circle(score)}
       <Text key="Hygeine">
       A Hygeine score of {score} out of 100 means that {name} needs attention
       from a doctor quickly. It also means there are products and services that
       could make an impact.
-    </Text>
-    </React.Fragment>
+      </Text>
   );
 };
+
 const managingMedication = (score, name) => {
   return (
     <Text key="Managing Medication">
@@ -70,6 +79,12 @@ const styles = StyleSheet.create ({
     fontWeight: "bold",
     fontSize: 18,
   },
+  cardContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    paddingVertical: 16,
+  },
   yellowCircle: {
     backgroundColor: "#FFDC26",
   },
@@ -81,7 +96,24 @@ const styles = StyleSheet.create ({
   },
   redCircleText: {
     color: "white"
-  }
-})
+  },
+  textContainer: {
+    flex: 1,
+    marginLeft: 19,
+  },
+  line: {
+    height: 0,
+    color: theme.gray,
+    borderColor: theme.gray,
+    borderWidth: 0.25,
+    width: "100%",
+  },
+  sectionHeader: {
+    fontFamily: theme.textFont,
+    fontWeight: "bold",
+    fontSize: 13,
+    lineHeight: 18,
+    textAlign: "left",   
+}})
 
 export default AreasOfConcern;
