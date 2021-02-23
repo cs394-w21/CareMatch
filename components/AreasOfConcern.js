@@ -10,8 +10,8 @@ import {
 } from "react-native";
 import { theme } from "../utils/theme";
 
-const AreasOfConcern = ({ areas, name }) => {
-  const cardSection = Object.keys(areas).map(area => {
+const AreasOfConcern = ({ navigation, areas, name }) => {
+  const cardSection = Object.keys(areas).map((area) => {
     let sectionContent;
     if (area == "Hygeine") {
       sectionContent = hygeine(areas[area], name);
@@ -19,28 +19,40 @@ const AreasOfConcern = ({ areas, name }) => {
       sectionContent = managingMedication(areas[area], name);
     }
     return (
-    <React.Fragment>
-        <View style = {styles.cardContainer}>
-          {circle(areas[area])} 
-          <View style = {styles.textContainer}>
-            <Text style = {styles.sectionHeader}>{area}</Text>
+      <View key={area}>
+        <View style={styles.cardContainer}>
+          {circle(areas[area])}
+          <View style={styles.textContainer}>
+            <Text style={styles.subSectionHeader}>{area}</Text>
             {sectionContent}
+            <Text
+              style={[styles.expandSection, styles.sectionBody]}
+              onPress={() =>
+                navigation.navigate("CategoryRecommendations", {
+                  area: area,
+                  score: areas[area],
+                })
+              }
+            >
+              See Recommendations
+            </Text>
           </View>
         </View>
-      <View style={styles.line}/>
-    </React.Fragment>
-    )
-  })
+
+        <View style={styles.line} />
+      </View>
+    );
+  });
   return <React.Fragment>{cardSection}</React.Fragment>;
 };
 
 const hygeine = (score, name) => {
   return (
-      <Text key="Hygeine">
+    <Text key="Hygeine">
       A Hygeine score of {score} out of 100 means that {name} needs attention
       from a doctor quickly. It also means there are products and services that
       could make an impact.
-      </Text>
+    </Text>
   );
 };
 
@@ -54,24 +66,28 @@ const managingMedication = (score, name) => {
   );
 };
 
-const circle = (score) => {
-  const [circleColor, textColor] = score > 50 ? [styles.yellowCircle, styles.yellowCircleText] : [styles.redCircle, styles.redCircleText]
+export const circle = (score) => {
+  const [circleColor, textColor] =
+    score > 50
+      ? [styles.yellowCircle, styles.yellowCircleText]
+      : [styles.redCircle, styles.redCircleText];
   return (
     <View style={[styles.circle, circleColor]}>
-      <Text style={[styles.text, textColor]}>
-        {score}
-      </Text>
+      <Text style={[styles.text, textColor]}>{score}</Text>
     </View>
-  )
-}
+  );
+};
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   circle: {
     width: 46,
     height: 46,
     borderRadius: 46 / 2,
     alignItems: "center",
     justifyContent: "center",
+  },
+  expandSection: {
+    color: theme.pink,
   },
   text: {
     fontFamily: theme.textFont2,
@@ -81,8 +97,8 @@ const styles = StyleSheet.create ({
   },
   cardContainer: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    flexDirection: "row",
+    justifyContent: "space-evenly",
     paddingVertical: 16,
   },
   yellowCircle: {
@@ -95,7 +111,7 @@ const styles = StyleSheet.create ({
     backgroundColor: "#FF2626",
   },
   redCircleText: {
-    color: "white"
+    color: "white",
   },
   textContainer: {
     flex: 1,
@@ -108,12 +124,13 @@ const styles = StyleSheet.create ({
     borderWidth: 0.25,
     width: "100%",
   },
-  sectionHeader: {
+  subSectionHeader: {
     fontFamily: theme.textFont,
     fontWeight: "bold",
     fontSize: 13,
     lineHeight: 18,
-    textAlign: "left",   
-}})
+    textAlign: "left",
+  },
+});
 
 export default AreasOfConcern;

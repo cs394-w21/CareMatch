@@ -10,10 +10,9 @@ import {
   Image,
 } from "react-native";
 import { theme } from "../utils/theme";
-import ReactDOM from "react-dom";
-import Unorderedlist from "react-native-unordered-list";
-import SupportScoreChart from "../components/SupportScoreChart";
-import AreasOfConcern from "../components/AreasOfConcern";
+import { circle } from "../components/AreasOfConcern";
+import ProductsAndServices from "../components/ProductsAndServices";
+import Articles from "../components/Articles";
 import NurseContact from "../components/NurseContact";
 import TopOptions from "../components/TopOptions";
 
@@ -27,62 +26,61 @@ const nurse = {
   title: "Registered Nurse",
   location: "Chicago, IL",
 };
+const categoryScoreDescription =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim. ";
 
-const RecommendationScreen = ({ navigation }) => {
+const CategoryRecommendations = ({ route, navigation }) => {
+  //area = "Hygeine";
+  //score = 45;
+  const { area, score } = route.params;
+  const numProducts = 2;
+  const numServices = 1;
+  console.log(score);
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <TopOptions leftContent="Questionnaire" rightContent="Save Results" />
-      <SupportScoreChart percent={supportScore} />
+      <TopOptions
+        leftContent="Assessment"
+        leftAction={() => {
+          navigation.navigate("RecommendationScreen");
+        }}
+        rightContent="Save Results"
+      />
       <View style={styles.sectionContainer}>
-        <Text style={styles.sectionHeader}>
-          Support Score of {supportScore}
-        </Text>
-        <Text style={styles.sectionBody}>{supportScoreDescription}</Text>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            width: "100%",
+          }}
+        >
+          <Text style={styles.sectionHeader}>
+            {"\n\n" + name}'s {area} Score
+          </Text>
+          {circle(score)}
+        </View>
+        <Text style={styles.sectionBody}>{categoryScoreDescription}</Text>
         <Text style={[styles.expandSection, styles.sectionBody]}>
           Read More
         </Text>
       </View>
       <View style={styles.sectionContainer}>
-        <Text style={styles.sectionHeader}>Areas of Concern</Text>
-        <View style={styles.line} />
-        <AreasOfConcern navigation={navigation} areas={areas} name={name} />
+        <Text style={styles.subSectionHeader}>For {name}, we recommend...</Text>
+        <Text style={styles.sectionBody}>
+          {numProducts} product(s) and {numServices} service(s). {name}'s score
+          is also low enough that we think it would be useful to talk with one
+          of our registerd nurses.
+        </Text>
+        <Text style={[styles.expandSection, styles.sectionBody]}>
+          Contact Nurse
+        </Text>
       </View>
       <View style={styles.sectionContainer}>
-        <Text style={styles.sectionHeader}>
-          Read about other support categories
-        </Text>
-        <Text style={[styles.sectionBody]}>
-          {name} scored well in our other support categories, but you can read
-          more about [category], [category], and others, if you like.
-        </Text>
-        <Text
-          style={[
-            styles.expandSection,
-            styles.sectionBody,
-            { paddingBottom: 16 },
-          ]}
-        >
-          Learn about other categories
-        </Text>
-        <View style={styles.line} />
+        <ProductsAndServices area={area} />
+      </View>
+      <View style={styles.sectionContainer}>
+        <Articles area={area} />
       </View>
       <NurseContact />
-      <Image
-        style={styles.logo}
-        source={require("../assets/juno_black.png")}
-      ></Image>
-      <Unorderedlist style={listBullet}>
-        <Text
-          style={textLink}
-          onPress={() =>
-            Linking.openURL(
-              "https://www.google.com/search?q=how+to+care+for+your+aging+parents&oq=how+to+care+for+your+aging+parents&aqs=chrome..69i57j46j0j0i22i30l4j0i390.4373j0j7&sourceid=chrome&ie=UTF-8"
-            )
-          }
-        >
-          How to Care for Your Aging Parents
-        </Text>
-      </Unorderedlist>
     </ScrollView>
   );
 };
@@ -91,7 +89,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    margin: 20,
+    padding: 20,
+    backgroundColor: "white",
   },
   title: {
     color: "#FF266F",
@@ -148,6 +147,13 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     textAlign: "left",
   },
+  subSectionHeader: {
+    fontFamily: theme.textFont,
+    fontWeight: "bold",
+    fontSize: 13,
+    lineHeight: 18,
+    textAlign: "left",
+  },
   sectionContainer: {
     flex: 1,
     alignItems: "flex-start",
@@ -183,4 +189,4 @@ const textLink = {
 const listBullet = {
   marginHorizontal: 20,
 };
-export default RecommendationScreen;
+export default CategoryRecommendations;

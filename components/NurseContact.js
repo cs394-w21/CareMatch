@@ -14,9 +14,6 @@ import ReactDOM from "react-dom";
 import Unorderedlist from "react-native-unordered-list";
 import SupportScoreChart from "../components/SupportScoreChart";
 import AreasOfConcern from "../components/AreasOfConcern";
-import NurseContact from "../components/NurseContact";
-import TopOptions from "../components/TopOptions";
-
 const supportScore = 65;
 const supportScoreDescription =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim";
@@ -28,62 +25,44 @@ const nurse = {
   location: "Chicago, IL",
 };
 
-const RecommendationScreen = ({ navigation }) => {
+const buttons = () => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <TopOptions leftContent="Questionnaire" rightContent="Save Results" />
-      <SupportScoreChart percent={supportScore} />
+    <>
+      <TouchableOpacity
+        style={[styles.button, styles.primaryButton]}
+        onPress={() => {
+          return;
+        }}
+      >
+        <Text style={[styles.buttonText, styles.primaryButtonText]}>Call</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[styles.button, styles.secondaryButton]}
+        onPress={() => {
+          return;
+        }}
+      >
+        <Text style={[styles.buttonText, styles.secondaryButtonText]}>
+          Chat
+        </Text>
+      </TouchableOpacity>
+    </>
+  );
+};
+
+const NurseContact = ({ navigation }) => {
+  return (
+    <>
       <View style={styles.sectionContainer}>
-        <Text style={styles.sectionHeader}>
-          Support Score of {supportScore}
-        </Text>
-        <Text style={styles.sectionBody}>{supportScoreDescription}</Text>
-        <Text style={[styles.expandSection, styles.sectionBody]}>
-          Read More
-        </Text>
+        <Text style={styles.sectionHeader}>Want to talk with someone?</Text>
       </View>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionHeader}>Areas of Concern</Text>
-        <View style={styles.line} />
-        <AreasOfConcern navigation={navigation} areas={areas} name={name} />
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        <Text>{nurse.name}</Text>
+        <Text>{nurse.title}</Text>
+        <Text>{nurse.location}</Text>
+        {buttons()}
       </View>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionHeader}>
-          Read about other support categories
-        </Text>
-        <Text style={[styles.sectionBody]}>
-          {name} scored well in our other support categories, but you can read
-          more about [category], [category], and others, if you like.
-        </Text>
-        <Text
-          style={[
-            styles.expandSection,
-            styles.sectionBody,
-            { paddingBottom: 16 },
-          ]}
-        >
-          Learn about other categories
-        </Text>
-        <View style={styles.line} />
-      </View>
-      <NurseContact />
-      <Image
-        style={styles.logo}
-        source={require("../assets/juno_black.png")}
-      ></Image>
-      <Unorderedlist style={listBullet}>
-        <Text
-          style={textLink}
-          onPress={() =>
-            Linking.openURL(
-              "https://www.google.com/search?q=how+to+care+for+your+aging+parents&oq=how+to+care+for+your+aging+parents&aqs=chrome..69i57j46j0j0i22i30l4j0i390.4373j0j7&sourceid=chrome&ie=UTF-8"
-            )
-          }
-        >
-          How to Care for Your Aging Parents
-        </Text>
-      </Unorderedlist>
-    </ScrollView>
+    </>
   );
 };
 
@@ -183,4 +162,4 @@ const textLink = {
 const listBullet = {
   marginHorizontal: 20,
 };
-export default RecommendationScreen;
+export default NurseContact;
