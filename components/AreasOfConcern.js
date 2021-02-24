@@ -43,23 +43,11 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
 };
 
 const hygeine = (score, name) => {
-  return (
-    "A Hygeine score of " +
-    { score } +
-    " out of 100 means that " +
-    { name } +
-    " needs attention from a doctor quickly. It also means there are products and services that could make an impact."
-  );
+  return `A Hygeine score of ${score} out of 100 means that ${name} needs attention from a doctor quickly. It also means there are products and services that could make an impact.`;
 };
 
 const managingMedication = (score, name) => {
-  return (
-    "A Managing Medication score of " +
-    { score } +
-    " out of 100 means that " +
-    { name } +
-    " needs attention from a doctor quickly. It also means there are products and services that could make an impact."
-  );
+  return `A Managing Medication score of ${score} out of 100 means that ${name} needs attention from a doctor quickly. It also means there are products and services that could make an impact.`;
 };
 
 export const circle = (score) => {
