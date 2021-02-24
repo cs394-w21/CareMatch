@@ -50,7 +50,7 @@ const ProductsAndServices = ({ products }) => {
           <Text style={styles.productTitle}>{item.title}</Text>
           <Rating
             style={{ paddingVertical: 10 }}
-            startingValue={4}
+            startingValue={5}
             readonly={true}
             imageSize={11}
           />
