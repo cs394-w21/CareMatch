@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { firebase } from "../firebase";
 import { theme } from "../utils/theme";
+import Logo from "../components/Logo";
 
 const db = firebase.database().ref("users");
 
@@ -42,6 +43,7 @@ const SignUpScreen = ({ navigation }) => {
     const signUpAction = (email, userCredential, errorCode) => {
       if (errorCode != "success") return;
       const user = userCredential.user.uid;
+      console.log(user);
       db.update({
         [user]: {
           email: email,
@@ -66,7 +68,7 @@ const SignUpScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 40, marginBottom: 15 }}>Juno</Text>
+      <Logo />
       <TextInput
         value={firstName}
         onChangeText={(name) => setFirstName(name)}
@@ -100,7 +102,7 @@ const SignUpScreen = ({ navigation }) => {
         style={styles.input}
       />
       <TouchableOpacity onPress={onSignUp} style={styles.signupButton}>
-        <Text>SIGN UP</Text>
+        <Text style={{ color: "white" }}>REGISTER</Text>
       </TouchableOpacity>
       <Text>{signupError}</Text>
     </View>
@@ -115,7 +117,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   input: {
-    width: 200,
+    width: "70%",
+    maxWidth: 350,
     height: 44,
     padding: 10,
     borderWidth: 1,

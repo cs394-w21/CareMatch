@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: theme.textFontSize,
-    //fontWeight: "bold",
     fontFamily: theme.textFont,
     textAlign: "center",
   },
@@ -83,8 +82,9 @@ const styles = StyleSheet.create({
   secondaryText: {
     color: "white",
   },
+
   buttonText: {
-    fontFamily: "Georgia",
+    fontFamily: theme.textFont2,
     fontSize: 13,
   },
   primaryButtonText: {
@@ -92,6 +92,15 @@ const styles = StyleSheet.create({
   },
   secondaryButtonText: {
     color: "black",
+  },
+  secondaryButton: {
+    borderColor: "black",
+    borderWidth: 2,
+  },
+  primaryButton: {
+    backgroundColor: theme.pink,
+    borderColor: theme.pink,
+    borderWidth: 2,
   },
   button: {
     flex: 1,
@@ -101,15 +110,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 6,
     textTransform: "uppercase",
-    minHeight: 80,
-    minWidth: 80,
-  },
-  secondaryButton: {
-    borderColor: "black",
-    borderWidth: 2,
-  },
-  primaryButton: {
-    backgroundColor: theme.pink,
+    minHeight: 60,
+    minWidth: 60,
   },
   buttonContainer: {
     justifyContent: "space-evenly",

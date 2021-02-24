@@ -6,6 +6,7 @@ import SignUpScreen from "./screens/SignUpScreen";
 import RecommendationScreen from "./screens/RecommendationScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import CategoryRecommendations from "./screens/CategoryRecommendations";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -14,14 +15,20 @@ export default function App() {
       <StatusBar style="auto" />
       <Stack.Navigator>
         <Stack.Screen
+          component={WelcomeScreen}
+          name="WelcomeScreen"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           component={RecommendationScreen}
           name="RecommendationScreen"
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          component={WelcomeScreen}
-          name="WelcomeScreen"
+          component={CategoryRecommendations}
+          name="CategoryRecommendations"
           options={{ headerShown: false }}
+          initialParams={{ area: "Hygeine", score: "45" }}
         />
 
         <Stack.Screen
