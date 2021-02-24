@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-  Button,
-  Image,
   Text,
   TextInput,
   TouchableOpacity,
@@ -10,6 +8,7 @@ import {
 } from "react-native";
 import { firebase } from "../firebase";
 import { theme } from "../utils/theme";
+import Logo from "../components/Logo";
 
 const db = firebase.database().ref("users");
 
@@ -39,11 +38,7 @@ const LoginScreen = ({ navigation }) => {
   }
   return (
     <View style={styles.container}>
-      {/* <Image 
-        style={styles.logo}
-        source={require("../assets/juno.png")}>
-      </Image> */} 
-      <Text style={{ fontSize: 40, marginBottom: 15 }}>Juno</Text>
+      <Logo />
       <TextInput
         value={email}
         onChangeText={(email) => setEmail(email)}
@@ -91,16 +86,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "white",
   },
-  logo: {
-    marginBottom: 40,
-    overflow: "visible",
-    width: 112,
-    height: 49,
-    alignSelf: "center",
-  },
   input: {
-    width: 200,
-    height: 44,
+    minWidth: "70%",
+    minHeight: 44,
     padding: 10,
     borderWidth: 1,
     borderColor: "black",

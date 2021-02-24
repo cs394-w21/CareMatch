@@ -28,7 +28,9 @@ const TopOptions = ({
     >
       <TouchableOpacity style={{ flexDirection: "row" }} onPress={leftAction}>
         {leftIcon}
-        <Text style={styles.sectionBody}>{leftContent}</Text>
+        <Text style={[styles.sectionBody, { marginLeft: 8 }]}>
+          {leftContent}
+        </Text>
       </TouchableOpacity>
       <Text
         style={[styles.expandSection, styles.sectionBody]}

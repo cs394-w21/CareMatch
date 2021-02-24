@@ -42,6 +42,7 @@ const SignUpScreen = ({ navigation }) => {
     const signUpAction = (email, userCredential, errorCode) => {
       if (errorCode != "success") return;
       const user = userCredential.user.uid;
+      console.log(user);
       db.update({
         [user]: {
           email: email,
@@ -100,7 +101,7 @@ const SignUpScreen = ({ navigation }) => {
         style={styles.input}
       />
       <TouchableOpacity onPress={onSignUp} style={styles.signupButton}>
-        <Text>SIGN UP</Text>
+        <Text>REGISTER</Text>
       </TouchableOpacity>
       <Text>{signupError}</Text>
     </View>

@@ -13,32 +13,26 @@ import { theme } from "../utils/theme";
 import { circle } from "../components/AreasOfConcern";
 import ProductsAndServices from "../components/ProductsAndServices";
 import Articles from "../components/Articles";
-import NurseContact from "../components/NurseContact";
+import BottomCards from "../components/BottomCards";
 import TopOptions from "../components/TopOptions";
 
-const supportScore = 65;
-const supportScoreDescription =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim";
 const name = "Marv";
-const areas = { Hygeine: 45, "Managing Medication": 55 };
-const nurse = {
-  name: "Jane",
-  title: "Registered Nurse",
-  location: "Chicago, IL",
-};
 const categoryScoreDescription =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim. ";
 
 const CategoryRecommendations = ({ route, navigation }) => {
-  //area = "Hygeine";
-  //score = 45;
   const { area, score } = route.params;
   const numProducts = 2;
   const numServices = 1;
-  console.log(score);
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <TopOptions
+        leftIcon={
+          <Image
+            style={styles.icon}
+            source={require("../assets/chevron.png")}
+          ></Image>
+        }
         leftContent="Assessment"
         leftAction={() => {
           navigation.navigate("RecommendationScreen");
@@ -68,7 +62,7 @@ const CategoryRecommendations = ({ route, navigation }) => {
         <Text style={styles.sectionBody}>
           {numProducts} product(s) and {numServices} service(s). {name}'s score
           is also low enough that we think it would be useful to talk with one
-          of our registerd nurses.
+          of our registered nurses.
         </Text>
         <Text style={[styles.expandSection, styles.sectionBody]}>
           Contact Nurse
@@ -80,7 +74,7 @@ const CategoryRecommendations = ({ route, navigation }) => {
       <View style={styles.sectionContainer}>
         <Articles area={area} />
       </View>
-      <NurseContact />
+      <BottomCards />
     </ScrollView>
   );
 };
@@ -91,54 +85,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
     backgroundColor: "white",
+    flexGrow: 1,
   },
-  title: {
-    color: "#FF266F",
-    padding: "40px",
-    fontFamily: "Arial",
-    textAlign: "center",
-  },
-  text: {
-    fontSize: theme.textFontSize,
-    //fontWeight: "bold",
-    fontFamily: theme.textFont,
-    textAlign: "center",
-  },
-  primaryText: {
-    color: "black",
-  },
-  secondaryText: {
-    color: "white",
-  },
-  buttonText: {
-    fontFamily: "Georgia",
-    fontSize: 13,
-  },
-  primaryButtonText: {
-    color: "white",
-  },
-  secondaryButtonText: {
-    color: "black",
-  },
-  button: {
-    flex: 1,
-    margin: 5,
-    padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 6,
-    textTransform: "uppercase",
-  },
-  secondaryButton: {
-    borderColor: "black",
-    borderWidth: 2,
-  },
-  primaryButton: {
-    backgroundColor: theme.pink,
-  },
-  buttonContainer: {
-    justifyContent: "space-evenly",
-    flexDirection: "row",
+  icon: {
+    width: 12,
+    height: 21,
+    overflow: "visible",
   },
   sectionHeader: {
     fontFamily: theme.textFont,
@@ -180,13 +132,4 @@ const styles = StyleSheet.create({
     width: "100%",
   },
 });
-const textLink = {
-  color: "#0000FF",
-  fontFamily: "Arial",
-  textDecorationLine: "underline",
-};
-
-const listBullet = {
-  marginHorizontal: 20,
-};
 export default CategoryRecommendations;

@@ -82,13 +82,13 @@ const ProductsAndServices = ({ area }) => {
     );
   });
   return (
-    <>
+    <View>
       <Text style={styles.sectionHeader}>
         Recommended Products {"&"} Services
       </Text>
       <View style={styles.line} />
       {cards}
-    </>
+    </View>
   );
 };
 
