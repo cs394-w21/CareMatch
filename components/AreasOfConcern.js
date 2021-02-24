@@ -6,9 +6,9 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
   console.log(areas);
   const cardSection = Object.keys(areas).map((area) => {
     let sectionContent;
-    if (area == "Hygeine") {
-      sectionContent = hygeine(areas[area], name);
-    } else if (area == "Managing Medication") {
+    if (area == "Hygiene") {
+      sectionContent = hygiene(areas[area], name);
+    } else if (area == "Managing Medications") {
       sectionContent = managingMedication(areas[area], name);
     }
     console.log(sectionContent);
@@ -42,12 +42,12 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
   return <View>{cardSection}</View>;
 };
 
-const hygeine = (score, name) => {
-  return `A Hygeine score of ${score} out of 100 means that ${name} needs attention from a doctor quickly. It also means there are products and services that could make an impact.`;
+const hygiene = (score, name) => {
+  return `A Hygiene score of ${score} out of 100 means that ${name} needs attention from a doctor quickly. It also means there are products and services that could make an impact.`;
 };
 
 const managingMedication = (score, name) => {
-  return `A Managing Medication score of ${score} out of 100 means that ${name} needs attention from a doctor quickly. It also means there are products and services that could make an impact.`;
+  return `A Managing Medications score of ${score} out of 100 means that ${name} needs attention from a doctor quickly. It also means there are products and services that could make an impact.`;
 };
 
 export const circle = (score) => {

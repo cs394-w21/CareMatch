@@ -10,33 +10,18 @@ import {
 } from "react-native";
 import { theme } from "../utils/theme";
 
-const Articles = ({ area }) => {
-  const articles = {
-    0: {
-      title: "Article Title Goes Here",
-      previewText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore.",
-    },
-    1: {
-      title: "Article Title Goes Here",
-      previewText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore.",
-    },
-  };
-  const cards = Object.keys(articles).map((i) => {
-    const item = articles[i];
+const Articles = ({ articles }) => {
+  const cards = articles.map((item, i) => {
     return (
       <View style={styles.sectionContainer} key={i}>
         <Text style={styles.articleTitle}>{item.title}</Text>
         <Text style={[styles.sectionBody, { marginBottom: 13 }]}>
-          {item.previewText}
+          {item.blurb}
         </Text>
         <Text
           style={[styles.expandSection, styles.sectionBody]}
           onPress={() =>
-            Linking.openURL(
-              "https://www.google.com/search?q=how+to+care+for+your+aging+parents&oq=how+to+care+for+your+aging+parents&aqs=chrome..69i57j46j0j0i22i30l4j0i390.4373j0j7&sourceid=chrome&ie=UTF-8"
-            )
+            Linking.openURL(item.url)
           }
         >
           Go to Article

@@ -8,5 +8,52 @@
       "firstName" : "2",
       "lastName" : "2"
     }
+  },
+  "adl" : {
+    "Managing Medications" : {
+      "blurb" : "Taking medicine correctly is essential for treating health conditions and managing symptoms. It's easy for a mix up to occur but thankfully there are many systems and tips available for seniors who may need a little assistance.",
+      "articles" : [
+        {
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/",
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed."
+        }
+      ],
+      "products": [
+        {
+          "title" : "Hero Pill Dispenser",
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      ]  
+    },
+    "Hygiene" : {
+      "blurb" : "Personal hygiene often declines with age. This can be embarrassing for many seniors to talk about but it's very important as the bathroom is #1 place falls occur. Thankfully there are many options, both temporary as well as permanent, that can help with this activity around the home and help maintain independence.",
+      "articles" : [
+        {
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene",
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity."
+        },
+        {
+          "title" : "Personal Hygiene Checklist for the Elderly",
+          "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/",
+          "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly."
+        }
+      ],
+      "products": [
+        {
+          "title": "Design By Intent - Shower Bar",
+          "url": "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html",
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly."
+        },
+        {
+          "title" : "Roll on Lotion application", 
+          "url" : "https://www.caregiverproducts.com/roll-on-lotion-applicator.html",
+          "blurb" : "The Roll On Lotion Applicator is a long handle applicator designed to help users easily apply lotion to their back and other hard to reach areas."
+        }
+      ]
+      
+    }
   }
 }

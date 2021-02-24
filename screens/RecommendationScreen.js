@@ -17,7 +17,7 @@ const supportScore = 65;
 const supportScoreDescription =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim";
 const name = "Marv";
-const areas = { Hygeine: 45, "Managing Medication": 55 };
+const areas = { "Hygiene": 45, "Managing Medications": 55 };
 
 const RecommendationScreen = ({ navigation }) => {
   return (

@@ -15,15 +15,16 @@ export default function App() {
       <StatusBar style="auto" />
       <Stack.Navigator>
         <Stack.Screen
-          component={WelcomeScreen}
-          name="WelcomeScreen"
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
           component={RecommendationScreen}
           name="RecommendationScreen"
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          component={WelcomeScreen}
+          name="WelcomeScreen"
+          options={{ headerShown: false }}
+        />
+
         <Stack.Screen
           component={CategoryRecommendations}
           name="CategoryRecommendations"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -15,6 +15,7 @@ import ProductsAndServices from "../components/ProductsAndServices";
 import Articles from "../components/Articles";
 import BottomCards from "../components/BottomCards";
 import TopOptions from "../components/TopOptions";
+import { firebase } from "../firebase";
 
 const name = "Marv";
 const categoryScoreDescription =
@@ -22,8 +23,35 @@ const categoryScoreDescription =
 
 const CategoryRecommendations = ({ route, navigation }) => {
   const { area, score } = route.params;
-  const numProducts = 2;
-  const numServices = 1;
+  const [adl, setAdl] = useState(null);
+
+  useEffect(() => {
+    const db = firebase.database().ref("adl");
+    const handleData = (snap) => {
+      const adlDb = snap.val();
+      if (adlDb) {
+        console.log(adlDb);
+        console.log(area);
+        console.log(adlDb[area]);
+        setAdl(adlDb[area]);
+      }
+
+    };
+    db.on("value", handleData, (error) => console.log(error));
+    return () => {
+      db.off("value", handleData);
+    }
+  }, []);
+  if (adl === null) {
+    return (
+      <View>
+        <Text style={styles.Header}>Loading...</Text>
+      </View>
+    )
+  }
+  const numProducts = adl.products.length;
+  const numArticles = adl.articles.length;
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <TopOptions
@@ -52,7 +80,7 @@ const CategoryRecommendations = ({ route, navigation }) => {
           </Text>
           {circle(score)}
         </View>
-        <Text style={styles.sectionBody}>{categoryScoreDescription}</Text>
+        <Text style={styles.sectionBody}>{adl.blurb}</Text>
         <Text style={[styles.expandSection, styles.sectionBody]}>
           Read More
         </Text>
@@ -60,7 +88,7 @@ const CategoryRecommendations = ({ route, navigation }) => {
       <View style={styles.sectionContainer}>
         <Text style={styles.subSectionHeader}>For {name}, we recommend...</Text>
         <Text style={styles.sectionBody}>
-          {numProducts} product(s) and {numServices} service(s). {name}'s score
+          {numProducts} product(s) and {numArticles} article(s). {name}'s score
           is also low enough that we think it would be useful to talk with one
           of our registered nurses.
         </Text>
@@ -69,10 +97,10 @@ const CategoryRecommendations = ({ route, navigation }) => {
         </Text>
       </View>
       <View style={styles.sectionContainer}>
-        <ProductsAndServices area={area} />
+        <ProductsAndServices products={adl.products} />
       </View>
       <View style={styles.sectionContainer}>
-        <Articles area={area} />
+        <Articles articles={adl.articles} />
       </View>
       <BottomCards />
     </ScrollView>

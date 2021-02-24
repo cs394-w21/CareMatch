@@ -33,25 +33,8 @@ const ProductBadge = () => {
   );
 };
 
-const ProductsAndServices = ({ area }) => {
-  const productsAndServices = {
-    0: {
-      name: "[Product Name]",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Mpor incididunt.",
-      stars: 4,
-      images: [],
-    },
-    1: {
-      name: "[Product Name]",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Mpor incididunt.",
-      stars: 5,
-      images: [],
-    },
-  };
-  const cards = Object.keys(productsAndServices).map((i) => {
-    const item = productsAndServices[i];
+const ProductsAndServices = ({ products }) => {
+  const cards = products.map((item, i) => {
     return (
       <View style={styles.sectionContainer} key={i}>
         <ProductBadge />
@@ -64,17 +47,19 @@ const ProductsAndServices = ({ area }) => {
             alignItems: "left",
           }}
         >
-          <Text style={styles.productTitle}>{item.name}</Text>
+          <Text style={styles.productTitle}>{item.title}</Text>
           <Rating
             style={{ paddingVertical: 10 }}
-            startingValue={item.stars}
+            startingValue={4}
             readonly={true}
             imageSize={11}
           />
         </View>
-        <Text style={styles.sectionBody}>{item.description}</Text>
+        <Text style={styles.sectionBody}>{item.blurb}</Text>
         <Text
           style={[styles.expandSection, styles.sectionBody, { marginTop: 15 }]}
+          onPress={() =>
+            Linking.openURL(item.url)}
         >
           Read More
         </Text>
