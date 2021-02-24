@@ -64,14 +64,14 @@ const LoginScreen = ({ navigation }) => {
           style={styles.loginButton}
           onPress={onLogin}
         >
-          <Text>LOG IN</Text>
+          <Text style={{ color: "white" }}>LOG IN</Text>
         </TouchableOpacity>
         <Text>Don't have an account?</Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate("signup")}
+          onPress={() => navigation.navigate("SignUpScreen")}
           style={styles.signupButton}
         >
-          <Text>Register</Text>
+          <Text>REGISTER</Text>
         </TouchableOpacity>
       </View>
       <Text>{loginError}</Text>
@@ -87,7 +87,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   input: {
-    minWidth: "70%",
+    width: "70%",
+    maxWidth: 350,
     minHeight: 44,
     padding: 10,
     borderWidth: 1,
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
   signupButton: {
     padding: 10,
     borderWidth: 1,
-    borderColor: theme.pink,
+    borderColor: "black",
     marginHorizontal: 10,
     marginBottom: 10,
     borderRadius: 10,
