@@ -15,7 +15,7 @@ import BottomCards from "../components/BottomCards";
 
 const supportScore = 65;
 const supportScoreDescription =
-  "65 is a number bigger than 64 and less than 66.  65 is divisible by 13 and 5.  65 is 1 year and two months younger than the full retirement age in the US for those born in 1955.  After that the retirement age will gradually increase to 67 for those born in 1960 and after.";
+  "Based on the analysis, a support score of 65 means that Marv needs support and care. We recommend getting professional advice and consulting with a doctor. Marv’s hygiene and managing his medication are two areas where he needs the most support.";
 const name = "Marv";
 const areas = { "Hygiene": 45, "Managing Medications": 55 };
 
