@@ -61,7 +61,7 @@ const ProductsAndServices = ({ navigation, products, area, score }) => {
             })
           }
         >
-          Read More
+          Read More ›
         </Text>
       </View>
     );

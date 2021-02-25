@@ -57,7 +57,7 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
                 })
               }
             >
-              See Recommendations
+              See Resources ›
             </Text>
           </View>
         </View>

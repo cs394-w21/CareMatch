@@ -21,8 +21,18 @@ const areas = { Hygiene: 45, "Managing Medications": 55 };
 
 const RecommendationScreen = ({ navigation }) => {
   return (
-    <View style={{ height: "100%" }}>
-      <ScrollView contentContainerStyle={styles.container}>
+    <View
+      style={{
+        width: "100%",
+        height: "100%",
+        backgroundColor: "white",
+        alignItems: "center",
+      }}
+    >
+      <ScrollView
+        style={{ maxWidth: 600 }}
+        contentContainerStyle={styles.container}
+      >
         <TopOptions
           leftIcon={
             <Image

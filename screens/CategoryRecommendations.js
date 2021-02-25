@@ -49,62 +49,76 @@ const CategoryRecommendations = ({ route, navigation }) => {
   const numArticles = adl.articles.length;
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <TopOptions
-        leftIcon={
-          <Image
-            style={styles.icon}
-            source={require("../assets/chevron.png")}
-          ></Image>
-        }
-        leftContent="Assessment"
-        leftAction={() => {
-          navigation.navigate("RecommendationScreen");
-        }}
-        rightContent="Save Results"
-      />
-      <View style={styles.sectionContainer}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            width: "100%",
+    <View
+      style={{
+        width: "100%",
+        height: "100%",
+        backgroundColor: "white",
+        alignItems: "center",
+      }}
+    >
+      <ScrollView
+        style={{ maxWidth: 600 }}
+        contentContainerStyle={styles.container}
+      >
+        <TopOptions
+          leftIcon={
+            <Image
+              style={styles.icon}
+              source={require("../assets/chevron.png")}
+            ></Image>
+          }
+          leftContent="Assessment"
+          leftAction={() => {
+            navigation.navigate("RecommendationScreen");
           }}
-        >
-          <Text style={styles.sectionHeader}>
-            {"\n\n" + name}'s {area} Score
-          </Text>
-          {circle(score)}
-        </View>
-        <Text style={styles.sectionBody}>{adl.blurb}</Text>
-        <Text style={[styles.expandSection, styles.sectionBody]}>
-          Read More
-        </Text>
-      </View>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.subSectionHeader}>For {name}, we recommend...</Text>
-        <Text style={styles.sectionBody}>
-          {numProducts} product(s) and {numArticles} article(s). {name}'s score
-          is also low enough that we think it would be useful to talk with one
-          of our registered nurses.
-        </Text>
-        <Text style={[styles.expandSection, styles.sectionBody]}>
-          Contact Nurse
-        </Text>
-      </View>
-      <View style={styles.sectionContainer}>
-        <ProductsAndServices
-          navigation={navigation}
-          products={adl.products}
-          area={area}
-          score={score}
+          rightContent="Save Results"
         />
-      </View>
-      <View style={styles.sectionContainer}>
-        <Articles articles={adl.articles} />
-      </View>
-      <BottomCards navigation={navigation} />
-    </ScrollView>
+        <View style={styles.sectionContainer}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
+            <Text style={styles.sectionHeader}>
+              {"\n\n" + name}'s {area} Score
+            </Text>
+            {circle(score)}
+          </View>
+          <Text style={styles.sectionBody}>{adl.blurb}</Text>
+          <Text style={[styles.expandSection, styles.sectionBody]}>
+            Read More
+          </Text>
+        </View>
+        <View style={styles.sectionContainer}>
+          <Text style={styles.subSectionHeader}>
+            For {name}, we recommend...
+          </Text>
+          <Text style={styles.sectionBody}>
+            {numProducts} product(s) and {numArticles} article(s). {name}'s
+            score is also low enough that we think it would be useful to talk
+            with one of our registered nurses.
+          </Text>
+          <Text style={[styles.expandSection, styles.sectionBody]}>
+            Contact Nurse
+          </Text>
+        </View>
+        <View style={styles.sectionContainer}>
+          <ProductsAndServices
+            navigation={navigation}
+            products={adl.products}
+            area={area}
+            score={score}
+          />
+        </View>
+        <View style={styles.sectionContainer}>
+          <Articles articles={adl.articles} />
+        </View>
+        <BottomCards navigation={navigation} />
+      </ScrollView>
+    </View>
   );
 };
 

@@ -20,11 +20,9 @@ const Articles = ({ articles }) => {
         </Text>
         <Text
           style={[styles.expandSection, styles.sectionBody]}
-          onPress={() =>
-            Linking.openURL(item.url)
-          }
+          onPress={() => Linking.openURL(item.url)}
         >
-          Go to Article
+          Go to Article Website ›
         </Text>
       </View>
     );

@@ -19,47 +19,59 @@ const SingleProductScreen = ({ route, navigation }) => {
   const { area, item, score } = route.params;
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <TopOptions
-        leftIcon={
-          <Image
-            style={styles.icon}
-            source={require("../assets/chevron.png")}
-          ></Image>
-        }
-        leftContent={area + " Recommendations"}
-        leftAction={() => {
-          navigation.navigate("CategoryRecommendations", {
-            area: area,
-            score: score,
-          });
-        }}
-        rightContent="Save to List"
-      />
-      <View style={styles.sectionContainer}>
-        <ProductBadge />
-        <Text style={styles.productTitle}>{item.title}</Text>
-        <Rating
-          style={{ paddingVertical: 10 }}
-          startingValue={5}
-          readonly={true}
-          imageSize={11}
+    <View
+      style={{
+        width: "100%",
+        height: "100%",
+        backgroundColor: "white",
+        alignItems: "center",
+      }}
+    >
+      <ScrollView
+        style={{ maxWidth: 600 }}
+        contentContainerStyle={styles.container}
+      >
+        <TopOptions
+          leftIcon={
+            <Image
+              style={styles.icon}
+              source={require("../assets/chevron.png")}
+            ></Image>
+          }
+          leftContent={area + " Recommendations"}
+          leftAction={() => {
+            navigation.navigate("CategoryRecommendations", {
+              area: area,
+              score: score,
+            });
+          }}
+          rightContent="Save to List"
         />
-        <Text style={styles.sectionBody}>{item.blurb}</Text>
-        {item.image ? (
-          <Image style={styles.image} source={{ uri: item.image }}></Image>
-        ) : null}
-        <TouchableOpacity
-          style={[styles.button, styles.primaryButton]}
-          onPress={() => Linking.openURL(item.url)}
-        >
-          <Text style={[styles.buttonText, styles.primaryButtonText]}>
-            Go to Product Website
-          </Text>
-        </TouchableOpacity>
-      </View>
-      <BottomCards navigation={navigation} />
-    </ScrollView>
+        <View style={styles.sectionContainer}>
+          <ProductBadge />
+          <Text style={styles.productTitle}>{item.title}</Text>
+          <Rating
+            style={{ paddingVertical: 10 }}
+            startingValue={5}
+            readonly={true}
+            imageSize={11}
+          />
+          <Text style={styles.sectionBody}>{item.blurb}</Text>
+          {item.image ? (
+            <Image style={styles.image} source={{ uri: item.image }}></Image>
+          ) : null}
+          <TouchableOpacity
+            style={[styles.button, styles.primaryButton]}
+            onPress={() => Linking.openURL(item.url)}
+          >
+            <Text style={[styles.buttonText, styles.primaryButtonText]}>
+              Go to Product Website
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <BottomCards navigation={navigation} />
+      </ScrollView>
+    </View>
   );
 };
 
