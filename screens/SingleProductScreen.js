@@ -58,7 +58,7 @@ const SingleProductScreen = ({ route, navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
-      <BottomCards />
+      <BottomCards navigation={navigation} />
     </ScrollView>
   );
 };

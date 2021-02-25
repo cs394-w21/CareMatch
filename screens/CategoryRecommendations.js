@@ -30,9 +30,6 @@ const CategoryRecommendations = ({ route, navigation }) => {
     const handleData = (snap) => {
       const adlDb = snap.val();
       if (adlDb) {
-        console.log(adlDb);
-        console.log(area);
-        console.log(adlDb[area]);
         setAdl(adlDb[area]);
       }
     };
@@ -106,7 +103,7 @@ const CategoryRecommendations = ({ route, navigation }) => {
       <View style={styles.sectionContainer}>
         <Articles articles={adl.articles} />
       </View>
-      <BottomCards />
+      <BottomCards navigation={navigation} />
     </ScrollView>
   );
 };

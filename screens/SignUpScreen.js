@@ -43,7 +43,6 @@ const SignUpScreen = ({ navigation }) => {
     const signUpAction = (email, userCredential, errorCode) => {
       if (errorCode != "success") return;
       const user = userCredential.user.uid;
-      console.log(user);
       db.update({
         [user]: {
           email: email,

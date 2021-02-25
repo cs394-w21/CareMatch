@@ -4,7 +4,6 @@ import { theme } from "../utils/theme";
 import Carousel from "../components/WelcomeCarousel";
 
 const Buttons = ({ showButtons, onGetStarted, onLogin, onSignUp }) => {
-  console.log(showButtons);
   if (showButtons) {
     return (
       <View style={styles.buttonContainer}>

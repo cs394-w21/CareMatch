@@ -17,7 +17,7 @@ const supportScore = 65;
 const supportScoreDescription =
   "Based on the analysis, a support score of 65 means that Marv needs support and care. We recommend getting professional advice and consulting with a doctor. Marv’s hygiene and managing his medication are two areas where he needs the most support.";
 const name = "Marv";
-const areas = { "Hygiene": 45, "Managing Medications": 55 };
+const areas = { Hygiene: 45, "Managing Medications": 55 };
 
 const RecommendationScreen = ({ navigation }) => {
   return (
@@ -67,7 +67,7 @@ const RecommendationScreen = ({ navigation }) => {
           </Text>
           <View style={styles.line} />
         </View>
-        <BottomCards />
+        <BottomCards navigation={navigation} />
       </ScrollView>
     </View>
   );

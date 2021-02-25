@@ -8,7 +8,6 @@ import Swiper from "react-native-web-swiper";
 const Carousel = ({ setShowButtons }) => {
   const [currIndex, setCurrIndex] = useState(0);
   const onIndexChanged = (index) => {
-    console.log(index);
     setCurrIndex(index);
     index === 4 ? setShowButtons(false) : setShowButtons(true);
   };

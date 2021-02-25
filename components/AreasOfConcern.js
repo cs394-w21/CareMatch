@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
 
 const AreasOfConcern = ({ navigation, areas, name }) => {
-  console.log(areas);
   const cardSection = Object.keys(areas).map((area) => {
     let sectionContent;
     if (area == "Hygiene") {
@@ -11,7 +10,6 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
     } else if (area == "Managing Medications") {
       sectionContent = managingMedication(areas[area], name);
     }
-    console.log(sectionContent);
     return (
       <View key={area}>
         <View style={styles.cardContainer}>
