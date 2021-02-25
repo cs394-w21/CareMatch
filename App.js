@@ -7,6 +7,7 @@ import RecommendationScreen from "./screens/RecommendationScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import CategoryRecommendations from "./screens/CategoryRecommendations";
+import SingleProductScreen from "./screens/SingleProductScreen";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -29,6 +30,11 @@ export default function App() {
           name="CategoryRecommendations"
           options={{ headerShown: false }}
           initialParams={{ area: "Hygeine", score: "45" }}
+        />
+        <Stack.Screen
+          component={SingleProductScreen}
+          name="SingleProductScreen"
+          options={{ headerShown: false }}
         />
 
         <Stack.Screen

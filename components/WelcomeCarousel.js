@@ -5,7 +5,6 @@ import Swiper from "react-native-web-swiper";
 //import juno from '../assets/juno.svg';
 //import {Svg} from 'react-native-svg';
 
-
 const Carousel = ({ setShowButtons }) => {
   const [currIndex, setCurrIndex] = useState(0);
   const onIndexChanged = (index) => {
@@ -19,8 +18,12 @@ const Carousel = ({ setShowButtons }) => {
         onIndexChanged={onIndexChanged}
         minDistanceForAction={0.03} // only 3% of distance needed to qualify as a swipe
         controlsProps={{
-          nextPos: false, // hide next button
-          prevPos: false, // hide back button
+          nextPos: "right",
+          prevPos: "left",
+          nextTitle: "›",
+          prevTitle: "‹",
+          prevTitleStyle: { color: "gray", fontSize: 30 },
+          nextTitleStyle: { color: "gray", fontSize: 30 },
           dotsTouchable: true,
           DotComponent: ({ index, isActive, onPress }) => {
             let color = "black";
@@ -67,10 +70,10 @@ const Carousel = ({ setShowButtons }) => {
           >
             <View style={[styles.firstSlideContainer]}>
               <View style={{ maxWidth: "75%" }}>
-                <Image 
+                <Image
                   style={styles.logo}
-                  source={require("../assets/juno.png")}>
-                </Image>
+                  source={require("../assets/juno.png")}
+                ></Image>
                 <Text style={[styles.text, styles.secondaryText]}>
                   Everyone gets older, but when a family member of your own
                   needs more support as they age, it can be difficult to engage.
@@ -187,7 +190,7 @@ const styles = StyleSheet.create({
     //fontWeight: "bold",
     fontFamily: "Helvetica Neue",
     textAlign: "center",
-    textAlignVertical: "top"
+    textAlignVertical: "top",
   },
   primaryText: {
     color: "black",

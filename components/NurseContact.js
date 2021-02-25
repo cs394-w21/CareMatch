@@ -9,7 +9,7 @@ const nurse = {
 
 const buttons = () => {
   return (
-    <View>
+    <View style={{ marginTop: 30 }}>
       <TouchableOpacity
         style={[styles.button, styles.primaryButton]}
         onPress={() => {
@@ -34,14 +34,18 @@ const buttons = () => {
 
 const NurseContact = ({ navigation }) => {
   return (
-    <View>
+    <View style={{ marginBottom: 30 }}>
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionHeader}>Want to talk with someone?</Text>
       </View>
       <View style={{ alignItems: "center", justifyContent: "center" }}>
-        <Text>{nurse.name}</Text>
-        <Text>{nurse.title}</Text>
-        <Text>{nurse.location}</Text>
+        <Image
+          style={styles.image}
+          source={require("../assets/nurse_jane.png")}
+        ></Image>
+        <Text style={styles.text}>{nurse.name}</Text>
+        <Text style={styles.text}>{nurse.title}</Text>
+        <Text style={styles.text}>{nurse.location}</Text>
         {buttons()}
       </View>
     </View>
@@ -52,6 +56,20 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: theme.textFont2,
     fontSize: 13,
+  },
+  image: {
+    width: 128,
+    height: 128,
+    borderRadius: 128 / 2,
+    overflow: "hidden",
+    margin: 30,
+  },
+  text: {
+    fontFamily: theme.textFont2,
+    fontWeight: "900",
+    fontSize: 13,
+    lineHeight: 15,
+    textTransform: "uppercase",
   },
   primaryButtonText: {
     color: "white",

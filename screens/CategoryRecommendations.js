@@ -35,19 +35,18 @@ const CategoryRecommendations = ({ route, navigation }) => {
         console.log(adlDb[area]);
         setAdl(adlDb[area]);
       }
-
     };
     db.on("value", handleData, (error) => console.log(error));
     return () => {
       db.off("value", handleData);
-    }
+    };
   }, []);
   if (adl === null) {
     return (
       <View>
         <Text style={styles.Header}>Loading...</Text>
       </View>
-    )
+    );
   }
   const numProducts = adl.products.length;
   const numArticles = adl.articles.length;
@@ -97,7 +96,12 @@ const CategoryRecommendations = ({ route, navigation }) => {
         </Text>
       </View>
       <View style={styles.sectionContainer}>
-        <ProductsAndServices products={adl.products} />
+        <ProductsAndServices
+          navigation={navigation}
+          products={adl.products}
+          area={area}
+          score={score}
+        />
       </View>
       <View style={styles.sectionContainer}>
         <Articles articles={adl.articles} />

@@ -1,18 +1,9 @@
-import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Header,
-  Linking,
-  ScrollView,
-} from "react-native";
+import React from "react";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { theme } from "../utils/theme";
-import { Rating, AirbnbRating } from "react-native-ratings";
-import { ThemeProvider } from "@react-navigation/native";
+import { Rating } from "react-native-ratings";
 
-const ProductBadge = () => {
+export const ProductBadge = () => {
   return (
     <View style={{ backgroundColor: theme.pink, borderRadius: 9 }}>
       <Text
@@ -33,7 +24,7 @@ const ProductBadge = () => {
   );
 };
 
-const ProductsAndServices = ({ products }) => {
+const ProductsAndServices = ({ navigation, products, area, score }) => {
   const cards = products.map((item, i) => {
     return (
       <View style={styles.sectionContainer} key={i}>
@@ -56,10 +47,19 @@ const ProductsAndServices = ({ products }) => {
           />
         </View>
         <Text style={styles.sectionBody}>{item.blurb}</Text>
+        {item.image ? (
+          <Image style={styles.image} source={{ uri: item.image }}></Image>
+        ) : null}
+
         <Text
           style={[styles.expandSection, styles.sectionBody, { marginTop: 15 }]}
           onPress={() =>
-            Linking.openURL(item.url)}
+            navigation.navigate("SingleProductScreen", {
+              area: area,
+              item: item,
+              score: score,
+            })
+          }
         >
           Read More
         </Text>
@@ -84,6 +84,10 @@ const styles = StyleSheet.create({
     borderRadius: 46 / 2,
     alignItems: "center",
     justifyContent: "center",
+  },
+  image: {
+    width: 65,
+    height: 65,
   },
   expandSection: {
     color: theme.pink,
