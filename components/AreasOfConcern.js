@@ -1,8 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
+import { firebase } from "../firebase";
 
 const AreasOfConcern = ({ navigation, areas, name }) => {
+  const [adl, setAdl] = useState(null);
+
+  useEffect(() => {
+    const db = firebase.database().ref("adl");
+    const handleData = (snap) => {
+      const adlDb = snap.val();
+      if (adlDb) {
+        setAdl(adlDb);
+      }
+    };
+    db.on("value", handleData, (error) => console.log(error));
+    return () => {
+      db.off("value", handleData);
+    };
+  }, []);
+  if (adl === null) {
+    return (
+      <View>
+        <Text style={styles.Header}>Loading...</Text>
+      </View>
+    );
+  }
+
   const cardSection = Object.keys(areas).map((area) => {
     let sectionContent;
     if (area == "Hygiene") {
@@ -10,6 +34,8 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
     } else if (area == "Managing Medications") {
       sectionContent = managingMedication(areas[area], name);
     }
+    let numProducts = adl[area].products.length;
+    let numArticles = adl[area].articles.length;
     return (
       <View key={area}>
         <View style={styles.cardContainer}>
@@ -18,6 +44,9 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
             <Text style={styles.subSectionHeader}>{area}</Text>
             <Text style={styles.text} key={area}>
               {sectionContent}
+            </Text>
+            <Text style={styles.text} key={area}>
+              {numProducts} product(s) | {numArticles} article(s)
             </Text>
             <Text
               style={[styles.expandSection, styles.sectionBody]}
