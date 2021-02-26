@@ -58,7 +58,11 @@ const SingleProductScreen = ({ route, navigation }) => {
           />
           <Text style={styles.sectionBody}>{item.blurb}</Text>
           {item.image ? (
-            <Image style={styles.image} source={{ uri: item.image }}></Image>
+            <Image
+              style={styles.image}
+              source={{ uri: item.image }}
+              resizeMethod="contain"
+            ></Image>
           ) : null}
           <TouchableOpacity
             style={[styles.button, styles.primaryButton]}
@@ -69,7 +73,9 @@ const SingleProductScreen = ({ route, navigation }) => {
             </Text>
           </TouchableOpacity>
         </View>
-        <BottomCards navigation={navigation} />
+        <View style={styles.sectionContainer}>
+          <BottomCards navigation={navigation} />
+        </View>
       </ScrollView>
     </View>
   );
@@ -164,6 +170,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     minHeight: 60,
     minWidth: 60,
+    maxWidth: 312,
     width: "100%",
   },
 });

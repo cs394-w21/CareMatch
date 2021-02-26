@@ -37,7 +37,7 @@ const LoginScreen = ({ navigation }) => {
       .then(loginAction);
   }
   return (
-    <View style={styles.container}>
+    <View style={styles.container} accessibilityRole="form">
       <Logo />
       <TextInput
         value={email}

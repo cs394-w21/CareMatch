@@ -116,7 +116,9 @@ const CategoryRecommendations = ({ route, navigation }) => {
         <View style={styles.sectionContainer}>
           <Articles articles={adl.articles} />
         </View>
-        <BottomCards navigation={navigation} />
+        <View style={styles.sectionContainer}>
+          <BottomCards navigation={navigation} />
+        </View>
       </ScrollView>
     </View>
   );

@@ -77,7 +77,9 @@ const RecommendationScreen = ({ navigation }) => {
           </Text>
           <View style={styles.line} />
         </View>
-        <BottomCards navigation={navigation} />
+        <View style={styles.sectionContainer}>
+          <BottomCards navigation={navigation} />
+        </View>
       </ScrollView>
     </View>
   );

@@ -42,10 +42,8 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
           {circle(areas[area])}
           <View style={styles.textContainer}>
             <Text style={styles.subSectionHeader}>{area}</Text>
-            <Text style={styles.text} key={area}>
-              {sectionContent}
-            </Text>
-            <Text style={styles.text} key={area}>
+            <Text style={styles.text}>{sectionContent}</Text>
+            <Text style={styles.text}>
               {numProducts} product(s) | {numArticles} article(s)
             </Text>
             <Text

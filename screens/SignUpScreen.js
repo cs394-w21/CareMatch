@@ -66,7 +66,7 @@ const SignUpScreen = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} accessibilityRole="form">
       <Logo />
       <TextInput
         value={firstName}
