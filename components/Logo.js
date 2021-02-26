@@ -13,8 +13,9 @@ const Logo = () => {
 const styles = StyleSheet.create({
   logo: {
     marginBottom: 40,
+    resizeMode: "contain",
     overflow: "visible",
-    width: 112,
+    width: 120,
     height: 49,
     alignSelf: "center",
   },
