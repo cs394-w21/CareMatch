@@ -8,6 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import CategoryRecommendations from "./screens/CategoryRecommendations";
 import SingleProductScreen from "./screens/SingleProductScreen";
+import Questionnaire from "./screens/Questionnaire";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -16,36 +17,41 @@ export default function App() {
       <StatusBar style="auto" />
       <Stack.Navigator>
         <Stack.Screen
+          component={Questionnaire}
+          name="Questionnaire"
+          options={{ headerShown: false, title: "Juno" }}
+        />
+        <Stack.Screen
           component={WelcomeScreen}
           name="WelcomeScreen"
-          options={{ headerShown: false }}
+          options={{ headerShown: false, title: "Juno" }}
         />
         <Stack.Screen
           component={RecommendationScreen}
           name="RecommendationScreen"
-          options={{ headerShown: false }}
+          options={{ headerShown: false, title: "Juno" }}
         />
         <Stack.Screen
           component={CategoryRecommendations}
           name="CategoryRecommendations"
-          options={{ headerShown: false }}
+          options={{ headerShown: false, title: "Juno" }}
           initialParams={{ area: "Hygeine", score: "45" }}
         />
         <Stack.Screen
           component={SingleProductScreen}
           name="SingleProductScreen"
-          options={{ headerShown: false }}
+          options={{ headerShown: false, title: "Juno" }}
         />
 
         <Stack.Screen
           component={LoginScreen}
           name="LoginScreen"
-          options={{ title: "Log In" }}
+          options={{ title: "Log In to Juno" }}
         />
         <Stack.Screen
           component={SignUpScreen}
           name="SignUpScreen"
-          options={{ title: "Register" }}
+          options={{ title: "Register for Juno" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
