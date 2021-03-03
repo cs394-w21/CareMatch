@@ -77,6 +77,7 @@ const Survey = ({ navigation }) => {
       totalScore += Number(categoryScores[category]);
     }
     totalScore = totalScore / Object.keys(categoryScores).length;
+    totalScore = Math.trunc(totalScore);
     const results = {
       [name]: {
         categoryScores: categoryScores,
