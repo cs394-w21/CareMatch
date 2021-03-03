@@ -52,6 +52,7 @@ const AreasOfConcern = ({ navigation, areas, name }) => {
                 navigation.navigate("CategoryRecommendations", {
                   area: area,
                   score: areas[area],
+                  name: name,
                 })
               }
             >

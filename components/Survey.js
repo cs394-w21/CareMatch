@@ -50,17 +50,11 @@ const Survey = ({ navigation }) => {
       setAuth(auth);
     });
   }, []);
-  if (firebase.auth().currentUser) {
-    console.log(auth.uid);
-  }
 
   useEffect(() => {
     const handleData = (snap) => {
       const users = snap.val();
-      console.log("users", users);
       if (users && auth) {
-        console.log("users", users);
-        console.log("auth.uid", auth.uid);
         setUser(users[auth.uid]);
       }
     };
@@ -81,10 +75,8 @@ const Survey = ({ navigation }) => {
     let totalScore = 0;
     for (const category in categoryScores) {
       totalScore += Number(categoryScores[category]);
-      console.log(totalScore);
     }
     totalScore = totalScore / Object.keys(categoryScores).length;
-    console.log(totalScore);
     const results = {
       [name]: {
         categoryScores: categoryScores,
@@ -97,14 +89,10 @@ const Survey = ({ navigation }) => {
     db.update({
       [uid]: { ...user, seniors: { ...user["seniors"], ...results } },
     });
-    navigation.navigate("RecommendationScreen");
+    navigation.navigate("RecommendationScreen", {
+      name: name,
+    });
   }
-  useEffect(() => {
-    console.log(categoryScores);
-  }, [categoryScores]);
-  useEffect(() => {
-    console.log("user", user);
-  }, [user]);
 
   return (
     <View>
@@ -156,7 +144,6 @@ const MCQ = ({ setCategoryScores, categoryScores }) => {
     );
   }
 
-  console.log(Object.keys(adls));
   return (
     <View>
       {Object.keys(adls).map((adl) => {

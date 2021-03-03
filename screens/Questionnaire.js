@@ -66,6 +66,19 @@ const Questionnaire = ({ navigation }) => {
 
         <View style={styles.line} />
         <View style={styles.sectionContainer}>
+          <Text style={[styles.expandSection, styles.sectionHeader]}>
+            More categories coming soon!
+          </Text>
+          <Text style={[styles.sectionBody]}>
+            Hygiene, managing medications, and walking are the three categories
+            we can advise on at this time, but look out for more in the future.
+            Immediate next categories include transferring, climbing staris,
+            easting, and shopping. Soon, we will host all categories of support
+            analysis from the healthcare industry standard Activities of Daily
+            Living checklist.
+          </Text>
+        </View>
+        <View style={styles.sectionContainer}>
           <BottomCards navigation={navigation} />
         </View>
       </ScrollView>

@@ -17,12 +17,8 @@ import BottomCards from "../components/BottomCards";
 import TopOptions from "../components/TopOptions";
 import { firebase } from "../firebase";
 
-const name = "Marv";
-const categoryScoreDescription =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vincididunt ut labore et dolore magna aliqua. Ut enim. ";
-
 const CategoryRecommendations = ({ route, navigation }) => {
-  const { area, score } = route.params;
+  const { area, score, name } = route.params;
   const [adl, setAdl] = useState(null);
 
   useEffect(() => {

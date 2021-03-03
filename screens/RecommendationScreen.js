@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -12,14 +12,46 @@ import SupportScoreChart from "../components/SupportScoreChart";
 import AreasOfConcern from "../components/AreasOfConcern";
 import TopOptions from "../components/TopOptions";
 import BottomCards from "../components/BottomCards";
+import { firebase } from "../firebase";
 
-const supportScore = 65;
-const supportScoreDescription =
-  "Based on the analysis, a support score of 65 means that Marv needs support and care. We recommend getting professional advice and consulting with a doctor. Marv’s hygiene and managing his medication are two areas where he needs the most support.";
-const name = "Marv";
-const areas = { Hygiene: 45, "Managing Medications": 55 };
+const RecommendationScreen = ({ route, navigation }) => {
+  const { name } = route.params;
+  const [auth, setAuth] = useState();
+  const [user, setUser] = useState();
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((auth) => {
+      setAuth(auth);
+    });
+  }, []);
 
-const RecommendationScreen = ({ navigation }) => {
+  useEffect(() => {
+    const db = firebase.database().ref("users");
+    const handleData = (snap) => {
+      const users = snap.val();
+      if (users && auth) {
+        setUser(users[auth.uid]);
+      }
+    };
+    db.on("value", handleData, (error) => console.log(error));
+    return () => {
+      db.off("value", handleData);
+    };
+  }, [auth]);
+  if (user == null) {
+    return (
+      <View>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+  const categoryScores = user["seniors"][name]["categoryScores"];
+  const supportScore = user["seniors"][name]["totalScore"];
+  const areas = Object.fromEntries(
+    Object.entries(categoryScores).filter(([k, v]) => v < 100)
+  );
+  const goodAreas = Object.fromEntries(
+    Object.entries(categoryScores).filter(([k, v]) => v == 100)
+  );
   return (
     <View
       style={{
@@ -48,7 +80,21 @@ const RecommendationScreen = ({ navigation }) => {
           <Text style={styles.sectionHeader}>
             Support Score of {supportScore}
           </Text>
-          <Text style={styles.sectionBody}>{supportScoreDescription}</Text>
+          <Text style={styles.sectionBody}>
+            Based on the analysis, a support score of {supportScore} means that{" "}
+            {name} needs support and care. We recommend getting professional
+            advice and consulting with a doctor.{" "}
+          </Text>
+
+          {Object.keys(areas).length > 0 ? (
+            <Text style={styles.sectionBody}>
+              The area(s) where {name} needs the most support is/are:{" "}
+              {Object.keys(areas).join(", ")}
+            </Text>
+          ) : (
+            ""
+          )}
+
           <Text style={[styles.expandSection, styles.sectionBody]}>
             Read More
           </Text>
@@ -58,25 +104,31 @@ const RecommendationScreen = ({ navigation }) => {
           <View style={styles.line} />
           <AreasOfConcern navigation={navigation} areas={areas} name={name} />
         </View>
-        <View style={styles.sectionContainer}>
-          <Text style={styles.sectionHeader}>
-            Read about other support categories
-          </Text>
-          <Text style={[styles.sectionBody]}>
-            {name} scored well in our other support categories, but you can read
-            more about [category], [category], and others, if you like.
-          </Text>
-          <Text
-            style={[
-              styles.expandSection,
-              styles.sectionBody,
-              { paddingBottom: 16 },
-            ]}
-          >
-            Learn about other categories
-          </Text>
-          <View style={styles.line} />
-        </View>
+        {Object.keys(goodAreas).length > 0 ? (
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionHeader}>
+              Read about other support categories
+            </Text>
+
+            <Text style={[styles.sectionBody]}>
+              {name} scored well in our other support categories, but if you
+              like, you can read more about: {Object.keys(goodAreas).join(", ")}
+            </Text>
+            <Text
+              style={[
+                styles.expandSection,
+                styles.sectionBody,
+                { paddingBottom: 16 },
+              ]}
+            >
+              Learn about other categories
+            </Text>
+            <View style={styles.line} />
+          </View>
+        ) : (
+          <View />
+        )}
+
         <View style={styles.sectionContainer}>
           <BottomCards navigation={navigation} />
         </View>

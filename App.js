@@ -17,13 +17,13 @@ export default function App() {
       <StatusBar style="auto" />
       <Stack.Navigator>
         <Stack.Screen
-          component={Questionnaire}
-          name="Questionnaire"
+          component={WelcomeScreen}
+          name="WelcomeScreen"
           options={{ headerShown: false, title: "Juno" }}
         />
         <Stack.Screen
-          component={WelcomeScreen}
-          name="WelcomeScreen"
+          component={Questionnaire}
+          name="Questionnaire"
           options={{ headerShown: false, title: "Juno" }}
         />
         <Stack.Screen
