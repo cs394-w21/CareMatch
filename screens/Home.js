@@ -69,10 +69,6 @@ const Home = ({ navigation }) => {
                   Go to {name}'s Full Support Profile
                 </Text>
               </TouchableOpacity>
-              <Text>
-                Here are your saved article, product, and service
-                recommendations.
-              </Text>
             </View>
           );
         })}
