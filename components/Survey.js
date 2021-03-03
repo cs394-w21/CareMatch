@@ -71,7 +71,6 @@ const Survey = ({ navigation }) => {
       return;
     }
 
-    const uid = auth.uid;
     let totalScore = 0;
     for (const category in categoryScores) {
       totalScore += Number(categoryScores[category]);
@@ -86,12 +85,22 @@ const Survey = ({ navigation }) => {
         sex: sex,
       },
     };
+    let uid;
+    if (auth) {
+      uid = auth.uid;
+      db.update({
+        [uid]: { ...user, seniors: { ...user["seniors"], ...results } },
+      });
+    } else {
+      uid = "guest";
+      db.update({
+        [uid]: { seniors: { ...results } },
+      });
+    }
 
-    db.update({
-      [uid]: { ...user, seniors: { ...user["seniors"], ...results } },
-    });
     navigation.navigate("RecommendationScreen", {
       name: name,
+      uid: uid,
     });
   }
 

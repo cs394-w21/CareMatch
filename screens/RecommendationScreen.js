@@ -15,7 +15,7 @@ import BottomCards from "../components/BottomCards";
 import { firebase } from "../firebase";
 
 const RecommendationScreen = ({ route, navigation }) => {
-  const { name } = route.params;
+  const { name, uid } = route.params;
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();
   useEffect(() => {
@@ -28,7 +28,9 @@ const RecommendationScreen = ({ route, navigation }) => {
     const db = firebase.database().ref("users");
     const handleData = (snap) => {
       const users = snap.val();
-      if (users && auth) {
+      if (uid === "guest") {
+        setUser(users[uid]);
+      } else if (users && auth) {
         setUser(users[auth.uid]);
       }
     };
@@ -73,7 +75,13 @@ const RecommendationScreen = ({ route, navigation }) => {
             ></Image>
           }
           leftContent="Home"
-          leftAction={() => navigation.navigate("Home")}
+          leftAction={() => {
+            if (uid === "guest") {
+              return;
+            } else {
+              navigation.navigate("Home");
+            }
+          }}
           rightContent="Save Results"
         />
         <SupportScoreChart percent={supportScore} />
