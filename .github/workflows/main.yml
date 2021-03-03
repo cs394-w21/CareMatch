@@ -17,23 +17,9 @@ jobs:
       - run: npm install
       - run: npm test
 
-  cypress:
-    name: Cypress test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: expo/expo-github-action@v5
-        with:
-          expo-version: 3.x
-      - uses: cypress-io/github-action@v2
-        with:
-          build: expo build:web
-          start: expo start -w
-          wait-on: http://localhost:19006
-
   deploy:
     name: Firebase deploy
-    needs: [build, cypress]
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
