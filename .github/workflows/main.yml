@@ -1,0 +1,49 @@
+name: Expo CI
+
+on: [push]
+
+jobs:
+  build:
+    name: Build and unit test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+      - run: npm install
+      - run: npm test
+
+  cypress:
+    name: Cypress test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+      - uses: cypress-io/github-action@v2
+        with:
+          build: expo build:web
+          start: expo start -w
+          wait-on: http://localhost:19006
+
+  deploy:
+    name: Firebase deploy
+    needs: [build, cypress]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+      - run: npm install
+      - run: expo build:web
+      - run: npm install -g firebase-tools
+      - run: firebase deploy --token "${{ secrets.FIREBASE_DEPLOY_TOKEN }}" --non-interactive
