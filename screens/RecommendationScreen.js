@@ -72,7 +72,8 @@ const RecommendationScreen = ({ route, navigation }) => {
               source={require("../assets/chevron.png")}
             ></Image>
           }
-          leftContent="Questionnaire"
+          leftContent="Home"
+          leftAction={() => navigation.navigate("Home")}
           rightContent="Save Results"
         />
         <SupportScoreChart percent={supportScore} />
@@ -91,9 +92,7 @@ const RecommendationScreen = ({ route, navigation }) => {
               The area(s) where {name} needs the most support is/are:{" "}
               {Object.keys(areas).join(", ")}
             </Text>
-          ) : (
-            ""
-          )}
+          ) : null}
 
           <Text style={[styles.expandSection, styles.sectionBody]}>
             Read More

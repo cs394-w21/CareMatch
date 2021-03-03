@@ -51,7 +51,7 @@ const SignUpScreen = ({ navigation }) => {
       db.update({
         [user]: { ...newUser, firstName: firstName, lastName: lastName },
       });
-      navigation.navigate("RecommendationScreen");
+      navigation.navigate("Questionnaire");
     };
     firebase
       .auth()

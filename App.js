@@ -9,6 +9,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import CategoryRecommendations from "./screens/CategoryRecommendations";
 import SingleProductScreen from "./screens/SingleProductScreen";
 import Questionnaire from "./screens/Questionnaire";
+import Home from "./screens/Home";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -19,6 +20,11 @@ export default function App() {
         <Stack.Screen
           component={WelcomeScreen}
           name="WelcomeScreen"
+          options={{ headerShown: false, title: "Juno" }}
+        />
+        <Stack.Screen
+          component={Home}
+          name="Home"
           options={{ headerShown: false, title: "Juno" }}
         />
         <Stack.Screen

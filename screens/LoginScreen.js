@@ -23,7 +23,7 @@ const LoginScreen = ({ navigation }) => {
       if (errorCode != "success") return;
       let curId = firebase.auth().currentUser.uid;
       db.child(curId).once("value", (snapshot) => {
-        navigation.navigate("RecommendationScreen");
+        navigation.navigate("Home");
       });
     };
     firebase
