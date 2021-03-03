@@ -71,7 +71,7 @@ const RecommendationScreen = ({ route, navigation }) => {
           leftIcon={
             <Image
               style={styles.icon}
-              source={require("../assets/chevron.png")}
+              source={require("../assets/Chevron.png")}
             ></Image>
           }
           leftContent="Home"
