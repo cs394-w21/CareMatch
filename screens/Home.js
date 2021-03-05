@@ -11,7 +11,8 @@ import { theme } from "../utils/theme";
 import Logo from "../components/Logo";
 import { firebase } from "../firebase";
 
-const Home = ({ navigation }) => {
+const Home = ({ route, navigation }) => {
+  const { uid } = route.params;
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();
   useEffect(() => {
@@ -24,7 +25,9 @@ const Home = ({ navigation }) => {
     const db = firebase.database().ref("users");
     const handleData = (snap) => {
       const users = snap.val();
-      if (users && auth) {
+      if (users && uid) {
+        setUser(users[uid]);
+      } else if (users && auth) {
         setUser(users[auth.uid]);
       }
     };
@@ -46,18 +49,21 @@ const Home = ({ navigation }) => {
         width: "100%",
         height: "100%",
         backgroundColor: "white",
+        alignItems: "center",
       }}
     >
       <ScrollView
         style={{ maxWidth: 600 }}
         contentContainerStyle={styles.container}
       >
+        <Logo />
         <View>
           <Text style={styles.sectionHeader}>Profiles</Text>
         </View>
         {Object.keys(user["seniors"]).map((name) => {
           return (
-            <View key={name}>
+            <View style={{ width: "100%" }} key={name}>
+              <View style={styles.line} />
               <Text>{name}</Text>
               <TouchableOpacity
                 style={[styles.button, styles.secondaryButton]}
@@ -72,7 +78,28 @@ const Home = ({ navigation }) => {
             </View>
           );
         })}
-        <Logo />
+        <View style={styles.line} />
+        <TouchableOpacity
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onPress={() => navigation.navigate("Questionnaire")}
+        >
+          <View style={[styles.button, styles.primaryButton]}>
+            <Text style={[styles.buttonText, styles.primaryButtonText]}>+</Text>
+          </View>
+          <Text
+            style={[
+              styles.expandSection,
+              styles.buttonText,
+              { fontWeight: "900" },
+            ]}
+          >
+            Add a New Profile
+          </Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
@@ -92,20 +119,33 @@ const styles = StyleSheet.create({
   secondaryButtonText: {
     color: "black",
   },
+  primaryButtonText: {
+    color: "white",
+    fontWeight: "900",
+  },
   secondaryButton: {
     backgroundColor: "rgba(255, 146, 183, 0.34)",
     borderColor: "rgba(255, 146, 183, 0.34)",
     borderWidth: 2,
+    minHeight: 36,
+    minWidth: 60,
+    borderRadius: 13,
+    width: "100%",
+  },
+  primaryButton: {
+    backgroundColor: theme.pink,
+    borderColor: theme.pink,
+    borderWidth: 2,
+    width: 22,
+    height: 22,
+    borderRadius: 22 / 2,
+    marginLeft: 0,
   },
   button: {
-    flex: 1,
-    margin: 16,
+    margin: 9,
     padding: 10,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 13,
-    minHeight: 36,
-    minWidth: 60,
   },
   logo: {
     marginBottom: 40,

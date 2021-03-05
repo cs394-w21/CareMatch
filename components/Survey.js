@@ -24,15 +24,16 @@ const radio_props = [
 
 const RadioButtons = ({ adl, setCategoryScores, categoryScores }) => {
   return (
-    <View>
-      <RadioForm
-        radio_props={radio_props}
-        initial={-1}
-        onPress={(value) => {
-          setCategoryScores({ ...categoryScores, [adl]: value });
-        }}
-      />
-    </View>
+    <RadioForm
+      radio_props={radio_props}
+      initial={-1}
+      buttonColor={theme.pink}
+      selectedButtonColor={theme.pink}
+      labelStyle={{ fontSize: 13, fontFamily: theme.textFont2 }}
+      onPress={(value) => {
+        setCategoryScores({ ...categoryScores, [adl]: value });
+      }}
+    />
   );
 };
 
@@ -66,8 +67,12 @@ const Survey = ({ navigation }) => {
 
   async function onGetRecos() {
     const NUMBER_OF_ADLS = 3; // TODO: make this dynamic
-    if (Object.keys(categoryScores).length != NUMBER_OF_ADLS) {
-      alert("Please fill out the entire survey.");
+    if (
+      Object.keys(categoryScores).length != NUMBER_OF_ADLS ||
+      name == "" ||
+      age == ""
+    ) {
+      alert("Please fill in all required fields.");
       return;
     }
 
@@ -92,9 +97,10 @@ const Survey = ({ navigation }) => {
         [uid]: { ...user, seniors: { ...user["seniors"], ...results } },
       });
     } else {
-      uid = "guest";
+      uid = db.push().key; // generates a unique id based on timestamp
+      console.log(uid);
       db.update({
-        [uid]: { seniors: { ...results } },
+        [uid]: { seniors: { ...results }, first: "guest", last: "" },
       });
     }
 
@@ -114,6 +120,7 @@ const Survey = ({ navigation }) => {
         sex={sex}
         age={age}
       />
+      <View style={styles.line} />
       <MCQ
         setCategoryScores={setCategoryScores}
         categoryScores={categoryScores}
@@ -159,8 +166,10 @@ const MCQ = ({ setCategoryScores, categoryScores }) => {
       {Object.keys(adls).map((adl) => {
         return (
           <View key={adl}>
-            <Text style={styles.sectionHeader}>{adl}</Text>
-            <Text style={styles.sectionBody}>{adls[adl]["Question"]}</Text>
+            <View style={{ marginTop: 26, marginBottom: 10 }}>
+              <Text style={styles.sectionHeader}>{adl}</Text>
+              <Text style={styles.sectionBody}>{adls[adl]["Question"]}</Text>
+            </View>
             <RadioButtons
               adl={adl}
               setCategoryScores={setCategoryScores}
@@ -185,12 +194,12 @@ const FRQ = ({ setName, setSex, setAge, name, sex, age }) => {
       <TextInput
         value={sex}
         onChangeText={(sex) => setSex(sex)}
-        placeholder={"Sex assigned at birth"}
+        placeholder={"Sex assigned at birth (optional)"}
         style={styles.input}
       />
       <TextInput
         value={age}
-        onChangeText={(age) => setAge(Number(age))}
+        onChangeText={(age) => setAge(age)}
         placeholder={"Age"}
         style={styles.input}
       />
@@ -277,6 +286,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: theme.textFont2,
     fontSize: 13,
+    fontWeight: "900",
   },
   primaryButtonText: {
     color: "white",

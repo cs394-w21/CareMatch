@@ -16,7 +16,7 @@ import TopOptions from "../components/TopOptions";
 import { Rating } from "react-native-ratings";
 
 const SingleProductScreen = ({ route, navigation }) => {
-  const { area, item, score } = route.params;
+  const { area, item, score, name } = route.params;
 
   return (
     <View
@@ -45,7 +45,7 @@ const SingleProductScreen = ({ route, navigation }) => {
               score: score,
             });
           }}
-          rightContent="Save to List"
+          rightContent={"Save for " + name}
         />
         <View style={styles.sectionContainer}>
           <ProductBadge />
@@ -74,7 +74,7 @@ const SingleProductScreen = ({ route, navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContainer}>
-          <BottomCards navigation={navigation} />
+          <BottomCards navigation={navigation} name={name} />
         </View>
       </ScrollView>
     </View>

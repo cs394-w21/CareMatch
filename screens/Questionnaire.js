@@ -33,23 +33,26 @@ const Questionnaire = ({ navigation }) => {
               source={require("../assets/Chevron.png")}
             ></Image>
           }
-          leftContent="Questionnaire"
-          rightContent="Save Results"
+          leftContent="Back"
+          leftAction={() => navigation.goBack()}
         />
         <View style={styles.sectionContainer}>
-          <Text style={styles.sectionHeader}>Questionnaire</Text>
+          <Text style={styles.sectionHeader}>Support Questionnaire</Text>
+          <Text style={[styles.expandSection, styles.sectionHeader]}>
+            Let’s learn a little about your loved one.
+          </Text>
           <Text style={styles.sectionBody}>
-            Let’s learn a little about your loved one. Please answer a few
-            questions about your loved one below and we will provide you with
-            recommendations and guidance based on the support and care they
-            need. Our questionaire is based on the healthcare industry standard
-            Activities of Daily Living (ADL) checklist.
+            Please answer a few questions about your loved one below and we will
+            provide you with recommendations and guidance based on the support
+            and care they need. Our questionnaire is based on the healthcare
+            industry standard Activities of Daily Living (ADL) checklist.
           </Text>
           <Text style={[styles.expandSection, styles.sectionBody]}>
             Read more aout ADLs here
           </Text>
         </View>
         <View style={styles.sectionContainer}>
+          <View style={styles.line} />
           <Text style={styles.sectionHeader}>
             Whom are we talking about today?
           </Text>
@@ -71,7 +74,7 @@ const Questionnaire = ({ navigation }) => {
           </Text>
         </View>
         <View style={styles.sectionContainer}>
-          <BottomCards navigation={navigation} />
+          <BottomCards navigation={navigation} name={"your loved one"} />
         </View>
       </ScrollView>
     </View>
@@ -98,6 +101,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 22,
     textAlign: "left",
+    marginTop: 26,
   },
   sectionContainer: {
     flex: 1,

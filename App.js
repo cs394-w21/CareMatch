@@ -52,12 +52,12 @@ export default function App() {
         <Stack.Screen
           component={LoginScreen}
           name="LoginScreen"
-          options={{ title: "Log In to Juno" }}
+          options={{ headerShown: false, title: "Log In to Juno" }}
         />
         <Stack.Screen
           component={SignUpScreen}
           name="SignUpScreen"
-          options={{ title: "Register for Juno" }}
+          options={{ headerShown: false, title: "Register for Juno" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: theme.textFont2,
     fontSize: 13,
+    fontWeight: "900",
   },
   image: {
     width: 128,

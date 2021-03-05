@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
 import Carousel from "../components/WelcomeCarousel";
+import { firebase } from "../firebase";
 
 const Buttons = ({ showButtons, onGetStarted, onLogin, onSignUp }) => {
   if (showButtons) {
@@ -42,6 +43,11 @@ const Buttons = ({ showButtons, onGetStarted, onLogin, onSignUp }) => {
 };
 
 export default function WelcomeScreen({ navigation }) {
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((auth) => {
+      navigation.navigate("Home", { uid: auth.uid });
+    });
+  }, []);
   const [showButtons, setShowButtons] = useState(true);
   const onGetStarted = () => {
     navigation.navigate("Questionnaire");
@@ -85,6 +91,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: theme.textFont2,
     fontSize: 13,
+    fontWeight: "900",
   },
   primaryButtonText: {
     color: "white",

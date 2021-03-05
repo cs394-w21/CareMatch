@@ -107,13 +107,14 @@ const CategoryRecommendations = ({ route, navigation }) => {
             products={adl.products}
             area={area}
             score={score}
+            name={name}
           />
         </View>
         <View style={styles.sectionContainer}>
           <Articles articles={adl.articles} />
         </View>
         <View style={styles.sectionContainer}>
-          <BottomCards navigation={navigation} />
+          <BottomCards navigation={navigation} name={name} />
         </View>
       </ScrollView>
     </View>

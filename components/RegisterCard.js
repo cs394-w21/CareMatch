@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import { theme } from "../utils/theme";
 import { firebase } from "../firebase";
 
-const name = "Marv";
 const body =
   "Gurl, you need some help. Register pretty plz. I'll be your best friend, promise. Also I'll never spam you with emails because I'm not good enough at programming to know how to do that.";
 
@@ -24,7 +23,7 @@ const buttons = (navigation) => {
   );
 };
 
-const RegisterCard = ({ navigation }) => {
+const RegisterCard = ({ navigation, name }) => {
   const [auth, setAuth] = useState();
 
   useEffect(() => {
@@ -62,6 +61,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: theme.textFont2,
     fontSize: 13,
+    fontWeight: "900",
   },
   image: {
     width: 128,

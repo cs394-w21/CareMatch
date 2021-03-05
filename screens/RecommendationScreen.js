@@ -28,7 +28,7 @@ const RecommendationScreen = ({ route, navigation }) => {
     const db = firebase.database().ref("users");
     const handleData = (snap) => {
       const users = snap.val();
-      if (uid === "guest") {
+      if (users && uid) {
         setUser(users[uid]);
       } else if (users && auth) {
         setUser(users[auth.uid]);
@@ -76,14 +76,15 @@ const RecommendationScreen = ({ route, navigation }) => {
           }
           leftContent="Home"
           leftAction={() => {
-            if (uid === "guest") {
-              return;
-            } else {
-              navigation.navigate("Home");
-            }
+            navigation.navigate("Home", { uid: uid });
           }}
           rightContent="Save Results"
         />
+        <View style={[styles.sectionContainer, { marginBottom: 26 }]}>
+          <Text style={styles.sectionHeader}>
+            {name}'s Support Recommendations
+          </Text>
+        </View>
         <SupportScoreChart percent={supportScore} />
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionHeader}>
@@ -137,7 +138,7 @@ const RecommendationScreen = ({ route, navigation }) => {
         )}
 
         <View style={styles.sectionContainer}>
-          <BottomCards navigation={navigation} />
+          <BottomCards navigation={navigation} name={name} />
         </View>
       </ScrollView>
     </View>

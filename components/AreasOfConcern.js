@@ -80,6 +80,8 @@ export const circle = (score) => {
   const [circleColor, textColor] =
     score > 50
       ? [styles.yellowCircle, styles.yellowCircleText]
+      : score == 50
+      ? [styles.orangeCircle, styles.yellowCircleText]
       : [styles.redCircle, styles.redCircleText];
   return (
     <View style={[styles.circle, circleColor]}>
@@ -109,6 +111,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     paddingVertical: 16,
+  },
+  orangeCircle: {
+    backgroundColor: "#f57b42",
   },
   yellowCircle: {
     backgroundColor: "#FFDC26",

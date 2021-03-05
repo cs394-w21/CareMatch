@@ -5,10 +5,12 @@ import {
   TouchableOpacity,
   View,
   StyleSheet,
+  Image,
 } from "react-native";
 import { firebase } from "../firebase";
 import { theme } from "../utils/theme";
 import Logo from "../components/Logo";
+import TopOptions from "../components/TopOptions";
 
 const db = firebase.database().ref("users");
 
@@ -23,7 +25,7 @@ const LoginScreen = ({ navigation }) => {
       if (errorCode != "success") return;
       let curId = firebase.auth().currentUser.uid;
       db.child(curId).once("value", (snapshot) => {
-        navigation.navigate("Home");
+        navigation.navigate("Home", { uid: curId });
       });
     };
     firebase
@@ -37,44 +39,73 @@ const LoginScreen = ({ navigation }) => {
       .then(loginAction);
   }
   return (
-    <View style={styles.container} accessibilityRole="form">
-      <Logo />
-      <TextInput
-        value={email}
-        onChangeText={(email) => setEmail(email)}
-        placeholder={"Email"}
-        style={styles.input}
+    <View style={{ flex: 1, backgroundColor: "white", padding: 20 }}>
+      <TopOptions
+        leftIcon={
+          <Image
+            style={styles.icon}
+            source={require("../assets/Chevron.png")}
+          ></Image>
+        }
+        leftContent="Back"
+        leftAction={() => navigation.goBack()}
       />
-      <TextInput
-        value={password}
-        onChangeText={(password) => setPassword(password)}
-        placeholder={"Password"}
-        secureTextEntry={true}
-        style={styles.input}
-      />
-      <View
-        style={{
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <TouchableOpacity
-          title={"Login"}
-          style={styles.loginButton}
-          onPress={onLogin}
+      <View style={styles.container} accessibilityRole="form">
+        <Logo />
+        <TextInput
+          value={email}
+          onChangeText={(email) => setEmail(email)}
+          placeholder={"Email"}
+          style={styles.input}
+        />
+        <TextInput
+          value={password}
+          onChangeText={(password) => setPassword(password)}
+          placeholder={"Password"}
+          secureTextEntry={true}
+          style={styles.input}
+        />
+        <View
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <Text style={{ color: "white" }}>LOG IN</Text>
-        </TouchableOpacity>
-        <Text>Don't have an account?</Text>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("SignUpScreen")}
-          style={styles.signupButton}
-        >
-          <Text>REGISTER</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            title={"Login"}
+            style={styles.loginButton}
+            onPress={onLogin}
+          >
+            <Text
+              style={{
+                color: "white",
+                fontFamily: theme.textFont2,
+                fontSize: 13,
+                fontWeight: "900",
+              }}
+            >
+              LOG IN
+            </Text>
+          </TouchableOpacity>
+          <Text>Don't have an account?</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("SignUpScreen")}
+            style={styles.signupButton}
+          >
+            <Text
+              style={{
+                fontFamily: theme.textFont2,
+                fontSize: 13,
+                fontWeight: "900",
+              }}
+            >
+              REGISTER
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <Text>{loginError}</Text>
       </View>
-      <Text>{loginError}</Text>
     </View>
   );
 };
@@ -106,12 +137,17 @@ const styles = StyleSheet.create({
   },
   signupButton: {
     padding: 10,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: "black",
     marginHorizontal: 10,
     marginBottom: 10,
     borderRadius: 10,
     marginTop: 10,
+  },
+  icon: {
+    width: 12,
+    height: 21,
+    overflow: "visible",
   },
 });
 

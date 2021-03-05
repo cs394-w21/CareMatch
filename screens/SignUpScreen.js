@@ -11,6 +11,7 @@ import {
 import { firebase } from "../firebase";
 import { theme } from "../utils/theme";
 import Logo from "../components/Logo";
+import TopOptions from "../components/TopOptions";
 
 const db = firebase.database().ref("users");
 
@@ -66,44 +67,67 @@ const SignUpScreen = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.container} accessibilityRole="form">
-      <Logo />
-      <TextInput
-        value={firstName}
-        onChangeText={(name) => setFirstName(name)}
-        placeholder={"First Name"}
-        style={styles.input}
+    <View style={{ flex: 1, backgroundColor: "white", padding: 20 }}>
+      <TopOptions
+        leftIcon={
+          <Image
+            style={styles.icon}
+            source={require("../assets/Chevron.png")}
+          ></Image>
+        }
+        leftContent="Back"
+        leftAction={() => navigation.goBack()}
       />
-      <TextInput
-        value={lastName}
-        onChangeText={(name) => setLastName(name)}
-        placeholder={"Last Name"}
-        style={styles.input}
-      />
-      <TextInput
-        value={email}
-        onChangeText={(email) => setEmail(email)}
-        placeholder={"Email"}
-        style={styles.input}
-      />
-      <TextInput
-        value={password}
-        onChangeText={(password) => setPassword(password)}
-        placeholder={"Password"}
-        secureTextEntry={true}
-        style={styles.input}
-      />
-      <TextInput
-        value={confirmPassword}
-        onChangeText={(confirmPassword) => setConfirmPassword(confirmPassword)}
-        placeholder={"Confirm Password"}
-        secureTextEntry={true}
-        style={styles.input}
-      />
-      <TouchableOpacity onPress={onSignUp} style={styles.signupButton}>
-        <Text style={{ color: "white" }}>REGISTER</Text>
-      </TouchableOpacity>
-      <Text>{signupError}</Text>
+      <View style={styles.container} accessibilityRole="form">
+        <Logo />
+        <TextInput
+          value={firstName}
+          onChangeText={(name) => setFirstName(name)}
+          placeholder={"First Name"}
+          style={styles.input}
+        />
+        <TextInput
+          value={lastName}
+          onChangeText={(name) => setLastName(name)}
+          placeholder={"Last Name"}
+          style={styles.input}
+        />
+        <TextInput
+          value={email}
+          onChangeText={(email) => setEmail(email)}
+          placeholder={"Email"}
+          style={styles.input}
+        />
+        <TextInput
+          value={password}
+          onChangeText={(password) => setPassword(password)}
+          placeholder={"Password"}
+          secureTextEntry={true}
+          style={styles.input}
+        />
+        <TextInput
+          value={confirmPassword}
+          onChangeText={(confirmPassword) =>
+            setConfirmPassword(confirmPassword)
+          }
+          placeholder={"Confirm Password"}
+          secureTextEntry={true}
+          style={styles.input}
+        />
+        <TouchableOpacity onPress={onSignUp} style={styles.signupButton}>
+          <Text
+            style={{
+              color: "white",
+              fontFamily: theme.textFont2,
+              fontSize: 13,
+              fontWeight: "900",
+            }}
+          >
+            REGISTER
+          </Text>
+        </TouchableOpacity>
+        <Text>{signupError}</Text>
+      </View>
     </View>
   );
 };
@@ -129,9 +153,18 @@ const styles = StyleSheet.create({
   signupButton: {
     padding: 10,
     backgroundColor: theme.pink,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 6,
+    textTransform: "uppercase",
     marginHorizontal: 10,
     marginBottom: 10,
     borderRadius: 10,
+  },
+  icon: {
+    width: 12,
+    height: 21,
+    overflow: "visible",
   },
 });
 

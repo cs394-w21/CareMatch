@@ -24,8 +24,16 @@ export const ProductBadge = () => {
   );
 };
 
-const ProductsAndServices = ({ navigation, products, area, score }) => {
+const ProductsAndServices = ({ navigation, products, area, score, name }) => {
   const cards = products.map((item, i) => {
+    const goToProduct = () => {
+      navigation.navigate("SingleProductScreen", {
+        area: area,
+        item: item,
+        score: score,
+        name: name,
+      });
+    };
     return (
       <View style={styles.sectionContainer} key={i}>
         <ProductBadge />
@@ -38,7 +46,9 @@ const ProductsAndServices = ({ navigation, products, area, score }) => {
             alignItems: "left",
           }}
         >
-          <Text style={styles.productTitle}>{item.title}</Text>
+          <Text style={styles.productTitle} onPress={goToProduct}>
+            {item.title}
+          </Text>
           <Rating
             style={{ paddingVertical: 10 }}
             startingValue={5}
@@ -53,13 +63,7 @@ const ProductsAndServices = ({ navigation, products, area, score }) => {
 
         <Text
           style={[styles.expandSection, styles.sectionBody, { marginTop: 15 }]}
-          onPress={() =>
-            navigation.navigate("SingleProductScreen", {
-              area: area,
-              item: item,
-              score: score,
-            })
-          }
+          onPress={goToProduct}
         >
           Read More ›
         </Text>
