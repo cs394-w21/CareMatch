@@ -40,6 +40,39 @@ const Home = ({ navigation }) => {
       </View>
     );
   }
+
+  let profiles;
+  if (user.hasOwnProperty("seniors")) {
+    profiles = Object.keys(user["seniors"]).map((name) => {
+      return (
+        <View key={name}>
+          <Text style={{ fontSize: 15, marginBottom: "-5%", fontWeight: "bold" }}>{name}</Text>
+          <TouchableOpacity
+            style={[styles.button, styles.secondaryButton]}
+            onPress={() =>
+              navigation.navigate("RecommendationScreen", { name: name })
+            }
+          >
+            <Text style={[styles.buttonText, styles.secondaryButtonText]}>
+              Go to {name}'s Full Support Profile
+          </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{ marginTop: "-5%", alignSelf: "center" }}
+            onPress={() => {
+              const ref = firebase.database().ref("users/" + auth.uid + "/seniors/" + name);
+              ref.remove();
+            }}
+          >
+            <Text style={{ color: theme.lightPink }}>Delete this profile</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    })
+  } else {
+    profiles = <Text> No profiles to view</Text>
+  }
+
   return (
     <View
       style={{
@@ -55,23 +88,17 @@ const Home = ({ navigation }) => {
         <View>
           <Text style={styles.sectionHeader}>Profiles</Text>
         </View>
-        {Object.keys(user["seniors"]).map((name) => {
-          return (
-            <View key={name}>
-              <Text>{name}</Text>
-              <TouchableOpacity
-                style={[styles.button, styles.secondaryButton]}
-                onPress={() =>
-                  navigation.navigate("RecommendationScreen", { name: name })
-                }
-              >
-                <Text style={[styles.buttonText, styles.secondaryButtonText]}>
-                  Go to {name}'s Full Support Profile
-                </Text>
-              </TouchableOpacity>
-            </View>
-          );
-        })}
+
+        {profiles}
+        <View>
+          <TouchableOpacity
+            style={[styles.button, styles.primaryButton]}
+            onPress={() => navigation.navigate("Questionnaire")}
+          >
+            <Text style={[styles.buttonText, styles.primaryButtonText]}>Fill out another senior profile.</Text>
+          </TouchableOpacity>
+        </View>
+
         <Logo />
       </ScrollView>
     </View>
@@ -150,6 +177,18 @@ const styles = StyleSheet.create({
     width: 12,
     height: 21,
     overflow: "visible",
+  },
+  primaryButton: {
+    backgroundColor: theme.pink,
+    borderColor: theme.pink,
+    borderWidth: 2,
+  },
+  buttonText: {
+    fontFamily: theme.textFont2,
+    fontSize: 13,
+  },
+  primaryButtonText: {
+    color: "white",
   },
 });
 export default Home;
