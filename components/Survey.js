@@ -205,8 +205,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   input: {
-    width: "70%",
-    maxWidth: 350,
+    width: "100%",
     minHeight: 44,
     padding: 10,
     borderWidth: 1,

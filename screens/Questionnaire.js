@@ -8,17 +8,9 @@ import {
   Image,
 } from "react-native";
 import { theme } from "../utils/theme";
-import SupportScoreChart from "../components/SupportScoreChart";
-import AreasOfConcern from "../components/AreasOfConcern";
 import TopOptions from "../components/TopOptions";
 import BottomCards from "../components/BottomCards";
 import Survey from "../components/Survey";
-
-const supportScore = 65;
-const supportScoreDescription =
-  "Based on the analysis, a support score of 65 means that Marv needs support and care. We recommend getting professional advice and consulting with a doctor. Marv’s hygiene and managing his medication are two areas where he needs the most support.";
-const name = "Marv";
-const areas = { Hygiene: 45, "Managing Medications": 55 };
 
 const Questionnaire = ({ navigation }) => {
   return (
@@ -38,7 +30,7 @@ const Questionnaire = ({ navigation }) => {
           leftIcon={
             <Image
               style={styles.icon}
-              source={require("../assets/chevron.png")}
+              source={require("../assets/Chevron.png")}
             ></Image>
           }
           leftContent="Questionnaire"

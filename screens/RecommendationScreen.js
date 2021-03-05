@@ -15,7 +15,7 @@ import BottomCards from "../components/BottomCards";
 import { firebase } from "../firebase";
 
 const RecommendationScreen = ({ route, navigation }) => {
-  const { name, uid } = route.params;
+  const { name, uid } = route.params; //because we have a guest account
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();
   useEffect(() => {
@@ -71,7 +71,7 @@ const RecommendationScreen = ({ route, navigation }) => {
           leftIcon={
             <Image
               style={styles.icon}
-              source={require("../assets/chevron.png")}
+              source={require("../assets/Chevron.png")}
             ></Image>
           }
           leftContent="Home"
