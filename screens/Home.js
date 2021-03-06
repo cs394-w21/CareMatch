@@ -90,13 +90,22 @@ const Home = ({ navigation }) => {
         </View>
 
         {profiles}
+
         <View>
+          <TouchableOpacity
+            style={[styles.button, styles.primaryButton]}
+            onPress={() => navigation.navigate("SavedContent", { user: user })}
+          >
+            <Text style={[styles.buttonText, styles.primaryButtonText]}>View your saved content.</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity
             style={[styles.button, styles.primaryButton]}
             onPress={() => navigation.navigate("Questionnaire")}
           >
             <Text style={[styles.buttonText, styles.primaryButtonText]}>Fill out another senior profile.</Text>
           </TouchableOpacity>
+
         </View>
 
         <Logo />

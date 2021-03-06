@@ -38,12 +38,17 @@ const SingleProductScreen = ({ route, navigation }) => {
               source={require("../assets/Chevron.png")}
             ></Image>
           }
-          leftContent={area + " Recommendations"}
+          leftContent={area !== "Home" ? area + " Recommendations" : "Home"}
           leftAction={() => {
-            navigation.navigate("CategoryRecommendations", {
-              area: area,
-              score: score,
-            });
+            if (area !== "Home") {
+              navigation.navigate("CategoryRecommendations", {
+                area: area,
+                score: score,
+              });
+            } else {
+              navigation.navigate("Home")
+            }
+
           }}
           rightContent="Save to List"
           rightAction={() => saveProduct(item)}

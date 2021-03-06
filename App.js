@@ -10,6 +10,7 @@ import CategoryRecommendations from "./screens/CategoryRecommendations";
 import SingleProductScreen from "./screens/SingleProductScreen";
 import Questionnaire from "./screens/Questionnaire";
 import Home from "./screens/Home";
+import SavedContent from "./screens/SavedContent";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -47,6 +48,11 @@ export default function App() {
           component={SingleProductScreen}
           name="SingleProductScreen"
           options={{ headerShown: false, title: "Juno" }}
+        />
+        <Stack.Screen
+          component={SavedContent}
+          name="SavedContent"
+          options={{ title: "Saved Content" }}
         />
 
         <Stack.Screen
