@@ -24,7 +24,7 @@ export const ProductBadge = () => {
   );
 };
 
-const ProductsAndServices = ({ navigation, products, area, score }) => {
+const ProductsAndServices = ({ navigation, products, area, score, saveProduct }) => {
   const cards = products.map((item, i) => {
     return (
       <View style={styles.sectionContainer} key={i}>
@@ -58,6 +58,7 @@ const ProductsAndServices = ({ navigation, products, area, score }) => {
               area: area,
               item: item,
               score: score,
+              saveProduct: saveProduct,
             })
           }
         >

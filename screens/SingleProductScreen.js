@@ -16,7 +16,7 @@ import TopOptions from "../components/TopOptions";
 import { Rating } from "react-native-ratings";
 
 const SingleProductScreen = ({ route, navigation }) => {
-  const { area, item, score } = route.params;
+  const { area, item, score, saveProduct } = route.params;
 
   return (
     <View
@@ -46,6 +46,7 @@ const SingleProductScreen = ({ route, navigation }) => {
             });
           }}
           rightContent="Save to List"
+          rightAction={() => saveProduct(item)}
         />
         <View style={styles.sectionContainer}>
           <ProductBadge />
