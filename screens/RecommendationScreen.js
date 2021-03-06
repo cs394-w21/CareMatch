@@ -100,6 +100,7 @@ const RecommendationScreen = ({ route, navigation }) => {
             }
           }}
         />
+        <Text style={styles.header}>{name}'s support score</Text>
         <SupportScoreChart percent={supportScore} />
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionHeader}>
@@ -180,6 +181,13 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 22,
     textAlign: "left",
+  },
+  header: {
+    fontFamily: theme.textFont,
+    fontWeight: "bold",
+    fontSize: 25,
+    textAlign: "center",
+    marginBottom: 5
   },
   sectionContainer: {
     flex: 1,

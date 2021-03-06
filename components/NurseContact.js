@@ -2,9 +2,10 @@ import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import { theme } from "../utils/theme";
 const nurse = {
-  name: "Jane",
+  name: "Jane Brigham, RN",
   title: "Registered Nurse",
   location: "Chicago, IL",
+  blurb: "Jane is a graduate of Worcester City Hospital School of Nursing. She worked for 10 years as an RN with a specialization in Senior Care. Now  she leads a highly skilled team of registered nurses at Juno. As a certified Clinical Nurse Liaison, Jane finds fulfillment in helping people in finding the best support care guidance and securing continuity of care for their loved ones."
 };
 
 const buttons = () => {
@@ -46,6 +47,7 @@ const NurseContact = ({ navigation }) => {
         <Text style={styles.text}>{nurse.name}</Text>
         <Text style={styles.text}>{nurse.title}</Text>
         <Text style={styles.text}>{nurse.location}</Text>
+        <Text>{nurse.blurb}</Text>
         {buttons()}
       </View>
     </View>
