@@ -43,11 +43,6 @@ const Buttons = ({ showButtons, onGetStarted, onLogin, onSignUp }) => {
 };
 
 export default function WelcomeScreen({ navigation }) {
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged((auth) => {
-      navigation.navigate("Home", { uid: auth.uid });
-    });
-  }, []);
   const [showButtons, setShowButtons] = useState(true);
   const onGetStarted = () => {
     navigation.navigate("Questionnaire");
