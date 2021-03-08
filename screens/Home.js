@@ -49,7 +49,11 @@ const Home = ({ route, navigation }) => {
     profiles = Object.keys(user["seniors"]).map((name) => {
       return (
         <View key={name}>
-          <Text style={{ fontSize: 15, marginBottom: "-5%", fontWeight: "bold" }}>{name}</Text>
+          <Text
+            style={{ fontSize: 15, marginBottom: "-5%", fontWeight: "bold" }}
+          >
+            {name}
+          </Text>
           <TouchableOpacity
             style={[styles.button, styles.secondaryButton]}
             onPress={() =>
@@ -58,12 +62,14 @@ const Home = ({ route, navigation }) => {
           >
             <Text style={[styles.buttonText, styles.secondaryButtonText]}>
               Go to {name}'s Full Support Profile
-          </Text>
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{ marginTop: "-5%", alignSelf: "center" }}
             onPress={() => {
-              const ref = firebase.database().ref("users/" + auth.uid + "/seniors/" + name);
+              const ref = firebase
+                .database()
+                .ref("users/" + auth.uid + "/seniors/" + name);
               ref.remove();
             }}
           >
@@ -71,9 +77,9 @@ const Home = ({ route, navigation }) => {
           </TouchableOpacity>
         </View>
       );
-    })
+    });
   } else {
-    profiles = <Text> No profiles to view</Text>
+    profiles = <Text> No profiles to view</Text>;
   }
 
   return (
@@ -94,10 +100,6 @@ const Home = ({ route, navigation }) => {
           <Text style={styles.sectionHeader}>Profiles</Text>
         </View>
 
-       
-        
-
-
         {profiles}
 
         <View>
@@ -105,32 +107,34 @@ const Home = ({ route, navigation }) => {
             style={[styles.button, styles.primaryButton]}
             onPress={() => navigation.navigate("SavedContent", { user: user })}
           >
-            <Text style={[styles.buttonText, styles.primaryButtonText]}>View your saved content.</Text>
+            <Text style={[styles.buttonText, styles.primaryButtonText]}>
+              View your saved content.
+            </Text>
           </TouchableOpacity>
           <View style={styles.line} />
           <TouchableOpacity
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          onPress={() => navigation.navigate("Questionnaire")}
-        >
-          <View style={[styles.button, styles.primaryButton]}>
-            <Text style={[styles.buttonText, styles.primaryButtonText]}>+</Text>
-          </View>
-          <Text
-            style={[
-              styles.expandSection,
-              styles.buttonText,
-              { fontWeight: "900" },
-            ]}
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onPress={() => navigation.navigate("Questionnaire")}
           >
-            Add a New Profile
-          </Text>
-        </TouchableOpacity>
-          
-
+            <View style={[styles.button, styles.primaryButton]}>
+              <Text style={[styles.buttonText, styles.primaryButtonText]}>
+                +
+              </Text>
+            </View>
+            <Text
+              style={[
+                styles.expandSection,
+                styles.buttonText,
+                { fontWeight: "900" },
+              ]}
+            >
+              Add a New Profile
+            </Text>
+          </TouchableOpacity>
         </View>
         <Logo />
       </ScrollView>
@@ -216,7 +220,7 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.25,
+    borderWidth: 0.125,
     width: "100%",
   },
   icon: {

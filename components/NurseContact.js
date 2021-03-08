@@ -1,11 +1,19 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Image, Linking } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  Linking,
+} from "react-native";
 import { theme } from "../utils/theme";
 const nurse = {
   name: "Jane Brigham, RN",
   title: "Registered Nurse",
   location: "Chicago, IL",
-  blurb: "Jane is a graduate of Worcester City Hospital School of Nursing. She worked for 10 years as an RN with a specialization in Senior Care. Now  she leads a highly skilled team of registered nurses at Juno. As a certified Clinical Nurse Liaison, Jane finds fulfillment in helping people in finding the best support care guidance and securing continuity of care for their loved ones."
+  blurb:
+    "Jane is a graduate of Worcester City Hospital School of Nursing. She worked for 10 years as an RN with a specialization in Senior Care. Now  she leads a highly skilled team of registered nurses at Juno. As a certified Clinical Nurse Liaison, Jane finds fulfillment in helping people in finding the best support care guidance and securing continuity of care for their loved ones.",
 };
 
 const buttons = () => {
@@ -37,7 +45,7 @@ const NurseContact = ({ navigation }) => {
         <Text style={styles.text}>{nurse.name}</Text>
         <Text style={styles.text}>{nurse.title}</Text>
         <Text style={styles.text}>{nurse.location}</Text>
-        <Text>{nurse.blurb}</Text>
+        <Text style={[{ marginTop: 16 }]}>{nurse.blurb}</Text>
         {buttons()}
       </View>
     </View>
@@ -77,6 +85,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 6,
     textTransform: "uppercase",
+    width: 157,
+    height: 52,
   },
   secondaryButton: {
     borderColor: "black",

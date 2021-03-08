@@ -1,11 +1,20 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { theme } from "../utils/theme";
-import { Rating } from "react-native-ratings";
 
 export const ProductBadge = () => {
   return (
-    <View style={{ backgroundColor: theme.pink, borderRadius: 9 }}>
+    <View
+      style={{
+        backgroundColor: theme.pink,
+        borderRadius: 9,
+        marginBottom: 16,
+        height: 23,
+        width: 49,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Text
         style={{
           fontFamily: theme.textFont2,
@@ -24,8 +33,14 @@ export const ProductBadge = () => {
   );
 };
 
-const ProductsAndServices = ({ navigation, products, area, score, name, saveProduct }) => {
-
+const ProductsAndServices = ({
+  navigation,
+  products,
+  area,
+  score,
+  name,
+  saveProduct,
+}) => {
   const cards = products.map((item, i) => {
     const goToProduct = () => {
       navigation.navigate("SingleProductScreen", {
@@ -51,12 +66,6 @@ const ProductsAndServices = ({ navigation, products, area, score, name, saveProd
           <Text style={styles.productTitle} onPress={goToProduct}>
             {item.title}
           </Text>
-          <Rating
-            style={{ paddingVertical: 10 }}
-            startingValue={5}
-            readonly={true}
-            imageSize={11}
-          />
         </View>
         <Text style={styles.sectionBody}>{item.blurb}</Text>
         {item.image ? (
@@ -65,11 +74,7 @@ const ProductsAndServices = ({ navigation, products, area, score, name, saveProd
 
         <Text
           style={[styles.expandSection, styles.sectionBody, { marginTop: 15 }]}
-
           onPress={goToProduct}
-
-          
-
         >
           Read More ›
         </Text>
@@ -98,6 +103,7 @@ const styles = StyleSheet.create({
   image: {
     width: 65,
     height: 65,
+    marginTop: 16,
   },
   expandSection: {
     color: theme.pink,
@@ -141,7 +147,7 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.25,
+    borderWidth: 0.125,
     width: "100%",
   },
   sectionHeader: {

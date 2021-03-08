@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.25,
+    borderWidth: 0.125,
     width: "100%",
   },
   primaryButton: {

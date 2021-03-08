@@ -18,7 +18,15 @@ import TopOptions from "../components/TopOptions";
 import { firebase } from "../firebase";
 
 const CategoryRecommendations = ({ route, navigation }) => {
-  const { area, score, name, saveArticle, saveProduct, articleState, productState } = route.params;
+  const {
+    area,
+    score,
+    name,
+    saveArticle,
+    saveProduct,
+    articleState,
+    productState,
+  } = route.params;
   const [adl, setAdl] = useState(null);
   console.log(productState, articleState);
   useEffect(() => {
@@ -70,6 +78,11 @@ const CategoryRecommendations = ({ route, navigation }) => {
           }}
         />
         <View style={styles.sectionContainer}>
+          <Text
+            style={[styles.sectionHeader, { fontWeight: 400, fontSize: 30 }]}
+          >
+            {area} Support Recommendations
+          </Text>
           <View
             style={{
               flexDirection: "row",
@@ -93,9 +106,12 @@ const CategoryRecommendations = ({ route, navigation }) => {
             score is also low enough that we think it would be useful to talk
             with one of our registered nurses.
           </Text>
-          <Text style={[styles.expandSection, styles.sectionBody]} onPress={() => {
-          Linking.openURL(`tel:9148068177`);
-        }}>
+          <Text
+            style={[styles.expandSection, styles.sectionBody]}
+            onPress={() => {
+              Linking.openURL(`tel:9148068177`);
+            }}
+          >
             Contact Nurse
           </Text>
         </View>
@@ -169,7 +185,7 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.25,
+    borderWidth: 0.125,
     width: "100%",
   },
 });

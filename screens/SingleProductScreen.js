@@ -16,9 +16,7 @@ import TopOptions from "../components/TopOptions";
 import { Rating } from "react-native-ratings";
 
 const SingleProductScreen = ({ route, navigation }) => {
-
   const { area, item, score, name, saveProduct } = route.params;
-
 
   return (
     <View
@@ -48,11 +46,9 @@ const SingleProductScreen = ({ route, navigation }) => {
                 score: score,
               });
             } else {
-              navigation.navigate("Home")
+              navigation.navigate("Home");
             }
-
           }}
-
           rightContent={"Save for " + name}
           rightAction={() => saveProduct(item)}
         />
@@ -101,6 +97,7 @@ const styles = StyleSheet.create({
   image: {
     width: 312,
     height: 312,
+    paddingTop: 16,
   },
   icon: {
     width: 12,
@@ -143,7 +140,7 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.25,
+    borderWidth: 0.125,
     width: "100%",
   },
   productTitle: {

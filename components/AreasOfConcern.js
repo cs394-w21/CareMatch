@@ -3,7 +3,15 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
 import { firebase } from "../firebase";
 
-const AreasOfConcern = ({ navigation, areas, name, saveArticle, saveProduct, articleState, productState }) => {
+const AreasOfConcern = ({
+  navigation,
+  areas,
+  name,
+  saveArticle,
+  saveProduct,
+  articleState,
+  productState,
+}) => {
   const [adl, setAdl] = useState(null);
 
   useEffect(() => {
@@ -44,7 +52,8 @@ const AreasOfConcern = ({ navigation, areas, name, saveArticle, saveProduct, art
             <Text style={styles.subSectionHeader}>{area}</Text>
             <Text style={styles.text}>{sectionContent}</Text>
             <Text style={styles.text}>
-              {"\n"}{numProducts} product(s) | {numArticles} article(s)
+              {"\n"}
+              {numProducts} product(s) | {numArticles} article(s)
             </Text>
             <Text
               style={[styles.expandSection, styles.sectionBody]}
@@ -56,7 +65,7 @@ const AreasOfConcern = ({ navigation, areas, name, saveArticle, saveProduct, art
                   saveArticle: saveArticle,
                   saveProduct: saveProduct,
                   articleState: articleState,
-                  productState: productState
+                  productState: productState,
                 })
               }
             >
@@ -89,7 +98,9 @@ export const circle = (score) => {
       : [styles.redCircle, styles.redCircleText];
   return (
     <View style={[styles.circle, circleColor]}>
-      <Text style={[styles.text, textColor, {fontSize: 18, fontWeight: 700}]}>{score}</Text>
+      <Text style={[styles.text, textColor, { fontSize: 18, fontWeight: 700 }]}>
+        {score}
+      </Text>
     </View>
   );
 };
@@ -139,7 +150,7 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.25,
+    borderWidth: 0.125,
     width: "100%",
   },
   subSectionHeader: {
