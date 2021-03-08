@@ -44,7 +44,7 @@ const AreasOfConcern = ({ navigation, areas, name, saveArticle, saveProduct, art
             <Text style={styles.subSectionHeader}>{area}</Text>
             <Text style={styles.text}>{sectionContent}</Text>
             <Text style={styles.text}>
-              {numProducts} product(s) | {numArticles} article(s)
+              {"\n"}{numProducts} product(s) | {numArticles} article(s)
             </Text>
             <Text
               style={[styles.expandSection, styles.sectionBody]}
@@ -60,7 +60,7 @@ const AreasOfConcern = ({ navigation, areas, name, saveArticle, saveProduct, art
                 })
               }
             >
-              See Resources ›
+              {"\n"}See Resources ›
             </Text>
           </View>
         </View>
@@ -89,7 +89,7 @@ export const circle = (score) => {
       : [styles.redCircle, styles.redCircleText];
   return (
     <View style={[styles.circle, circleColor]}>
-      <Text style={[styles.text, textColor]}>{score}</Text>
+      <Text style={[styles.text, textColor, {fontSize: 18, fontWeight: 700}]}>{score}</Text>
     </View>
   );
 };

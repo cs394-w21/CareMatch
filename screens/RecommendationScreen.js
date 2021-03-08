@@ -102,8 +102,8 @@ const RecommendationScreen = ({ route, navigation }) => {
           }}
         />
 
-        <View style={[styles.sectionContainer, { marginBottom: 26 }]}>
-          <Text style={styles.sectionHeader}>
+        <View style={[styles.sectionContainer, { marginBottom: 100 }]}>
+          <Text style={[styles.sectionHeader, { fontWeight: 400, fontSize: 30}]}>
             {name}'s Support Recommendations
           </Text>
         </View>
@@ -132,9 +132,9 @@ const RecommendationScreen = ({ route, navigation }) => {
           <View style={styles.line} />
           <AreasOfConcern navigation={navigation} areas={areas} name={name} saveArticle={saveArticle} saveProduct={saveProduct} articleState={savedArticles} productState={savedProducts} />
         </View>
-        {Object.keys(goodAreas).length > 0 ? (
+        {/* {Object.keys(goodAreas).length > 0 ? (
           <View style={styles.sectionContainer}>
-            <Text style={styles.sectionHeader}>
+            <Text style={[styles.sectionHeader, {fontSize: 13,}]}>
               Read about other support categories
             </Text>
 
@@ -155,7 +155,7 @@ const RecommendationScreen = ({ route, navigation }) => {
           </View>
         ) : (
             <View />
-          )}
+          )} */}
 
         <View style={styles.sectionContainer}>
           <BottomCards navigation={navigation} name={name} />
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.25,
+    borderWidth: 0.125,
     width: "100%",
   },
   icon: {
