@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image, Linking } from "react-native";
 import { theme } from "../utils/theme";
 const nurse = {
   name: "Jane Brigham, RN",
@@ -14,20 +14,10 @@ const buttons = () => {
       <TouchableOpacity
         style={[styles.button, styles.primaryButton]}
         onPress={() => {
-          return;
+          Linking.openURL(`tel:9148068177`);
         }}
       >
         <Text style={[styles.buttonText, styles.primaryButtonText]}>Call</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[styles.button, styles.secondaryButton]}
-        onPress={() => {
-          return;
-        }}
-      >
-        <Text style={[styles.buttonText, styles.secondaryButtonText]}>
-          Chat
-        </Text>
       </TouchableOpacity>
     </View>
   );
