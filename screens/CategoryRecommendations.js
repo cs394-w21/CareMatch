@@ -83,9 +83,6 @@ const CategoryRecommendations = ({ route, navigation }) => {
             {circle(score)}
           </View>
           <Text style={styles.sectionBody}>{adl.blurb}</Text>
-          <Text style={[styles.expandSection, styles.sectionBody]}>
-            Read More
-          </Text>
         </View>
         <View style={styles.sectionContainer}>
           <Text style={styles.subSectionHeader}>
@@ -96,7 +93,9 @@ const CategoryRecommendations = ({ route, navigation }) => {
             score is also low enough that we think it would be useful to talk
             with one of our registered nurses.
           </Text>
-          <Text style={[styles.expandSection, styles.sectionBody]}>
+          <Text style={[styles.expandSection, styles.sectionBody]} onPress={() => {
+          Linking.openURL(`tel:9148068177`);
+        }}>
             Contact Nurse
           </Text>
         </View>

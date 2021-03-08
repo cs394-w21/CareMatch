@@ -126,10 +126,6 @@ const RecommendationScreen = ({ route, navigation }) => {
               {Object.keys(areas).join(", ")}
             </Text>
           ) : null}
-
-          <Text style={[styles.expandSection, styles.sectionBody]}>
-            Read More
-          </Text>
         </View>
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionHeader}>Areas of Concern</Text>
