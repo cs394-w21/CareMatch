@@ -45,7 +45,7 @@ const Buttons = ({ showButtons, onGetStarted, onLogin, onSignUp }) => {
 export default function WelcomeScreen({ navigation }) {
   const [showButtons, setShowButtons] = useState(true);
   const onGetStarted = () => {
-    navigation.navigate("Questionnaire");
+    navigation.navigate("SignUpScreen");
   };
   const onLogin = () => {
     navigation.navigate("LoginScreen");
