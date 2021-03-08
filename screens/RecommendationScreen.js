@@ -18,6 +18,8 @@ const RecommendationScreen = ({ route, navigation }) => {
   const { name, uid } = route.params; //because we have a guest account
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();
+  const [savedArticles, setSavedArticles] = useState({});
+  const [savedProducts, setSavedProducts] = useState({});
   useEffect(() => {
     firebase.auth().onAuthStateChanged((auth) => {
       setAuth(auth);
@@ -32,6 +34,8 @@ const RecommendationScreen = ({ route, navigation }) => {
         setUser(users[uid]);
       } else if (users && auth) {
         setUser(users[auth.uid]);
+        setSavedArticles(users[auth.uid].articles);
+        setSavedProducts(users[auth.uid].products);
       }
     };
     db.on("value", handleData, (error) => console.log(error));
@@ -46,14 +50,32 @@ const RecommendationScreen = ({ route, navigation }) => {
       </View>
     );
   }
+  
+  if (user["seniors"] == null) {
+    return(null)
+  }
   const categoryScores = user["seniors"][name]["categoryScores"];
   const supportScore = user["seniors"][name]["totalScore"];
+
   const areas = Object.fromEntries(
     Object.entries(categoryScores).filter(([k, v]) => v < 100)
   );
   const goodAreas = Object.fromEntries(
     Object.entries(categoryScores).filter(([k, v]) => v == 100)
   );
+  const saveArticle = (article) => {
+    const db = firebase.database().ref("users");
+    db.update({ [auth.uid]: { ...user, articles: { ...savedArticles, [article.title]: { ...article } } } });
+    setSavedArticles({ ...savedArticles, [article.title]: { ...article } });
+  };
+
+  const saveProduct = (product) => {
+    setSavedProducts({ ...savedProducts, [product.title]: { ...product } });
+    const db = firebase.database().ref("users");
+    db.update({ [auth.uid]: { ...user, products: { ...savedProducts, [product.title]: { ...product } } } });
+
+  }
+
   return (
     <View
       style={{
@@ -78,13 +100,15 @@ const RecommendationScreen = ({ route, navigation }) => {
           leftAction={() => {
             navigation.navigate("Home", { uid: uid });
           }}
-          rightContent="Save Results"
         />
+
         <View style={[styles.sectionContainer, { marginBottom: 26 }]}>
           <Text style={styles.sectionHeader}>
             {name}'s Support Recommendations
           </Text>
         </View>
+
+        
         <SupportScoreChart percent={supportScore} />
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionHeader}>
@@ -110,7 +134,7 @@ const RecommendationScreen = ({ route, navigation }) => {
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionHeader}>Areas of Concern</Text>
           <View style={styles.line} />
-          <AreasOfConcern navigation={navigation} areas={areas} name={name} />
+          <AreasOfConcern navigation={navigation} areas={areas} name={name} saveArticle={saveArticle} saveProduct={saveProduct} articleState={savedArticles} productState={savedProducts} />
         </View>
         {Object.keys(goodAreas).length > 0 ? (
           <View style={styles.sectionContainer}>
@@ -134,8 +158,8 @@ const RecommendationScreen = ({ route, navigation }) => {
             <View style={styles.line} />
           </View>
         ) : (
-          <View />
-        )}
+            <View />
+          )}
 
         <View style={styles.sectionContainer}>
           <BottomCards navigation={navigation} name={name} />
@@ -165,6 +189,13 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 22,
     textAlign: "left",
+  },
+  header: {
+    fontFamily: theme.textFont,
+    fontWeight: "bold",
+    fontSize: 25,
+    textAlign: "center",
+    marginBottom: 5
   },
   sectionContainer: {
     flex: 1,

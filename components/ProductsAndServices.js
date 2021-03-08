@@ -24,13 +24,15 @@ export const ProductBadge = () => {
   );
 };
 
-const ProductsAndServices = ({ navigation, products, area, score, name }) => {
+const ProductsAndServices = ({ navigation, products, area, score, name, saveProduct }) => {
+
   const cards = products.map((item, i) => {
     const goToProduct = () => {
       navigation.navigate("SingleProductScreen", {
         area: area,
         item: item,
         score: score,
+        saveProduct: saveProduct,
         name: name,
       });
     };
@@ -63,7 +65,11 @@ const ProductsAndServices = ({ navigation, products, area, score, name }) => {
 
         <Text
           style={[styles.expandSection, styles.sectionBody, { marginTop: 15 }]}
+
           onPress={goToProduct}
+
+          
+
         >
           Read More ›
         </Text>

@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { theme } from "../utils/theme";
 
-const Articles = ({ articles }) => {
+const Articles = ({ articles, saveArticle }) => {
   const cards = articles.map((item, i) => {
     return (
       <View style={styles.sectionContainer} key={i}>
@@ -18,12 +18,27 @@ const Articles = ({ articles }) => {
         <Text style={[styles.sectionBody, { marginBottom: 13 }]}>
           {item.blurb}
         </Text>
-        <Text
-          style={[styles.expandSection, styles.sectionBody]}
-          onPress={() => Linking.openURL(item.url)}
-        >
-          Go to Article Website ›
+        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+          <TouchableOpacity
+            onPress={() => saveArticle(item)}
+            style={[styles.button, styles.secondaryButton]}
+          >
+            <Text style={[styles.buttonText, styles.sectionBody]}>
+              Save Article
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => Linking.openURL(item.url)}
+            style={styles.button}
+          >
+            <Text style={[styles.expandSection, styles.sectionBody]}>
+
+              Go to Article Website ›
         </Text>
+          </TouchableOpacity>
+        </View>
+
+
       </View>
     );
   });
@@ -110,6 +125,25 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     textAlign: "left",
   },
+  button: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 13,
+    minHeight: 36,
+    width: "35%",
+  },
+  secondaryButton: {
+    backgroundColor: theme.green,
+    borderColor: "rgba(255, 146, 183, 0.34)",
+    borderWidth: 2,
+  },
+  buttonText: {
+    color: theme.pink,
+  },
+  sectionBody: {
+    margin: 5
+  }
 });
 
 export default Articles;

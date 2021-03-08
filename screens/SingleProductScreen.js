@@ -16,7 +16,9 @@ import TopOptions from "../components/TopOptions";
 import { Rating } from "react-native-ratings";
 
 const SingleProductScreen = ({ route, navigation }) => {
-  const { area, item, score, name } = route.params;
+
+  const { area, item, score, name, saveProduct } = route.params;
+
 
   return (
     <View
@@ -38,14 +40,21 @@ const SingleProductScreen = ({ route, navigation }) => {
               source={require("../assets/Chevron.png")}
             ></Image>
           }
-          leftContent={area + " Recommendations"}
+          leftContent={area !== "Home" ? area + " Recommendations" : "Home"}
           leftAction={() => {
-            navigation.navigate("CategoryRecommendations", {
-              area: area,
-              score: score,
-            });
+            if (area !== "Home") {
+              navigation.navigate("CategoryRecommendations", {
+                area: area,
+                score: score,
+              });
+            } else {
+              navigation.navigate("Home")
+            }
+
           }}
+
           rightContent={"Save for " + name}
+          rightAction={() => saveProduct(item)}
         />
         <View style={styles.sectionContainer}>
           <ProductBadge />
