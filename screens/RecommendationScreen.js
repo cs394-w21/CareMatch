@@ -154,30 +154,21 @@ const RecommendationScreen = ({ route, navigation }) => {
             productState={savedProducts}
           />
         </View>
-        {/* {Object.keys(goodAreas).length > 0 ? (
+        {Object.keys(goodAreas).length > 0 ? (
           <View style={styles.sectionContainer}>
-            <Text style={[styles.sectionHeader, {fontSize: 13,}]}>
-              Read about other support categories
+            <Text style={[styles.sectionHeader, { fontSize: 13 }]}>
+              Other support categories
             </Text>
 
-            <Text style={[styles.sectionBody]}>
-              {name} scored well in our other support categories, but if you
-              like, you can read more about: {Object.keys(goodAreas).join(", ")}
-            </Text>
-            <Text
-              style={[
-                styles.expandSection,
-                styles.sectionBody,
-                { paddingBottom: 16 },
-              ]}
-            >
-              Learn about other categories
+            <Text style={[styles.sectionBody, { paddingBottom: 16 }]}>
+              {name} scored well in our other support categories:{" "}
+              {Object.keys(goodAreas).join(", ")}
             </Text>
             <View style={styles.line} />
           </View>
         ) : (
-            <View />
-          )} */}
+          <View />
+        )}
 
         <View style={styles.sectionContainer}>
           <BottomCards navigation={navigation} name={name} />
