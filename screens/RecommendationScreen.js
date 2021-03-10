@@ -72,6 +72,7 @@ const RecommendationScreen = ({ route, navigation }) => {
       },
     });
     setSavedArticles({ ...savedArticles, [article.title]: { ...article } });
+    alert("The article was succcessfully saved.");
   };
 
   const saveProduct = (product) => {
@@ -83,6 +84,7 @@ const RecommendationScreen = ({ route, navigation }) => {
         products: { ...savedProducts, [product.title]: { ...product } },
       },
     });
+    alert("The product was succcessfully saved.");
   };
 
   return (
