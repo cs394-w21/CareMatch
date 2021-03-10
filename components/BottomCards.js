@@ -9,7 +9,7 @@ const BottomCards = ({ navigation, name }) => {
     <View style={{ width: "100%" }}>
       <NurseContact />
       <RegisterCard navigation={navigation} name={name} />
-      <Logo />
+      <Logo navigation={navigation} />
     </View>
   );
 };

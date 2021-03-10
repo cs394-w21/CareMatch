@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 18,
   },
   cardContainer: {
@@ -150,15 +150,16 @@ const styles = StyleSheet.create({
     height: 0,
     color: theme.gray,
     borderColor: theme.gray,
-    borderWidth: 0.125,
+    borderWidth: 0.0001,
     width: "100%",
   },
   subSectionHeader: {
     fontFamily: theme.textFont2,
     fontWeight: "bold",
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 18,
     textAlign: "left",
+    marginBottom: 3,
   },
 });
 

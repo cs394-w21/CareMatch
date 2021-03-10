@@ -136,7 +136,6 @@ const Home = ({ route, navigation }) => {
             </Text>
           </TouchableOpacity>
         </View>
-        <Logo />
       </ScrollView>
     </View>
   );
@@ -151,7 +150,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
   },
   secondaryButtonText: {
     color: "black",
@@ -207,7 +206,7 @@ const styles = StyleSheet.create({
   },
   sectionBody: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 22,
@@ -235,7 +234,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
   },
   primaryButtonText: {
     color: "white",

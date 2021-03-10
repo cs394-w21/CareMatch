@@ -60,7 +60,7 @@ const RegisterCard = ({ navigation, name }) => {
 const styles = StyleSheet.create({
   buttonText: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     fontWeight: "900",
   },
   image: {
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: theme.textFont2,
     fontWeight: "900",
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 15,
     textTransform: "uppercase",
   },
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
   sectionBody: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 22,

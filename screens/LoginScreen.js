@@ -81,7 +81,7 @@ const LoginScreen = ({ navigation }) => {
               style={{
                 color: "white",
                 fontFamily: theme.textFont2,
-                fontSize: 13,
+                fontSize: 15,
                 fontWeight: "900",
               }}
             >
@@ -96,7 +96,7 @@ const LoginScreen = ({ navigation }) => {
             <Text
               style={{
                 fontFamily: theme.textFont2,
-                fontSize: 13,
+                fontSize: 15,
                 fontWeight: "900",
               }}
             >

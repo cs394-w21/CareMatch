@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   subSectionHeader: {
     fontFamily: theme.textFont,
     fontWeight: "bold",
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 18,
     textAlign: "left",
   },
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   },
   sectionBody: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 22,
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
 
   buttonText: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 15,
     fontWeight: "900",
   },
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    marginVertical: 13,
+    marginVertical: 15,
     padding: 10,
     justifyContent: "center",
     alignItems: "center",

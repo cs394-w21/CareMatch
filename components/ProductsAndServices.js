@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
   subSectionHeader: {
     fontFamily: theme.textFont,
     fontWeight: "bold",
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 18,
     textAlign: "left",
   },

@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: "Georgia",
-    fontSize: 13,
+    fontSize: 15,
   },
   primaryButtonText: {
     color: "white",
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   sectionBody: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 22,

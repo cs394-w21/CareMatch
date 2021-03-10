@@ -50,9 +50,9 @@ const RecommendationScreen = ({ route, navigation }) => {
       </View>
     );
   }
-  
+
   if (user["seniors"] == null) {
-    return(null)
+    return null;
   }
   const categoryScores = user["seniors"][name]["categoryScores"];
   const supportScore = user["seniors"][name]["totalScore"];
@@ -65,16 +65,25 @@ const RecommendationScreen = ({ route, navigation }) => {
   );
   const saveArticle = (article) => {
     const db = firebase.database().ref("users");
-    db.update({ [auth.uid]: { ...user, articles: { ...savedArticles, [article.title]: { ...article } } } });
+    db.update({
+      [auth.uid]: {
+        ...user,
+        articles: { ...savedArticles, [article.title]: { ...article } },
+      },
+    });
     setSavedArticles({ ...savedArticles, [article.title]: { ...article } });
   };
 
   const saveProduct = (product) => {
     setSavedProducts({ ...savedProducts, [product.title]: { ...product } });
     const db = firebase.database().ref("users");
-    db.update({ [auth.uid]: { ...user, products: { ...savedProducts, [product.title]: { ...product } } } });
-
-  }
+    db.update({
+      [auth.uid]: {
+        ...user,
+        products: { ...savedProducts, [product.title]: { ...product } },
+      },
+    });
+  };
 
   return (
     <View
@@ -102,13 +111,14 @@ const RecommendationScreen = ({ route, navigation }) => {
           }}
         />
 
-        <View style={[styles.sectionContainer, { marginBottom: 100 }]}>
-          <Text style={[styles.sectionHeader, { fontWeight: 400, fontSize: 30}]}>
+        <View style={[styles.sectionContainer, { marginBottom: 35 }]}>
+          <Text
+            style={[styles.sectionHeader, { fontWeight: 400, fontSize: 30 }]}
+          >
             {name}'s Support Recommendations
           </Text>
         </View>
 
-        
         <SupportScoreChart percent={supportScore} />
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionHeader}>
@@ -128,9 +138,19 @@ const RecommendationScreen = ({ route, navigation }) => {
           ) : null}
         </View>
         <View style={styles.sectionContainer}>
-          <Text style={styles.sectionHeader}>Areas of Concern</Text>
+          <Text style={[styles.sectionHeader, { marginBottom: 3 }]}>
+            Areas of Concern
+          </Text>
           <View style={styles.line} />
-          <AreasOfConcern navigation={navigation} areas={areas} name={name} saveArticle={saveArticle} saveProduct={saveProduct} articleState={savedArticles} productState={savedProducts} />
+          <AreasOfConcern
+            navigation={navigation}
+            areas={areas}
+            name={name}
+            saveArticle={saveArticle}
+            saveProduct={saveProduct}
+            articleState={savedArticles}
+            productState={savedProducts}
+          />
         </View>
         {/* {Object.keys(goodAreas).length > 0 ? (
           <View style={styles.sectionContainer}>
@@ -191,7 +211,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 25,
     textAlign: "center",
-    marginBottom: 5
+    marginBottom: 5,
   },
   sectionContainer: {
     flex: 1,
@@ -202,7 +222,7 @@ const styles = StyleSheet.create({
   },
   sectionBody: {
     fontFamily: theme.textFont2,
-    fontSize: 13,
+    fontSize: 15,
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 22,

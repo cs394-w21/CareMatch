@@ -32,13 +32,10 @@ const Articles = ({ articles, saveArticle }) => {
             style={styles.button}
           >
             <Text style={[styles.expandSection, styles.sectionBody]}>
-
               Go to Article Website ›
-        </Text>
+            </Text>
           </TouchableOpacity>
         </View>
-
-
       </View>
     );
   });
@@ -121,7 +118,7 @@ const styles = StyleSheet.create({
   subSectionHeader: {
     fontFamily: theme.textFont2,
     fontWeight: "bold",
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 18,
     textAlign: "left",
   },
@@ -142,8 +139,8 @@ const styles = StyleSheet.create({
     color: theme.pink,
   },
   sectionBody: {
-    margin: 5
-  }
+    margin: 5,
+  },
 });
 
 export default Articles;

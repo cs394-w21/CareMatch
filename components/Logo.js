@@ -1,12 +1,22 @@
 import React, { useState } from "react";
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, TouchableOpacity } from "react-native";
 
-const Logo = () => {
+const Logo = ({ navigation }) => {
+  // don't pass Logo navigation if you don't want it to navigate you home
   return (
-    <Image
-      style={styles.logo}
-      source={require("../assets/juno_black.png")}
-    ></Image>
+    <TouchableOpacity
+      onPress={() => {
+        if (navigation) {
+          navigation.navigate("Home");
+        }
+      }}
+    >
+      <Image
+        style={styles.logo}
+        source={require("../assets/juno_black.png")}
+        onPress={() => navigation.navigate("Home")}
+      ></Image>
+    </TouchableOpacity>
   );
 };
 

@@ -5,7 +5,7 @@ const theme = {
   gray: "#B6B6B6",
   textFont: "Arial", // Should be Calibri
   textFont2: "Arial", // Should be Roboto
-  textFontSize: 13,
+  textFontSize: 15,
 };
 
 export { theme };
