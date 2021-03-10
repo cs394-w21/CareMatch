@@ -49,13 +49,11 @@ const Home = ({ route, navigation }) => {
     profiles = Object.keys(user["seniors"]).map((name) => {
       return (
         <View key={name}>
-          <Text
-            style={{ fontSize: 15, marginBottom: "-5%", fontWeight: "bold" }}
-          >
+          <Text style={{ fontSize: 15, marginBottom: 5, fontWeight: "bold" }}>
             {name}
           </Text>
           <TouchableOpacity
-            style={[styles.button, styles.secondaryButton]}
+            style={[styles.button, styles.secondaryButton, { marginBottom: 0 }]}
             onPress={() =>
               navigation.navigate("RecommendationScreen", { name: name })
             }
@@ -65,7 +63,7 @@ const Home = ({ route, navigation }) => {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={{ marginTop: "-5%", alignSelf: "center" }}
+            style={{ marginTop: 5, alignSelf: "center" }}
             onPress={() => {
               const ref = firebase
                 .database()
@@ -73,7 +71,9 @@ const Home = ({ route, navigation }) => {
               ref.remove();
             }}
           >
-            <Text style={{ color: theme.lightPink }}>Delete this profile</Text>
+            <Text style={{ color: theme.lightPink, marginTop: -2 }}>
+              Delete this profile
+            </Text>
           </TouchableOpacity>
         </View>
       );
@@ -120,7 +120,7 @@ const Home = ({ route, navigation }) => {
             }}
             onPress={() => navigation.navigate("Questionnaire")}
           >
-            <View style={[styles.button, styles.primaryButton]}>
+            <View style={[styles.button, styles.addButton]}>
               <Text style={[styles.buttonText, styles.primaryButtonText]}>
                 +
               </Text>
@@ -169,6 +169,12 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   primaryButton: {
+    backgroundColor: theme.pink,
+    borderColor: theme.pink,
+    borderWidth: 2,
+    borderRadius: 13,
+  },
+  addButton: {
     backgroundColor: theme.pink,
     borderColor: theme.pink,
     borderWidth: 2,
@@ -227,17 +233,9 @@ const styles = StyleSheet.create({
     height: 21,
     overflow: "visible",
   },
-  primaryButton: {
-    backgroundColor: theme.pink,
-    borderColor: theme.pink,
-    borderWidth: 2,
-  },
   buttonText: {
     fontFamily: theme.textFont2,
     fontSize: 15,
-  },
-  primaryButtonText: {
-    color: "white",
   },
 });
 export default Home;
