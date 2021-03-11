@@ -18,8 +18,6 @@ const RecommendationScreen = ({ route, navigation }) => {
   const { name, uid } = route.params; //because we have a guest account
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();
-  const [savedArticles, setSavedArticles] = useState({});
-  const [savedProducts, setSavedProducts] = useState({});
   useEffect(() => {
     firebase.auth().onAuthStateChanged((auth) => {
       setAuth(auth);
@@ -34,8 +32,6 @@ const RecommendationScreen = ({ route, navigation }) => {
         setUser(users[uid]);
       } else if (users && auth) {
         setUser(users[auth.uid]);
-        setSavedArticles(users[auth.uid].articles);
-        setSavedProducts(users[auth.uid].products);
       }
     };
     db.on("value", handleData, (error) => console.log(error));
@@ -63,29 +59,6 @@ const RecommendationScreen = ({ route, navigation }) => {
   const goodAreas = Object.fromEntries(
     Object.entries(categoryScores).filter(([k, v]) => v == 100)
   );
-  const saveArticle = (article) => {
-    const db = firebase.database().ref("users");
-    db.update({
-      [auth.uid]: {
-        ...user,
-        articles: { ...savedArticles, [article.title]: { ...article } },
-      },
-    });
-    setSavedArticles({ ...savedArticles, [article.title]: { ...article } });
-    alert("The article was succcessfully saved.");
-  };
-
-  const saveProduct = (product) => {
-    setSavedProducts({ ...savedProducts, [product.title]: { ...product } });
-    const db = firebase.database().ref("users");
-    db.update({
-      [auth.uid]: {
-        ...user,
-        products: { ...savedProducts, [product.title]: { ...product } },
-      },
-    });
-    alert("The product was succcessfully saved.");
-  };
 
   return (
     <View
@@ -144,15 +117,7 @@ const RecommendationScreen = ({ route, navigation }) => {
             Areas of Concern
           </Text>
           <View style={styles.line} />
-          <AreasOfConcern
-            navigation={navigation}
-            areas={areas}
-            name={name}
-            saveArticle={saveArticle}
-            saveProduct={saveProduct}
-            articleState={savedArticles}
-            productState={savedProducts}
-          />
+          <AreasOfConcern navigation={navigation} areas={areas} name={name} />
         </View>
         {Object.keys(goodAreas).length > 0 ? (
           <View style={styles.sectionContainer}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {firebase} from "../firebase";
+import { firebase } from "../firebase";
 import {
   StyleSheet,
   Text,
@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { theme } from "../utils/theme";
 
-const Articles = ({ articles, saveArticle }) => {
+const Articles = ({ articles }) => {
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();
   useEffect(() => {
@@ -33,6 +33,15 @@ const Articles = ({ articles, saveArticle }) => {
       db.off("value", handleData);
     };
   }, [auth]);
+
+  const saveArticle = (article) => {
+    const db = firebase.database().ref("users/" + auth.uid + "/articles");
+    db.update({
+      [article.title]: { ...article },
+    });
+    alert("The article was succcessfully saved.");
+  };
+
   if (user == null) {
     return (
       <View>
@@ -41,37 +50,44 @@ const Articles = ({ articles, saveArticle }) => {
     );
   }
 
-
   const cards = articles.map((item, i) => {
     let saved = false;
     if (user["articles"]) {
-      console.log(item.title)
-      console.log(Object.keys(user.articles))
-      if (item.title in Object.keys(user.articles)) {
+      if (Object.keys(user["articles"]).includes(item.title)) {
         saved = true;
-        console.log("it worked")
       }
     }
     return (
       <View style={styles.sectionContainer} key={i}>
         <View style={styles.moveright}>
-         <TouchableOpacity
-            onPress={() => saveArticle(item)}
-          >
-            { saved? <Text style={[styles.sectionBody, styles.expandSection, styles.moveright]}>
-            Saved
-          </Text> : <Text style={[styles.sectionBody, styles.expandSection, styles.moveright]}>
-              Save
-            </Text>}
-            
+          <TouchableOpacity onPress={() => saveArticle(item)}>
+            {saved ? (
+              <View style={{ alignItems: "center", flexDirection: "row" }}>
+                <Text style={[styles.sectionBody, styles.expandSection]}>
+                  Saved{" "}
+                </Text>
+                <View style={[styles.indicator, styles.saved]} />
+              </View>
+            ) : (
+              <View
+                style={{
+                  alignItems: "center",
+                  flexDirection: "row",
+                }}
+              >
+                <Text style={[styles.sectionBody, styles.expandSection]}>
+                  Save{" "}
+                </Text>
+                <View style={styles.indicator} />
+              </View>
+            )}
           </TouchableOpacity>
-          </View>
+        </View>
         <Text style={styles.articleTitle}>{item.title}</Text>
         <Text style={[styles.sectionBody, { marginBottom: 13 }]}>
           {item.blurb}
         </Text>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-         
           <TouchableOpacity
             onPress={() => Linking.openURL(item.url)}
             style={styles.button}
@@ -113,7 +129,8 @@ const styles = StyleSheet.create({
   },
   moveright: {
     width: "100%",
-    textAlign: 'right',
+    flexDirection: "column",
+    alignItems: "flex-end",
   },
   text: {
     fontFamily: theme.textFont2,
@@ -188,7 +205,18 @@ const styles = StyleSheet.create({
     color: theme.pink,
   },
   sectionBody: {
-    margin: 5,
+    marginTop: 5,
+    marginBottom: 5,
+  },
+  indicator: {
+    width: 6,
+    height: 6,
+    borderWidth: 1,
+    borderRadius: 6 / 2,
+    borderColor: theme.pink,
+  },
+  saved: {
+    backgroundColor: theme.pink,
   },
 });
 

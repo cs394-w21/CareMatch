@@ -1,6 +1,7 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import React, { useState, useEffect } from "react";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
+import { firebase } from "../firebase";
 
 export const ProductBadge = () => {
   return (
@@ -33,14 +34,37 @@ export const ProductBadge = () => {
   );
 };
 
-const ProductsAndServices = ({
-  navigation,
-  products,
-  area,
-  score,
-  name,
-  saveProduct,
-}) => {
+const ProductsAndServices = ({ navigation, products, area, score, name }) => {
+  const [auth, setAuth] = useState();
+  const [user, setUser] = useState();
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((auth) => {
+      setAuth(auth);
+    });
+  }, []);
+
+  useEffect(() => {
+    const db = firebase.database().ref("users");
+    const handleData = (snap) => {
+      const users = snap.val();
+      if (users && auth) {
+        setUser(users[auth.uid]);
+      }
+    };
+    db.on("value", handleData, (error) => console.log(error));
+    return () => {
+      db.off("value", handleData);
+    };
+  }, [auth]);
+
+  const saveProduct = (product) => {
+    const db = firebase.database().ref("users/" + auth.uid + "/products");
+    db.update({
+      [product.title]: { ...product },
+    });
+    alert("The product was succcessfully saved.");
+  };
+
   const cards = products.map((item, i) => {
     const goToProduct = () => {
       navigation.navigate("SingleProductScreen", {
@@ -51,9 +75,42 @@ const ProductsAndServices = ({
         name: name,
       });
     };
+    let saved = false;
+    if (user) {
+      if (user["products"]) {
+        if (Object.keys(user["products"]).includes(item.title)) {
+          saved = true;
+        }
+      }
+    }
     return (
       <View style={styles.sectionContainer} key={i}>
-        <ProductBadge />
+        <View style={styles.spaceBetween}>
+          <ProductBadge />
+          <TouchableOpacity onPress={() => saveProduct(item)}>
+            {saved ? (
+              <View style={{ alignItems: "center", flexDirection: "row" }}>
+                <Text style={[styles.sectionBody, styles.expandSection]}>
+                  Saved{" "}
+                </Text>
+                <View style={[styles.indicator, styles.saved]} />
+              </View>
+            ) : (
+              <View
+                style={{
+                  alignItems: "center",
+                  flexDirection: "row",
+                }}
+              >
+                <Text style={[styles.sectionBody, styles.expandSection]}>
+                  Save{" "}
+                </Text>
+                <View style={styles.indicator} />
+              </View>
+            )}
+          </TouchableOpacity>
+        </View>
+
         <View
           style={{
             flex: 1,
@@ -171,6 +228,22 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     textAlign: "left",
     color: theme.pink,
+  },
+  indicator: {
+    width: 6,
+    height: 6,
+    borderWidth: 1,
+    borderRadius: 6 / 2,
+    borderColor: theme.pink,
+  },
+  saved: {
+    backgroundColor: theme.pink,
+  },
+  spaceBetween: {
+    width: "100%",
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
 

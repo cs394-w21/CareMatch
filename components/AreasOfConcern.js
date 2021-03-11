@@ -3,15 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
 import { firebase } from "../firebase";
 
-const AreasOfConcern = ({
-  navigation,
-  areas,
-  name,
-  saveArticle,
-  saveProduct,
-  articleState,
-  productState,
-}) => {
+const AreasOfConcern = ({ navigation, areas, name }) => {
   const [adl, setAdl] = useState(null);
 
   useEffect(() => {
@@ -62,10 +54,6 @@ const AreasOfConcern = ({
                   area: area,
                   score: areas[area],
                   name: name,
-                  saveArticle: saveArticle,
-                  saveProduct: saveProduct,
-                  articleState: articleState,
-                  productState: productState,
                 })
               }
             >

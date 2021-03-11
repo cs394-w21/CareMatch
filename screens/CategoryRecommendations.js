@@ -18,17 +18,8 @@ import TopOptions from "../components/TopOptions";
 import { firebase } from "../firebase";
 
 const CategoryRecommendations = ({ route, navigation }) => {
-  const {
-    area,
-    score,
-    name,
-    saveArticle,
-    saveProduct,
-    articleState,
-    productState,
-  } = route.params;
+  const { area, score, name } = route.params;
   const [adl, setAdl] = useState(null);
-  console.log(productState, articleState);
   useEffect(() => {
     const db = firebase.database().ref("adl");
     const handleData = (snap) => {
@@ -122,11 +113,10 @@ const CategoryRecommendations = ({ route, navigation }) => {
             area={area}
             score={score}
             name={name}
-            saveProduct={saveProduct}
           />
         </View>
         <View style={styles.sectionContainer}>
-          <Articles articles={adl.articles} saveArticle={saveArticle} />
+          <Articles articles={adl.articles} />
         </View>
         <View style={styles.sectionContainer}>
           <BottomCards navigation={navigation} name={name} />

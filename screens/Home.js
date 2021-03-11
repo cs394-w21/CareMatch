@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   primaryButton: {
     backgroundColor: theme.pink,
     borderColor: theme.pink,
-    borderWidth: 2,
+    borderWidth: 0,
     borderRadius: 13,
   },
   addButton: {
