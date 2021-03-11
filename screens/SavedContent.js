@@ -12,6 +12,7 @@ import Logo from "../components/Logo";
 import { firebase } from "../firebase";
 import Articles from "../components/Articles";
 import ProductsAndServices from "../components/ProductsAndServices";
+import TopOptions from "../components/TopOptions";
 
 const SavedContent = ({ route, navigation }) => {
   const { user } = route.params;
@@ -19,7 +20,7 @@ const SavedContent = ({ route, navigation }) => {
   const displayArticles = () => {
     if (!user.hasOwnProperty("articles")) {
       console.log("why");
-      return <Text>No articles to display</Text>;
+      return <Text style={{ marginVertical: 16 }}>No articles to display</Text>;
     } else {
       console.log("help");
       return (
@@ -33,7 +34,7 @@ const SavedContent = ({ route, navigation }) => {
 
   const displayProducts = () => {
     if (!user.hasOwnProperty("products")) {
-      return <Text>No products to display</Text>;
+      return <Text style={{ marginVertical: 16 }}>No products to display</Text>;
     } else {
       return (
         <ProductsAndServices
@@ -46,20 +47,40 @@ const SavedContent = ({ route, navigation }) => {
     }
   };
   return (
-    <View style={styles.cardContainer}>
-      {displayArticles()}
-      {displayProducts()}
+    <View style={styles.container}>
+      <TopOptions
+        leftIcon={
+          <Image
+            style={styles.icon}
+            source={require("../assets/Chevron.png")}
+          ></Image>
+        }
+        leftContent="Back"
+        leftAction={() => navigation.goBack()}
+      />
+      <View style={styles.cardContainer}>
+        {displayArticles()}
+        {displayProducts()}
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  cardContainer: {
+  container: {
     flex: 1,
-    justifyContent: "space-evenly",
     paddingVertical: 26,
     paddingHorizontal: 10,
     backgroundColor: "white",
+  },
+  cardContainer: {
+    flex: 1,
+    justifyContent: "space-evenly",
+  },
+  icon: {
+    width: 12,
+    height: 21,
+    overflow: "visible",
   },
 });
 

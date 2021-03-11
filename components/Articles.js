@@ -36,9 +36,16 @@ const Articles = ({ articles }) => {
 
   const saveArticle = (article) => {
     const db = firebase.database().ref("users/" + auth.uid + "/articles");
-    db.update({
-      [article.title]: { ...article },
-    });
+    if (user && user["articles"] && article.title in user.articles) {
+      const ref = firebase
+        .database()
+        .ref("users/" + auth.uid + "/articles/" + article.title);
+      ref.remove();
+    } else {
+      db.update({
+        [article.title]: { ...article },
+      });
+    }
   };
 
   if (user == null) {

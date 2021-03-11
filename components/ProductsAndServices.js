@@ -59,9 +59,16 @@ const ProductsAndServices = ({ navigation, products, area, score, name }) => {
 
   const saveProduct = (product) => {
     const db = firebase.database().ref("users/" + auth.uid + "/products");
-    db.update({
-      [product.title]: { ...product },
-    });
+    if (user && user["products"] && product.title in user.products) {
+      const ref = firebase
+        .database()
+        .ref("users/" + auth.uid + "/products/" + product.title);
+      ref.remove();
+    } else {
+      db.update({
+        [product.title]: { ...product },
+      });
+    }
   };
 
   const cards = products.map((item, i) => {

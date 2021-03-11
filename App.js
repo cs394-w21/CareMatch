@@ -52,7 +52,7 @@ export default function App() {
         <Stack.Screen
           component={SavedContent}
           name="SavedContent"
-          options={{ title: "Saved Content" }}
+          options={{ headerShown: false, title: "Juno" }}
         />
 
         <Stack.Screen
