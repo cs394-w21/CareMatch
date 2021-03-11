@@ -9,6 +9,7 @@ import {
   ScrollView,
   Image,
 } from "react-native";
+import GenericTouchable from "react-native-gesture-handler/dist/src/components/touchables/GenericTouchable";
 import { theme } from "../utils/theme";
 
 const TopOptions = ({
@@ -32,12 +33,11 @@ const TopOptions = ({
           {leftContent}
         </Text>
       </TouchableOpacity>
-      <Text
-        style={[styles.expandSection, styles.sectionBody]}
-        onPress={rightAction}
-      >
-        {rightContent}
-      </Text>
+      <TouchableOpacity onPress={rightAction}>
+        <Text style={[styles.expandSection, styles.sectionBody]}>
+          {rightContent}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
