@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   sectionBody: {
     fontFamily: theme.textFont2,
-    fontSize: 15,
+    fontSize: 13,
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: 22,

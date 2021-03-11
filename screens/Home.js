@@ -12,7 +12,7 @@ import Logo from "../components/Logo";
 import { firebase } from "../firebase";
 
 const Home = ({ route, navigation }) => {
-  const { uid } = route.params;
+  //const { uid } = route.params;
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();
   useEffect(() => {
@@ -25,9 +25,7 @@ const Home = ({ route, navigation }) => {
     const db = firebase.database().ref("users");
     const handleData = (snap) => {
       const users = snap.val();
-      if (users && uid) {
-        setUser(users[uid]);
-      } else if (users && auth) {
+      if (users && auth) {
         setUser(users[auth.uid]);
       }
     };
@@ -72,7 +70,7 @@ const Home = ({ route, navigation }) => {
             }}
           >
             <Text style={{ color: theme.lightPink, marginTop: -2 }}>
-              Delete this profile
+              Delete This Profile
             </Text>
           </TouchableOpacity>
         </View>
@@ -108,7 +106,7 @@ const Home = ({ route, navigation }) => {
             onPress={() => navigation.navigate("SavedContent", { user: user })}
           >
             <Text style={[styles.buttonText, styles.primaryButtonText]}>
-              View your saved content.
+              View Your Saved Content
             </Text>
           </TouchableOpacity>
           <View style={styles.line} />
@@ -200,7 +198,7 @@ const styles = StyleSheet.create({
     fontFamily: theme.textFont,
     fontWeight: "bold",
     fontSize: 17,
-    lineHeight: 22,
+    //lineHeight: 22,
     textAlign: "left",
   },
   sectionContainer: {

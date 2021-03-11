@@ -62,7 +62,6 @@ const ProductsAndServices = ({ navigation, products, area, score, name }) => {
     db.update({
       [product.title]: { ...product },
     });
-    alert("The product was succcessfully saved.");
   };
 
   const cards = products.map((item, i) => {
@@ -219,6 +218,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 15,
     lineHeight: 18,
+    textAlign: "left",
+  },
+  sectionBody: {
+    fontFamily: theme.textFont2,
+    fontSize: 15,
+    fontStyle: "normal",
+    fontWeight: "400",
+    lineHeight: 22,
     textAlign: "left",
   },
   productTitle: {

@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     fontFamily: theme.textFont,
     fontWeight: "bold",
     fontSize: 17,
-    lineHeight: 22,
+    //lineHeight: 22,
     textAlign: "left",
   },
   header: {

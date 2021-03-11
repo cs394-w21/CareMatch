@@ -39,7 +39,6 @@ const Articles = ({ articles }) => {
     db.update({
       [article.title]: { ...article },
     });
-    alert("The article was succcessfully saved.");
   };
 
   if (user == null) {
@@ -205,6 +204,12 @@ const styles = StyleSheet.create({
     color: theme.pink,
   },
   sectionBody: {
+    fontFamily: theme.textFont2,
+    fontSize: 15,
+    fontStyle: "normal",
+    fontWeight: "400",
+    lineHeight: 22,
+    textAlign: "left",
     marginTop: 5,
     marginBottom: 5,
   },

@@ -57,8 +57,9 @@ const styles = StyleSheet.create({
   cardContainer: {
     flex: 1,
     justifyContent: "space-evenly",
-    paddingVertical: 16,
-    margin: 10,
+    paddingVertical: 26,
+    paddingHorizontal: 10,
+    backgroundColor: "white",
   },
 });
 

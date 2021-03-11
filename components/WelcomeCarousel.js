@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
 import { theme } from "../utils/theme";
 import Swiper from "react-native-web-swiper";
-//import juno from '../assets/juno.svg';
-//import {Svg} from 'react-native-svg';
 
 const Carousel = ({ setShowButtons }) => {
   const [currIndex, setCurrIndex] = useState(0);
@@ -63,7 +61,7 @@ const Carousel = ({ setShowButtons }) => {
       >
         <View style={[styles.slideContainer]}>
           <ImageBackground
-            source={require("../assets/elderly_couple.png")}
+            source={require("../assets/elderly_people.png")}
             style={styles.imageBackground}
             resizeMode="cover"
           >
@@ -86,7 +84,7 @@ const Carousel = ({ setShowButtons }) => {
           <View style={styles.textContainer}>
             <Image
               style={styles.image}
-              source={require("../assets/graphic_placeholder.png")}
+              source={require("../assets/first_swipe.png")}
             ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               Assess how much support your loved one may need by utilizing the
@@ -100,7 +98,7 @@ const Carousel = ({ setShowButtons }) => {
           <View style={styles.textContainer}>
             <Image
               style={styles.image}
-              source={require("../assets/graphic_placeholder.png")}
+              source={require("../assets/second_swipe.png")}
             ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               Understand recommended products and services based on your loved
@@ -112,7 +110,7 @@ const Carousel = ({ setShowButtons }) => {
           <View style={styles.textContainer}>
             <Image
               style={styles.image}
-              source={require("../assets/graphic_placeholder.png")}
+              source={require("../assets/third_swipe.png")}
             ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               Review articles and information that will help you know what aging
@@ -125,7 +123,7 @@ const Carousel = ({ setShowButtons }) => {
           <View style={styles.textContainer}>
             <Image
               style={styles.image}
-              source={require("../assets/graphic_placeholder.png")}
+              source={require("../assets/fourth_swipe.png")}
             ></Image>
             <Text style={[styles.text, styles.primaryText]}>
               To get started let’s take 10 minutes to learn about the person, or
@@ -149,7 +147,6 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 150,
-    borderRadius: 150 / 2,
     overflow: "hidden",
   },
   imageBackground: {
