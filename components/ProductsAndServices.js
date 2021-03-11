@@ -57,9 +57,14 @@ const ProductsAndServices = ({ navigation, products, area, score, name }) => {
     };
   }, [auth]);
 
-  const saveProduct = (product) => {
+  const saveProduct = (product, onlySave = false) => {
     const db = firebase.database().ref("users/" + auth.uid + "/products");
-    if (user && user["products"] && product.title in user.products) {
+    if (
+      user &&
+      user["products"] &&
+      product.title in user.products &&
+      !onlySave
+    ) {
       const ref = firebase
         .database()
         .ref("users/" + auth.uid + "/products/" + product.title);

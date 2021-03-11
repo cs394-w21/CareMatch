@@ -49,8 +49,8 @@ const SingleProductScreen = ({ route, navigation }) => {
               navigation.navigate("Home");
             }
           }}
-          rightContent={"Save for " + name}
-          rightAction={() => saveProduct(item)}
+          rightContent={"Save Product"}
+          rightAction={() => saveProduct(item, true)}
         />
         <View style={styles.sectionContainer}>
           <ProductBadge />
