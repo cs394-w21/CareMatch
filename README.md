@@ -22,16 +22,16 @@ Juno was created as a React-Native-based web application to help users care for 
 We created an example of the database in the `databaseExample.json` file that can be imported into the database. This has a number of old user accounts, but it importantly contains the values associated with the ADLs (eg ADL names, questions, definitions, products, articles, etc).
 
 ## Build/Deploy
-In Terminal, navigate to the root of the project. Run expo build:web. This makes a directory with the compiled website. From there, you can run firebase deploy to deploy the site to Firebase manually. Alternatively, you could push to GitHub, and (if you added a secret Firebase token key) it will take care of the deployment with the configuration specified in the YAML file.
+In Terminal, navigate to the root of the project. Run `expo build:web`. This makes a directory with the compiled website. From there, you can run firebase deploy to deploy the site to Firebase manually. Alternatively, you could push to GitHub, and (if you added a secret Firebase token key) it will take care of the deployment with the configuration specified in the YAML file.
 
 ## Future Development/Known issues
-**Filling Out Questionnaire**
+#### Filling Out Questionnaire
 * Editing profile 
     * No feature in place for editing profiles
-**Contact a Nurse**
+#### Contact a Nurse
 * Nurse contact
     * Calling feature is built but needs a number to call. There is no real nurse called Jane with the details specified.
-**User Accounts**
+#### User Accounts
 * Login/Registration
     * Users cannot log out.
     * There is some obsolete logic in the app related to guest accounts.
