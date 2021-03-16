@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { theme } from "../utils/theme";
 import Carousel from "../components/WelcomeCarousel";
-import { firebase } from "../firebase";
 
 const Buttons = ({ showButtons, onGetStarted, onLogin, onSignUp }) => {
   if (showButtons) {

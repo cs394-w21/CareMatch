@@ -1,0 +1,1644 @@
+{
+  "adl" : {
+    "Hygiene" : {
+      "Question" : "How do you estimate your loved one’s ability to get into and out of the shower? How do you estimate their ability to clean him or herself?",
+      "articles" : [ {
+        "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+        "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+        "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+      }, {
+        "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly.",
+        "title" : "Personal Hygiene Checklist for the Elderly",
+        "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/"
+      } ],
+      "blurb" : "Personal hygiene often declines with age. This can be embarrassing for many seniors to talk about but it's very important as the bathroom is #1 place falls occur. Thankfully there are many options, both temporary as well as permanent, that can help with this activity around the home and help maintain independence.",
+      "products" : [ {
+        "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+        "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+        "title" : "Design By Intent - Shower Bar",
+        "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+      }, {
+        "blurb" : "The Roll On Lotion Applicator is a long-handle applicator designed to help users easily apply lotion to their back and other hard-to-reach areas.",
+        "image" : "https://www.caregiverproducts.com/thumbnail.asp?file=assets/images/ajb3747-roll-a-lotion-demo-1w.jpg",
+        "title" : "Roll On Lotion Applicator",
+        "url" : "https://www.caregiverproducts.com/roll-on-lotion-applicator.html"
+      } ]
+    },
+    "Managing Medications" : {
+      "Question" : "How do you estimate your loved one's ability to take medication on time at the correct dosage?",
+      "articles" : [ {
+        "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+        "title" : "10 Tips For Safe Medication Management For Seniors",
+        "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+      } ],
+      "blurb" : "Taking medicine correctly is essential for treating health conditions and managing symptoms. It's easy for a mix up to occur but thankfully there are many systems and tips available for seniors who may need a little assistance.",
+      "products" : [ {
+        "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+        "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+        "title" : "Hero Pill Dispenser",
+        "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+      } ]
+    },
+    "Walking" : {
+      "Question" : "How do you estimate your loved one's ability to walk independently from one location to another?",
+      "articles" : [ {
+        "blurb" : "As an older adult, regular physical activity is one of the most important things you can do for your health. It can prevent many of the health problems that seem to come with age. ",
+        "title" : "How much physical activity do older adults need?",
+        "url" : "https://www.cdc.gov/physicalactivity/basics/older_adults/index.htm"
+      } ],
+      "blurb" : "Losing the ability to walk around freely is a massive barrier to independence in many senior’s lives. Thankfully, performing some fast and simple exercise routines can massively reduce declining physical ability. Incorporating routines can be a fun and empowering activity for seniors looking to maintain their independence.  ",
+      "products" : [ {
+        "blurb" : "As the growing population of older adults is seeking to gain strength and vitality while warding off inactivity-related disease and cognitive decline—and you can help them achieve their goals. The ACE Senior Fitness Specialist Program will teach you how to safely and effectively help seniors maintain vibrancy through health and fitness.",
+        "title" : "Ace Senior Fitness Program",
+        "url" : "https://www.acefitness.org/fitness-certifications/specialty-certifications/senior-fitness.aspx?campaignid=1749784468&adgroupid=69165159595&adid=340668339499&gclid=CjwKCAiAyc2BBhAaEiwA44-wW_hba76zFe7QippArXyQJdIgZHCoMvh9xsl7V7M1gX3i__W6pYP2JxoCNiMQAvD_BwE"
+      } ]
+    }
+  },
+  "users" : {
+    "-MV-bxojQ5Yzt6mMi5Wr" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "mally" : {
+          "age" : 90,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 25,
+            "Walking" : 50
+          },
+          "sex" : "female",
+          "totalScore" : 58
+        }
+      }
+    },
+    "-MV-dPiDaZLTCiSwYU-C" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "melly" : {
+          "age" : 90,
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "female",
+          "totalScore" : 58
+        }
+      }
+    },
+    "-MV-e32lBrPWZcJCdPsI" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "new" : {
+          "age" : 80,
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "intersex",
+          "totalScore" : 58
+        }
+      }
+    },
+    "-MV-enfzIJ6Gv5WSIZpg" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "Elizabeth" : {
+          "age" : 80,
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "female",
+          "totalScore" : 50
+        }
+      }
+    },
+    "-MV-ewoGoaDk8HfeZ5DL" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "Karen" : {
+          "age" : 90,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 50
+          },
+          "sex" : "female",
+          "totalScore" : 75
+        }
+      }
+    },
+    "-MV-fUSrmq6_CRa2qTJB" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "Lizzy" : {
+          "age" : 90,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 25
+          },
+          "sex" : "90",
+          "totalScore" : 58
+        }
+      }
+    },
+    "-MV-ggOpyuOGpozpo0mu" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "Jane" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "female",
+          "totalScore" : 25
+        }
+      }
+    },
+    "-MV-gjfsgEkRzFosaa9Y" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "Jane" : {
+          "age" : "",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 50,
+            "Walking" : 50
+          },
+          "sex" : "",
+          "totalScore" : 58
+        }
+      }
+    },
+    "-MV3w2byteAwjrJuZlAG" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "Mom" : {
+          "age" : "80",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "F",
+          "totalScore" : 83
+        }
+      }
+    },
+    "-MVIfoBM5j_6BZQPZZO8" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "Max" : {
+          "age" : "102",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "M",
+          "totalScore" : 25
+        }
+      }
+    },
+    "-MVIjp2Ljhn9WM3LvGap" : {
+      "first" : "guest",
+      "last" : "",
+      "seniors" : {
+        "robby" : {
+          "age" : "12",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "m",
+          "totalScore" : 25
+        }
+      }
+    },
+    "4jot7gZD4ZR4AFZmPcAry7jyfZj1" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        },
+        "Personal Hygiene Checklist for the Elderly" : {
+          "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly.",
+          "title" : "Personal Hygiene Checklist for the Elderly",
+          "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/"
+        }
+      },
+      "firstName" : "3",
+      "lastName" : "3",
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 50,
+            "Walking" : 50
+          },
+          "sex" : "male",
+          "totalScore" : 41
+        }
+      }
+    },
+    "5Bf5PnpnyOhOd4Ft5XxGJIENcJt1" : {
+      "firstName" : "David",
+      "lastName" : "Cannon"
+    },
+    "69ECCNTMSuNBee8bv0WSxnqJyqq1" : {
+      "firstName" : "16",
+      "lastName" : "16",
+      "seniors" : {
+        "Mary" : {
+          "age" : 69,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 50,
+            "Walking" : 25
+          },
+          "sex" : "female",
+          "totalScore" : 50
+        },
+        "test" : {
+          "age" : 90,
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "male",
+          "totalScore" : 58
+        }
+      }
+    },
+    "6Md6vLh9ZWNQuavU9E4u8u7MUnh1" : {
+      "firstName" : "24",
+      "lastName" : "24"
+    },
+    "7c2gakYAzvh4ImBy6SboZn1QaH12" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        },
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        },
+        "Personal Hygiene Checklist for the Elderly" : {
+          "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly.",
+          "title" : "Personal Hygiene Checklist for the Elderly",
+          "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/"
+        }
+      },
+      "firstName" : "5",
+      "lastName" : "5",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        },
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        },
+        "Roll On Lotion Applicator" : {
+          "blurb" : "The Roll On Lotion Applicator is a long-handle applicator designed to help users easily apply lotion to their back and other hard-to-reach areas.",
+          "image" : "https://www.caregiverproducts.com/thumbnail.asp?file=assets/images/ajb3747-roll-a-lotion-demo-1w.jpg",
+          "title" : "Roll On Lotion Applicator",
+          "url" : "https://www.caregiverproducts.com/roll-on-lotion-applicator.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 50
+          },
+          "sex" : "male",
+          "totalScore" : 33
+        }
+      }
+    },
+    "8RKafO1rN8Yz2gHJ1MpAIfaN1dA3" : {
+      "firstName" : "Tom",
+      "lastName" : "Jackson"
+    },
+    "AUhHG6KKQdgpm4pWc8NzjuPUPCj2" : {
+      "firstName" : "Adam",
+      "lastName" : "G"
+    },
+    "FWKSlYoQLdeKNwYB3uKY6sMFHnH2" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Jamie",
+      "lastName" : "Lynn",
+      "seniors" : {
+        "Fran" : {
+          "age" : "68",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "F",
+          "totalScore" : 83
+        }
+      }
+    },
+    "FZFyL8kqNxVOIGMPTfrVwU0eZJh2" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        }
+      },
+      "firstName" : "adam",
+      "lastName" : "g",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "85",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "m",
+          "totalScore" : 83
+        }
+      }
+    },
+    "Fwc8NyZ0lCYBxQxnnccxiqtSHPB3" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Fred",
+      "lastName" : "Jones",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Fred II" : {
+          "age" : "92",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 50
+          },
+          "sex" : "Male",
+          "totalScore" : 75
+        }
+      }
+    },
+    "H33PGLMdx3WLhJBEIjI4LrFpfC73" : {
+      "firstName" : "23",
+      "lastName" : "23",
+      "seniors" : {
+        "Lexi" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 50,
+            "Walking" : 25
+          },
+          "sex" : "90",
+          "totalScore" : 33
+        }
+      }
+    },
+    "H9xES5AOukZn6976SlVen15sidM2" : {
+      "firstName" : "Janet",
+      "lastName" : "Mc",
+      "seniors" : {
+        "Marv" : {
+          "age" : 91,
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 50,
+            "Walking" : 100
+          },
+          "sex" : "Male",
+          "totalScore" : 66
+        }
+      }
+    },
+    "I36U4uIZ8ARdakcJHxkBGWeo2mr2" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Nicole",
+      "lastName" : "Hessler",
+      "seniors" : {
+        "Marv" : {
+          "age" : "80",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 50,
+            "Walking" : 100
+          },
+          "sex" : "male",
+          "totalScore" : 83
+        }
+      }
+    },
+    "INDmxjzsJqUI3l43DRIULFJXVTs2" : {
+      "firstName" : "David",
+      "lastName" : "Cannon",
+      "seniors" : {
+        "Jean" : {
+          "age" : 64,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 50,
+            "Walking" : 50
+          },
+          "sex" : "Female",
+          "totalScore" : 66
+        }
+      }
+    },
+    "J93qO8b85WTH7adwtePW3bDHEK12" : {
+      "firstName" : "Joe",
+      "lastName" : "Blow"
+    },
+    "L3IeHBPq43VfY8TU6jJZ8jOkfV12" : {
+      "firstName" : "12",
+      "lastName" : "12",
+      "seniors" : {
+        "Beth" : {
+          "age" : 68,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 50
+          },
+          "sex" : "female",
+          "totalScore" : 75
+        },
+        "Marv" : {
+          "age" : 70,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "male",
+          "totalScore" : 75
+        }
+      }
+    },
+    "MaN26z0eLIgZLSpKVpDYgYgslGg2" : {
+      "firstName" : "Ahshshs",
+      "lastName" : "Dhdhd",
+      "seniors" : {
+        "Don" : {
+          "age" : 45,
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "Male",
+          "totalScore" : 58
+        },
+        "Jean" : {
+          "age" : 80,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "F",
+          "totalScore" : 75
+        },
+        "Marv" : {
+          "age" : 65,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "M",
+          "totalScore" : 75
+        },
+        "marv" : {
+          "age" : 65,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 100,
+            "Walking" : 75
+          },
+          "sex" : "M",
+          "totalScore" : 91
+        }
+      }
+    },
+    "O5ZqcjZDDSR1BIT9t5aRdQoMuBr1" : {
+      "firstName" : "Ahah",
+      "lastName" : "Shehe",
+      "seniors" : {
+        "Jeff" : {
+          "age" : 23,
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "L",
+          "totalScore" : 75
+        }
+      }
+    },
+    "ODsCv9VMcVg1b8vSEH1BPiAMJ3o2" : {
+      "articles" : {
+        "How much physical activity do older adults need?" : {
+          "blurb" : "As an older adult, regular physical activity is one of the most important things you can do for your health. It can prevent many of the health problems that seem to come with age. ",
+          "title" : "How much physical activity do older adults need?",
+          "url" : "https://www.cdc.gov/physicalactivity/basics/older_adults/index.htm"
+        }
+      },
+      "firstName" : "2",
+      "lastName" : "2",
+      "products" : {
+        "Ace Senior Fitness Program" : {
+          "blurb" : "As the growing population of older adults is seeking to gain strength and vitality while warding off inactivity-related disease and cognitive decline—and you can help them achieve their goals. The ACE Senior Fitness Specialist Program will teach you how to safely and effectively help seniors maintain vibrancy through health and fitness.",
+          "title" : "Ace Senior Fitness Program",
+          "url" : "https://www.acefitness.org/fitness-certifications/specialty-certifications/senior-fitness.aspx?campaignid=1749784468&adgroupid=69165159595&adid=340668339499&gclid=CjwKCAiAyc2BBhAaEiwA44-wW_hba76zFe7QippArXyQJdIgZHCoMvh9xsl7V7M1gX3i__W6pYP2JxoCNiMQAvD_BwE"
+        },
+        "Roll On Lotion Applicator" : {
+          "blurb" : "The Roll On Lotion Applicator is a long-handle applicator designed to help users easily apply lotion to their back and other hard-to-reach areas.",
+          "image" : "https://www.caregiverproducts.com/thumbnail.asp?file=assets/images/ajb3747-roll-a-lotion-demo-1w.jpg",
+          "title" : "Roll On Lotion Applicator",
+          "url" : "https://www.caregiverproducts.com/roll-on-lotion-applicator.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 50
+          },
+          "sex" : "male",
+          "totalScore" : 66
+        }
+      }
+    },
+    "P5kZY7JZVmhuGLFKlhMxWRaKNcg2" : {
+      "firstName" : "22",
+      "lastName" : "22"
+    },
+    "Pz7ohBzdkbXAYUiAMRRG9GgyGNV2" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "no",
+      "lastName" : "thanks",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "nothanks" : {
+          "age" : "5",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "nothanks",
+          "totalScore" : 25
+        }
+      }
+    },
+    "QBEj8E3lCMefU4B6oVDk8XGOyjA2" : {
+      "firstName" : "17",
+      "lastName" : "17",
+      "seniors" : {
+        "Mel" : {
+          "age" : 88,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 100,
+            "Walking" : 75
+          },
+          "sex" : "female",
+          "totalScore" : 91
+        }
+      }
+    },
+    "R6e6R0IJsuNfyz8mEGIDt0KVTw42" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        },
+        "How much physical activity do older adults need?" : {
+          "blurb" : "As an older adult, regular physical activity is one of the most important things you can do for your health. It can prevent many of the health problems that seem to come with age. ",
+          "title" : "How much physical activity do older adults need?",
+          "url" : "https://www.cdc.gov/physicalactivity/basics/older_adults/index.htm"
+        },
+        "Personal Hygiene Checklist for the Elderly" : {
+          "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly.",
+          "title" : "Personal Hygiene Checklist for the Elderly",
+          "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/"
+        }
+      },
+      "firstName" : "Astha",
+      "lastName" : "Goyal",
+      "products" : {
+        "Ace Senior Fitness Program" : {
+          "blurb" : "As the growing population of older adults is seeking to gain strength and vitality while warding off inactivity-related disease and cognitive decline—and you can help them achieve their goals. The ACE Senior Fitness Specialist Program will teach you how to safely and effectively help seniors maintain vibrancy through health and fitness.",
+          "title" : "Ace Senior Fitness Program",
+          "url" : "https://www.acefitness.org/fitness-certifications/specialty-certifications/senior-fitness.aspx?campaignid=1749784468&adgroupid=69165159595&adid=340668339499&gclid=CjwKCAiAyc2BBhAaEiwA44-wW_hba76zFe7QippArXyQJdIgZHCoMvh9xsl7V7M1gX3i__W6pYP2JxoCNiMQAvD_BwE"
+        },
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        }
+      },
+      "seniors" : {
+        "Jean" : {
+          "age" : 78,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "F",
+          "totalScore" : 83
+        },
+        "Marv" : {
+          "age" : 75,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "M",
+          "totalScore" : 75
+        }
+      }
+    },
+    "ROGpmLxioPRknAJ7es2UpbkPflv2" : {
+      "firstName" : "Maximilian",
+      "lastName" : "Kolowrat-Krakowsky",
+      "seniors" : {
+        "Mary" : {
+          "age" : "22",
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "F",
+          "totalScore" : 75
+        }
+      }
+    },
+    "SPyeNKgTqFdJ54xIUOl7upmg9nf2" : {
+      "firstName" : "1",
+      "lastName" : "1"
+    },
+    "Tdy0zy7fPHTQIHzzhmSEfqoakzf2" : {
+      "firstName" : "8",
+      "lastName" : "8",
+      "products" : {
+        "Ace Senior Fitness Program" : {
+          "blurb" : "As the growing population of older adults is seeking to gain strength and vitality while warding off inactivity-related disease and cognitive decline—and you can help them achieve their goals. The ACE Senior Fitness Specialist Program will teach you how to safely and effectively help seniors maintain vibrancy through health and fitness.",
+          "title" : "Ace Senior Fitness Program",
+          "url" : "https://www.acefitness.org/fitness-certifications/specialty-certifications/senior-fitness.aspx?campaignid=1749784468&adgroupid=69165159595&adid=340668339499&gclid=CjwKCAiAyc2BBhAaEiwA44-wW_hba76zFe7QippArXyQJdIgZHCoMvh9xsl7V7M1gX3i__W6pYP2JxoCNiMQAvD_BwE"
+        },
+        "Roll On Lotion Applicator" : {
+          "blurb" : "The Roll On Lotion Applicator is a long-handle applicator designed to help users easily apply lotion to their back and other hard-to-reach areas.",
+          "image" : "https://www.caregiverproducts.com/thumbnail.asp?file=assets/images/ajb3747-roll-a-lotion-demo-1w.jpg",
+          "title" : "Roll On Lotion Applicator",
+          "url" : "https://www.caregiverproducts.com/roll-on-lotion-applicator.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "80",
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 75,
+            "Walking" : 50
+          },
+          "sex" : "male",
+          "totalScore" : 58
+        }
+      }
+    },
+    "TmG7WpRziKMDWIUHCuhc4m7gy8Z2" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Nicole",
+      "lastName" : "Hessler",
+      "seniors" : {
+        "Marv" : {
+          "age" : "80",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "male",
+          "totalScore" : 66
+        }
+      }
+    },
+    "URoxUnj3F6hgQsYTJS9qw2Qo22S2" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        }
+      },
+      "firstName" : "m",
+      "lastName" : "k",
+      "seniors" : {
+        "Ma" : {
+          "age" : "2",
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 50,
+            "Walking" : 25
+          },
+          "sex" : "f",
+          "totalScore" : 41
+        }
+      }
+    },
+    "UZMJPCY8EXYSMcHnP9sZ0fhd9zs2" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Patrick",
+      "lastName" : "McClure",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Ray" : {
+          "age" : 91,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "Male",
+          "totalScore" : 66
+        },
+        "Ray " : {
+          "age" : 91,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 50,
+            "Walking" : 50
+          },
+          "sex" : "Male",
+          "totalScore" : 58
+        }
+      }
+    },
+    "VXAo6fFIynXfENCOvFGxROv3GWi2" : {
+      "firstName" : "Garrett",
+      "lastName" : "Scholtes",
+      "seniors" : {
+        "Bob Marshall" : {
+          "age" : 99,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "Male",
+          "totalScore" : 66
+        }
+      }
+    },
+    "VeInboDk7DXwtjvJmofAnT2wueo1" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "25",
+      "lastName" : "25",
+      "seniors" : {
+        "Ida" : {
+          "age" : 80,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 50,
+            "Walking" : 50
+          },
+          "sex" : "female",
+          "totalScore" : 66
+        }
+      }
+    },
+    "Wid2REpcQNRyqbYQiFgs5AD5BVK2" : {
+      "firstName" : "Nicole",
+      "lastName" : "Hessler",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "80",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 50,
+            "Walking" : 100
+          },
+          "sex" : "male",
+          "totalScore" : 83
+        }
+      }
+    },
+    "am0HWGwUN8d1jwdA4Q8nFfrLayC2" : {
+      "firstName" : "Nicole",
+      "lastName" : "Hessler",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "80",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 25,
+            "Walking" : 100
+          },
+          "sex" : "male",
+          "totalScore" : 75
+        }
+      }
+    },
+    "bryOSTIbp5XxYZeOOvU2HujWeX92" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Mary Jean",
+      "lastName" : "Cannon",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Jean Adolf" : {
+          "age" : 88,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "female",
+          "totalScore" : 83
+        }
+      }
+    },
+    "bz7cGWx7bQMemyxNnR2jxAElk403" : {
+      "firstName" : "joe",
+      "lastName" : "schmo",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 50,
+            "Walking" : 25
+          },
+          "sex" : "male",
+          "totalScore" : 50
+        }
+      }
+    },
+    "deYMgoW6BcRcX11DNhDPGsd8mlP2" : {
+      "firstName" : "19",
+      "lastName" : "19",
+      "seniors" : {
+        "Milly" : {
+          "age" : 70,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 25
+          },
+          "sex" : "female",
+          "totalScore" : 66
+        }
+      }
+    },
+    "guest" : {
+      "seniors" : {
+        "Luke" : {
+          "age" : 80,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "Male",
+          "totalScore" : 75
+        }
+      }
+    },
+    "h2X2cMVmVKc1fueQ5Ho7iBOniE93" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        }
+      },
+      "firstName" : "9",
+      "lastName" : "9",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 50,
+            "Walking" : 25
+          },
+          "sex" : "male",
+          "totalScore" : 41
+        }
+      }
+    },
+    "jcAPPSzqmkXbpnsJj6WsrBOyQZn2" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        },
+        "Personal Hygiene Checklist for the Elderly" : {
+          "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly.",
+          "title" : "Personal Hygiene Checklist for the Elderly",
+          "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/"
+        }
+      },
+      "firstName" : "7",
+      "lastName" : "7",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        },
+        "Roll On Lotion Applicator" : {
+          "blurb" : "The Roll On Lotion Applicator is a long-handle applicator designed to help users easily apply lotion to their back and other hard-to-reach areas.",
+          "image" : "https://www.caregiverproducts.com/thumbnail.asp?file=assets/images/ajb3747-roll-a-lotion-demo-1w.jpg",
+          "title" : "Roll On Lotion Applicator",
+          "url" : "https://www.caregiverproducts.com/roll-on-lotion-applicator.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 50,
+            "Walking" : 25
+          },
+          "sex" : "male",
+          "totalScore" : 41
+        }
+      }
+    },
+    "lXCoAHio5ddhg9usXoIqaCTbyM83" : {
+      "firstName" : "4",
+      "lastName" : "4",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 50,
+            "Walking" : 50
+          },
+          "sex" : "male",
+          "totalScore" : 41
+        }
+      }
+    },
+    "lxsn1Y3o15PGFvSmkI7NawHtIOF3" : {
+      "firstName" : "Tiffany",
+      "lastName" : "Lau",
+      "seniors" : {
+        "Bla" : {
+          "age" : "22",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "",
+          "totalScore" : 25
+        },
+        "bla2" : {
+          "age" : "22",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "",
+          "totalScore" : 91
+        }
+      }
+    },
+    "mRQ75Yq0UEcWqAGxieiBfMOEhRQ2" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        },
+        "Personal Hygiene Checklist for the Elderly" : {
+          "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly.",
+          "title" : "Personal Hygiene Checklist for the Elderly",
+          "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/"
+        }
+      },
+      "firstName" : "robert",
+      "lastName" : "goodman",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        },
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "another" : {
+          "age" : 90,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "M",
+          "totalScore" : 83
+        },
+        "rob" : {
+          "age" : 20,
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "20",
+          "totalScore" : 25
+        }
+      }
+    },
+    "nVcCB9veSwVqbhxgGvbKSFZ8du03" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        },
+        "How much physical activity do older adults need?" : {
+          "blurb" : "As an older adult, regular physical activity is one of the most important things you can do for your health. It can prevent many of the health problems that seem to come with age. ",
+          "title" : "How much physical activity do older adults need?",
+          "url" : "https://www.cdc.gov/physicalactivity/basics/older_adults/index.htm"
+        }
+      },
+      "firstName" : "11",
+      "lastName" : "11",
+      "products" : {
+        "Ace Senior Fitness Program" : {
+          "blurb" : "As the growing population of older adults is seeking to gain strength and vitality while warding off inactivity-related disease and cognitive decline—and you can help them achieve their goals. The ACE Senior Fitness Specialist Program will teach you how to safely and effectively help seniors maintain vibrancy through health and fitness.",
+          "title" : "Ace Senior Fitness Program",
+          "url" : "https://www.acefitness.org/fitness-certifications/specialty-certifications/senior-fitness.aspx?campaignid=1749784468&adgroupid=69165159595&adid=340668339499&gclid=CjwKCAiAyc2BBhAaEiwA44-wW_hba76zFe7QippArXyQJdIgZHCoMvh9xsl7V7M1gX3i__W6pYP2JxoCNiMQAvD_BwE"
+        },
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 50
+          },
+          "sex" : "male",
+          "totalScore" : 75
+        }
+      }
+    },
+    "nYcoQlvDglUxYjxTVSGfKybMw613" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "10",
+      "lastName" : "10",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 50,
+            "Walking" : 50
+          },
+          "sex" : "male",
+          "totalScore" : 41
+        }
+      }
+    },
+    "qF1vUYMpkVR7Jj3dXESO1z9VMGu2" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Adam",
+      "lastName" : "G",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        },
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "85",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "M",
+          "totalScore" : 83
+        }
+      }
+    },
+    "rlBg2sNYIqYyITky7xZpTyenmqJ2" : {
+      "firstName" : "D",
+      "lastName" : "C",
+      "seniors" : {
+        "P" : {
+          "age" : "99",
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 100,
+            "Walking" : 50
+          },
+          "sex" : "Male",
+          "totalScore" : 66
+        }
+      }
+    },
+    "t3nhliDofAcDwjYQKNeObiWfug43" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        },
+        "Personal Hygiene Checklist for the Elderly" : {
+          "blurb" : "It is important to provide support and offer assistance with essential hygiene tasks. Follow this personal hygiene checklist for providing personal hygiene care for the elderly.",
+          "title" : "Personal Hygiene Checklist for the Elderly",
+          "url" : "https://www.choosecomforthome.com/guide-to-personal-hygiene-care-for-the-elderly/"
+        }
+      },
+      "firstName" : "Luke",
+      "lastName" : "G",
+      "seniors" : {
+        "Danny" : {
+          "age" : "24",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 75
+          },
+          "sex" : "M",
+          "totalScore" : 75
+        }
+      }
+    },
+    "v34f9oxzbiftDiTczCTHUjy65VH3" : {
+      "articles" : {
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        }
+      },
+      "firstName" : "M",
+      "lastName" : "a",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        },
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "q" : {
+          "age" : "2",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "f",
+          "totalScore" : 25
+        },
+        "w" : {
+          "age" : "5",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 100
+          },
+          "sex" : "w",
+          "totalScore" : 50
+        }
+      }
+    },
+    "vD4Ph2XNnNUOFZA7p08zEy8Wc0k1" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        }
+      },
+      "firstName" : "Nicole",
+      "lastName" : "Hessler",
+      "products" : {
+        "Hero Pill Dispenser" : {
+          "blurb" : "An automatic dispenser could make it easier for someone caring for an older parent, for example, and give them one less thing to worry about.",
+          "image" : "https://images.prismic.io/herohealth/fba42f3a32323b860eb57dad3d5269e08c181ab3_hero-mobile.jpg",
+          "title" : "Hero Pill Dispenser",
+          "url" : "https://herohealth.com/?utm_medium=affiliate&utm_source=share_a_sale&utm_campaign=dec_2018&sscid=21k5_os628&utm_source=shareasale&utm_medium=affiliate&utm_campaign=1531854_1296686"
+        }
+      },
+      "seniors" : {
+        "Marv" : {
+          "age" : "80",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 50,
+            "Walking" : 100
+          },
+          "sex" : "male",
+          "totalScore" : 83
+        }
+      }
+    },
+    "vZvOrUaxKMQaKMti1MGhzc9NP4Q2" : {
+      "firstName" : "Patrick",
+      "lastName" : "McClure",
+      "seniors" : {
+        "Gary " : {
+          "age" : 81,
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "Male ",
+          "totalScore" : 25
+        },
+        "Grandpa Ray" : {
+          "age" : 91,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 50
+          },
+          "sex" : "Male ",
+          "totalScore" : 66
+        },
+        "Grandpa Ray " : {
+          "age" : 91,
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "Male ",
+          "totalScore" : 66
+        },
+        "John" : {
+          "age" : 98,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 100,
+            "Walking" : 100
+          },
+          "sex" : "Male",
+          "totalScore" : 100
+        },
+        "Mary-Anne" : {
+          "age" : "82",
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 50,
+            "Walking" : 75
+          },
+          "sex" : "Female",
+          "totalScore" : 75
+        }
+      }
+    },
+    "vzXErIXubncnPxs9tNOYFio6AKA3" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        },
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        }
+      },
+      "firstName" : "Adam",
+      "lastName" : "G",
+      "seniors" : {
+        "Marv" : {
+          "age" : "85",
+          "categoryScores" : {
+            "Hygiene" : 75,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "M",
+          "totalScore" : 83
+        }
+      }
+    },
+    "yB8RGNiRF5OLFt8FCBac0LrfGG03" : {
+      "firstName" : "21",
+      "lastName" : "21"
+    },
+    "yKCBNObZHGS8UEHbWetZXRFx4uj1" : {
+      "articles" : {
+        "10 Tips For Safe Medication Management For Seniors" : {
+          "blurb" : "Putting a simple system in place and taking care of the basics helps seniors avoid common medication mistakes like taking the wrong drug, missing doses, or taking more than prescribed.",
+          "title" : "10 Tips For Safe Medication Management For Seniors",
+          "url" : "https://dailycaring.com/medication-management-for-seniors-10-safety-tips/"
+        },
+        "An Expert’s Guide to Grooming and Hygiene for the Elderly" : {
+          "blurb" : "Learn an expert caregiver’s do’s and don’ts to accomplish these essential tasks more easily while maintaining your loved one’s dignity.",
+          "title" : "An Expert’s Guide to Grooming and Hygiene for the Elderly",
+          "url" : "https://www.aplaceformom.com/caregiver-resources/articles/grooming-and-hygiene"
+        },
+        "How much physical activity do older adults need?" : {
+          "blurb" : "As an older adult, regular physical activity is one of the most important things you can do for your health. It can prevent many of the health problems that seem to come with age. ",
+          "title" : "How much physical activity do older adults need?",
+          "url" : "https://www.cdc.gov/physicalactivity/basics/older_adults/index.htm"
+        }
+      },
+      "firstName" : "20",
+      "lastName" : "20",
+      "products" : {
+        "Design By Intent - Shower Bar" : {
+          "blurb" : "Enhancing bathroom safety and instilling confidence for greater independence, these shower grab bars provide a strong safety accessory for the elderly.",
+          "image" : "https://cdn11.bigcommerce.com/s-d4xis/images/stencil/1280x1280/products/597/5218/elma60-2__41525.1604805499.jpg",
+          "title" : "Design By Intent - Shower Bar",
+          "url" : "https://www.decoteak.com/products/20-straight-black-shower-grab-bar-ada-compliant-handle-grab-bars-for-bathroom-wall-mount-grab-bar-safety-hand-rail-support-senior-assist-bath-handle.html"
+        }
+      },
+      "seniors" : {
+        "Alisa" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 50,
+            "Walking" : 100
+          },
+          "sex" : "female",
+          "totalScore" : 58
+        },
+        "Fran" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 25,
+            "Walking" : 25
+          },
+          "sex" : "female",
+          "totalScore" : 25
+        },
+        "Johnny" : {
+          "age" : "90",
+          "categoryScores" : {
+            "Hygiene" : 25,
+            "Managing Medications" : 75,
+            "Walking" : 100
+          },
+          "sex" : "male",
+          "totalScore" : 66
+        }
+      }
+    },
+    "z68PXyKvd5a5jB6RrElhWzmVuSo1" : {
+      "firstName" : "18",
+      "lastName" : "18",
+      "seniors" : {
+        "Molly" : {
+          "age" : 90,
+          "categoryScores" : {
+            "Hygiene" : 100,
+            "Managing Medications" : 75,
+            "Walking" : 25
+          },
+          "sex" : "female",
+          "totalScore" : 66
+        }
+      }
+    },
+    "zsWNWDjsjSPI6Any7VVLaJst0eV2" : {
+      "firstName" : "Joe ",
+      "lastName" : "Blow",
+      "seniors" : {
+        "Joseph Blow" : {
+          "age" : "86",
+          "categoryScores" : {
+            "Hygiene" : 50,
+            "Managing Medications" : 25,
+            "Walking" : 75
+          },
+          "sex" : "Male",
+          "totalScore" : 50
+        }
+      }
+    }
+  }
+}

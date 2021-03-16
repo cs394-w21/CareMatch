@@ -5,13 +5,12 @@ import {
   View,
   TouchableOpacity,
   ScrollView,
-  Image,
 } from "react-native";
 import { theme } from "../utils/theme";
 import Logo from "../components/Logo";
 import { firebase } from "../firebase";
 
-const Home = ({ route, navigation }) => {
+const Home = ({ navigation }) => {
   //const { uid } = route.params;
   const [auth, setAuth] = useState();
   const [user, setUser] = useState();

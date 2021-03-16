@@ -22,7 +22,7 @@ const buttons = () => {
       <TouchableOpacity
         style={[styles.button, styles.primaryButton]}
         onPress={() => {
-          Linking.openURL(`tel:9148068177`);
+          Linking.openURL(`tel:5555555555`);
         }}
       >
         <Text style={[styles.buttonText, styles.primaryButtonText]}>Call</Text>
@@ -31,7 +31,7 @@ const buttons = () => {
   );
 };
 
-const NurseContact = ({ navigation }) => {
+const NurseContact = () => {
   return (
     <View style={{ marginBottom: 30 }}>
       <View style={styles.sectionContainer}>

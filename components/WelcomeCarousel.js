@@ -22,7 +22,7 @@ const Carousel = ({ setShowButtons }) => {
           prevTitleStyle: { color: "gray", fontSize: 30 },
           nextTitleStyle: { color: "gray", fontSize: 30 },
           dotsTouchable: true,
-          DotComponent: ({ index, isActive, onPress }) => {
+          DotComponent: ({ isActive, onPress }) => {
             let color = "black";
             if (currIndex === 0) {
               color = "white";

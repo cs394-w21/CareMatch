@@ -5,9 +5,7 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Header,
-  Linking,
-  ScrollView,
+  Linking
 } from "react-native";
 import { theme } from "../utils/theme";
 

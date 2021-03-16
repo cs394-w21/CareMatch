@@ -8,12 +8,7 @@ import {
 } from "react-native";
 import { firebase } from "../firebase";
 import { theme } from "../utils/theme";
-
-import RadioForm, {
-  RadioButton,
-  RadioButtonInput,
-  RadioButtonLabel,
-} from "react-native-simple-radio-button";
+import RadioForm from "react-native-simple-radio-button";
 
 const radio_props = [
   { label: "Independent", value: 100 },

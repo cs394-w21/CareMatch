@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
-  ScrollView,
   Image,
 } from "react-native";
-import { theme } from "../utils/theme";
-import Logo from "../components/Logo";
-import { firebase } from "../firebase";
 import Articles from "../components/Articles";
 import ProductsAndServices from "../components/ProductsAndServices";
 import TopOptions from "../components/TopOptions";

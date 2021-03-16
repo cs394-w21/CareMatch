@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
-  Header,
   Linking,
   ScrollView,
   Image,

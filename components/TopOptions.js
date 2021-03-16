@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
-  Header,
-  Linking,
-  ScrollView,
-  Image,
+  TouchableOpacity
 } from "react-native";
-import GenericTouchable from "react-native-gesture-handler/dist/src/components/touchables/GenericTouchable";
 import { theme } from "../utils/theme";
 
 const TopOptions = ({
