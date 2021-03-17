@@ -10,7 +10,7 @@ Juno was created as a React-Native-based web application to help users care for 
     * For Mac OS with Expo, run `expo install firebase`
     * For Windows, run `npm install firebase`
 * Second, you have to [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the GitHub repository
-* Third, `run npm install` in the terminal/command prompt. This installs all the npm modules that are dependencies (i.e. global libraries).
+* Third, run `npm install` in the terminal/command prompt. This installs all the npm modules that are dependencies (i.e. global libraries).
 
 ## Firebase
 * Some general instructions on how to set up the environment and use firebase are found at [https://courses.cs.northwestern.edu/394/intro-react-native-deploy.php](https://courses.cs.northwestern.edu/394/intro-react-native-deploy.php)
